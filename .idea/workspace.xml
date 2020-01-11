@@ -2,105 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="844763bf-dee6-4b5d-86f6-fb606467a343" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/一个普通的web项目/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/多线程/src/main/java/test/CssSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appa/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appa/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appc/StreamForker.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appc/StreamForker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appc/StreamForkerExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appc/StreamForkerExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap1/FilteringApples.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap1/FilteringApples.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/OperationsWithOptional.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/OperationsWithOptional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/OptionalMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/OptionalMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/ReadPositiveIntParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/ReadPositiveIntParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/AsyncShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/AsyncShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/BestPriceFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/BestPriceFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/Discount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/ExchangeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/ExchangeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/v1/BestPriceFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/v1/BestPriceFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/v1/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/v1/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/v1/ShopMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/v1/ShopMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap12/DateTimeExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap12/DateTimeExamples.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap13/Recursion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap13/Recursion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap13/SubsetsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap13/SubsetsMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/Currying.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/Currying.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/LazyLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/LazyLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/PatternMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/PatternMatching.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/PersistentTrainJourney.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/PersistentTrainJourney.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/PersistentTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/PersistentTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap2/FilteringApples.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap2/FilteringApples.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap2/MeaningOfThis.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap2/MeaningOfThis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap3/ExecuteAround.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap3/ExecuteAround.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap3/Lambdas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap3/Lambdas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap3/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap3/Sorting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap4/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap4/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap4/StreamBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap4/StreamBasic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap4/StreamVsCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap4/StreamVsCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/BuildingStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/BuildingStreams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Filtering.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Filtering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Finding.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Finding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Laziness.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Laziness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Mapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Mapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/NumericStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/NumericStreams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/PuttingIntoPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/PuttingIntoPractice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Reducing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Reducing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Trader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Trader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/CollectorHarness.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/CollectorHarness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Grouping.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Grouping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/GroupingTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/GroupingTransactions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/PartitionPrimeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/PartitionPrimeNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Partitioning.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Partitioning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Reducing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Reducing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Summarizing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Summarizing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/ToListCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/ToListCollector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ForkJoinSumCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ForkJoinSumCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ParallelStreamBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ParallelStreamBenchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ParallelStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ParallelStreams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ParallelStreamsHarness.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ParallelStreamsHarness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/WordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/WordCount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/Debugging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/Debugging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/FactoryMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/FactoryMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/ObserverMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/ObserverMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/OnlineBanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/OnlineBanking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/OnlineBankingLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/OnlineBankingLambda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/StrategyMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/StrategyMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Ambiguous.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Ambiguous.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Diamond.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Diamond.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Drawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Drawable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Ellipse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Intro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Intro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Letter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Letter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/MostSpecific.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/MostSpecific.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Resizable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Resizable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/Grouping.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/Grouping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/LambdaOrderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/LambdaOrderBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/MethodChainingOrderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/MethodChainingOrderBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/Mixed.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/Mixed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/MixedBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/MixedBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/NestedFunctionOrderBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/NestedFunctionOrderBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/TaxCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/model/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/model/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/model/Trade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/多线程/src/main/java/test/SuperUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/多线程/src/main/java/test/SuperUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -254,7 +170,7 @@
       <workItem from="1578398479098" duration="599000" />
       <workItem from="1578655289748" duration="1856000" />
       <workItem from="1578662808263" duration="597000" />
-      <workItem from="1578700210238" duration="6461000" />
+      <workItem from="1578700210238" duration="10591000" />
     </task>
     <task id="LOCAL-00001" summary="增加了Java8的代码">
       <created>1578712008695</created>
@@ -263,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578712008695</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="增加了Java8的代码">
+      <created>1578731656473</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578731656473</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,10 +197,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="增加了Java8的代码" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="628" y="149" key="CommitChangelistDialog2" timestamp="1578712003896">
+    <state x="830" y="266" key="#com.intellij.ide.util.MemberChooser" timestamp="1578744752479">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="628" y="149" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1578712003896" />
+    <state x="830" y="266" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1578744752479" />
+    <state x="628" y="149" key="CommitChangelistDialog2" timestamp="1578731655036">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="628" y="149" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1578731655036" />
     <state x="890" y="256" key="FileChooserDialogImpl" timestamp="1578228993558">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -310,10 +237,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="382" y="110" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1578714399804" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1578231831827">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1578731663773">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1578231831827" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1578731663773" />
     <state x="-262" y="138" width="1862" height="926" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578228247210">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -322,17 +249,17 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="469" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1578227934256" />
-    <state x="633" y="256" width="782" height="600" key="find.popup" timestamp="1578723633825">
+    <state x="633" y="256" width="782" height="600" key="find.popup" timestamp="1578742137175">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="633" y="256" width="782" height="600" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1578723633825" />
+    <state x="633" y="256" width="782" height="600" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1578742137175" />
     <state x="626" y="223" key="new project wizard" timestamp="1578712658416">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="626" y="223" key="new project wizard/0.0.2048.1112@0.0.2048.1112" timestamp="1578712658416" />
-    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup" timestamp="1578712032677">
+    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup" timestamp="1578743500053">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1578712032677" />
+    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1578743500053" />
   </component>
 </project>

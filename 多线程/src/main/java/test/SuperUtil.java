@@ -2,6 +2,8 @@ package test;
 
 import java.lang.reflect.Field;
 import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.function.BinaryOperator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,7 +20,21 @@ public class SuperUtil {
         nameList.addAll(Arrays.asList(names));
         nameList.remove(1);
         nameList.sort(Comparator.comparing(String::hashCode));
-        nameList.sort((a, b) -> a.compareTo(b));
+        new Thread(()-> {});
+        new Callable<String>(){
+
+            @Override
+            public String call() throws Exception {
+                return null;
+            }
+        };
+
+        BinaryOperator<String> operator = new BinaryOperator<String>(){
+            @Override
+            public String apply(String s, String s2) {
+                return null;
+            }
+        };
     }
 
 
