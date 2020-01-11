@@ -13,6 +13,7 @@
         <module>Java编程思想</module>
         <module>算法</module>
         <module>Java8实战</module>
+        <module>一个普通的web项目</module>
     </modules>
 
 
@@ -315,6 +316,7 @@
             <artifactId>jcstress-core</artifactId>
             <version>0.1.2</version>
         </dependency>
+
 
 
 

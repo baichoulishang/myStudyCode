@@ -1,7 +1,7 @@
 package lambdasinaction.chap7;
 
-import java.util.concurrent.RecursiveTask;
 import java.util.concurrent.ForkJoinTask;
+import java.util.concurrent.RecursiveTask;
 import java.util.stream.LongStream;
 
 import static lambdasinaction.chap7.ParallelStreamsHarness.FORK_JOIN_POOL;
@@ -24,15 +24,21 @@ public class ForkJoinSumCalculator extends RecursiveTask<Long> {
         this.end = end;
     }
 
+    public static long forkJoinSum(long n) {
+        long[] numbers = LongStream.rangeClosed(1, n).toArray();
+        ForkJoinTask<Long> task = new ForkJoinSumCalculator(numbers);
+        return FORK_JOIN_POOL.invoke(task);
+    }
+
     @Override
     protected Long compute() {
         int length = end - start;
         if (length <= THRESHOLD) {
             return computeSequentially();
         }
-        ForkJoinSumCalculator leftTask = new ForkJoinSumCalculator(numbers, start, start + length/2);
+        ForkJoinSumCalculator leftTask = new ForkJoinSumCalculator(numbers, start, start + length / 2);
         leftTask.fork();
-        ForkJoinSumCalculator rightTask = new ForkJoinSumCalculator(numbers, start + length/2, end);
+        ForkJoinSumCalculator rightTask = new ForkJoinSumCalculator(numbers, start + length / 2, end);
         Long rightResult = rightTask.compute();
         Long leftResult = leftTask.join();
         return leftResult + rightResult;
@@ -44,11 +50,5 @@ public class ForkJoinSumCalculator extends RecursiveTask<Long> {
             sum += numbers[i];
         }
         return sum;
-    }
-
-    public static long forkJoinSum(long n) {
-        long[] numbers = LongStream.rangeClosed(1, n).toArray();
-        ForkJoinTask<Long> task = new ForkJoinSumCalculator(numbers);
-        return FORK_JOIN_POOL.invoke(task);
     }
 }

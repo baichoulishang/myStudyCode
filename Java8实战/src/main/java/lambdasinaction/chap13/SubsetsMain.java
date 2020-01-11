@@ -19,7 +19,7 @@ public class SubsetsMain {
             return ans;
         }
         Integer first = l.get(0);
-        List<Integer> rest = l.subList(1,l.size());
+        List<Integer> rest = l.subList(1, l.size());
         List<List<Integer>> subans = subsets(rest);
         List<List<Integer>> subans2 = insertAll(first, subans);
         return concat(subans, subans2);

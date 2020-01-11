@@ -15,18 +15,18 @@ public class Recursion {
     public static int factorialIterative(int n) {
         int r = 1;
         for (int i = 1; i <= n; i++) {
-            r*=i;
+            r *= i;
         }
         return r;
     }
 
     public static long factorialRecursive(long n) {
-        return n == 1 ? 1 : n*factorialRecursive(n-1);
+        return n == 1 ? 1 : n * factorialRecursive(n - 1);
     }
 
-    public static long factorialStreams(long n){
+    public static long factorialStreams(long n) {
         return LongStream.rangeClosed(1, n)
-                         .reduce(1, (long a, long b) -> a * b);
+                .reduce(1, (long a, long b) -> a * b);
     }
 
     public static long factorialTailRecursive(long n) {
@@ -34,6 +34,6 @@ public class Recursion {
     }
 
     public static long factorialHelper(long acc, long n) {
-        return n == 1 ? acc : factorialHelper(acc * n, n-1);
+        return n == 1 ? acc : factorialHelper(acc * n, n - 1);
     }
 }

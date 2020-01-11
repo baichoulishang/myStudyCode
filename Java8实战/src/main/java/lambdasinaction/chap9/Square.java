@@ -10,13 +10,13 @@ public class Square implements Resizable {
     }
 
     @Override
-    public int getHeight() {
-        return 0;
+    public void setWidth(int width) {
+
     }
 
     @Override
-    public void setWidth(int width) {
-
+    public int getHeight() {
+        return 0;
     }
 
     @Override

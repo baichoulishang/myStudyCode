@@ -17,6 +17,8 @@ public class SuperUtil {
         List<String> nameList = new ArrayList<>();
         nameList.addAll(Arrays.asList(names));
         nameList.remove(1);
+        nameList.sort(Comparator.comparing(String::hashCode));
+        nameList.sort((a, b) -> a.compareTo(b));
     }
 
 

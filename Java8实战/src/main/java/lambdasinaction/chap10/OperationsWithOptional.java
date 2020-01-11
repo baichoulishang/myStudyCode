@@ -1,9 +1,9 @@
 package lambdasinaction.chap10;
 
-import java.util.*;
+import java.util.Optional;
 
-import static java.util.Optional.of;
 import static java.util.Optional.empty;
+import static java.util.Optional.of;
 
 public class OperationsWithOptional {
 
@@ -15,11 +15,11 @@ public class OperationsWithOptional {
         Optional<Integer> opt2 = opt1.or(() -> of(4));
 
         System.out.println(
-        of(5).or(() -> of(4))
-                          );
+                of(5).or(() -> of(4))
+        );
     }
 
     public static final Optional<Integer> max(Optional<Integer> i, Optional<Integer> j) {
-         return i.flatMap(a -> j.map(b -> Math.max(a, b)));
+        return i.flatMap(a -> j.map(b -> Math.max(a, b)));
     }
 }

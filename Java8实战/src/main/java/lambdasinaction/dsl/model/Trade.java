@@ -18,21 +18,16 @@ package lambdasinaction.dsl.model;
 
 public class Trade {
 
-    public enum Type { BUY, SELL }
-
     private Type type;
-
     private Stock stock;
-
     private int quantity;
-
     private double price;
 
     public Type getType() {
         return type;
     }
 
-    public void setType( Type type ) {
+    public void setType(Type type) {
         this.type = type;
     }
 
@@ -40,7 +35,7 @@ public class Trade {
         return quantity;
     }
 
-    public void setQuantity( int quantity ) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
@@ -48,7 +43,7 @@ public class Trade {
         return price;
     }
 
-    public void setPrice( double price ) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -56,11 +51,13 @@ public class Trade {
         return stock;
     }
 
-    public void setStock( Stock stock ) {
+    public void setStock(Stock stock) {
         this.stock = stock;
     }
 
     public double getValue() {
         return quantity * price;
     }
+
+    public enum Type {BUY, SELL}
 }

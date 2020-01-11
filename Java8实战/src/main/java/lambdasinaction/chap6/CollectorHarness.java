@@ -1,12 +1,12 @@
 package lambdasinaction.chap6;
 
-import java.util.function.*;
+import java.util.function.Consumer;
 
 public class CollectorHarness {
 
     public static void main(String[] args) {
         //System.out.println("Partitioning done in: " + execute(PartitionPrimeNumbers::partitionPrimes) + " msecs");
-        System.out.println("Partitioning done in: " + execute(PartitionPrimeNumbers::partitionPrimesWithCustomCollector) + " msecs" );
+        System.out.println("Partitioning done in: " + execute(PartitionPrimeNumbers::partitionPrimesWithCustomCollector) + " msecs");
     }
 
     private static long execute(Consumer<Integer> primePartitioner) {

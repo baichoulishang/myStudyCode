@@ -1,11 +1,11 @@
 package lambdasinaction.chap11;
 
-import static lambdasinaction.chap11.Util.delay;
-import static lambdasinaction.chap11.Util.format;
-
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
+
+import static lambdasinaction.chap11.Util.delay;
+import static lambdasinaction.chap11.Util.format;
 
 public class AsyncShop {
 

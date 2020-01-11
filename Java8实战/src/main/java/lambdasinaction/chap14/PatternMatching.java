@@ -56,13 +56,13 @@ public class PatternMatching {
                             return ((Number) left).val + ((Number) right).val;
                         }
                         if (right instanceof Number && left instanceof BinOp) {
-                            return ((Number) right).val + evaluate((BinOp) left);
+                            return ((Number) right).val + evaluate(left);
                         }
                         if (left instanceof Number && right instanceof BinOp) {
-                            return ((Number) left).val + evaluate((BinOp) right);
+                            return ((Number) left).val + evaluate(right);
                         }
                         if (left instanceof BinOp && right instanceof BinOp) {
-                            return evaluate((BinOp) left) + evaluate((BinOp) right);
+                            return evaluate(left) + evaluate(right);
                         }
                     }
                     if ("*".equals(opname)) {
@@ -70,13 +70,13 @@ public class PatternMatching {
                             return ((Number) left).val * ((Number) right).val;
                         }
                         if (right instanceof Number && left instanceof BinOp) {
-                            return ((Number) right).val * evaluate((BinOp) left);
+                            return ((Number) right).val * evaluate(left);
                         }
                         if (left instanceof Number && right instanceof BinOp) {
-                            return ((Number) left).val * evaluate((BinOp) right);
+                            return ((Number) left).val * evaluate(right);
                         }
                         if (left instanceof BinOp && right instanceof BinOp) {
-                            return evaluate((BinOp) left) * evaluate((BinOp) right);
+                            return evaluate(left) * evaluate(right);
                         }
                     }
                     return defaultcase.get();
@@ -85,11 +85,33 @@ public class PatternMatching {
         return patternMatchExpr(e, binopcase, numcase, defaultcase);
     }
 
+    static <T> T MyIf(boolean b, Supplier<T> truecase, Supplier<T> falsecase) {
+        return b ? truecase.get() : falsecase.get();
+    }
+
+    static <T> T patternMatchExpr(Expr e,
+                                  TriFunction<String, Expr, Expr, T> binopcase,
+                                  Function<Integer, T> numcase, Supplier<T> defaultcase) {
+
+        if (e instanceof BinOp) {
+            return binopcase.apply(((BinOp) e).opname, ((BinOp) e).left, ((BinOp) e).right);
+        } else if (e instanceof Number) {
+            return numcase.apply(((Number) e).val);
+        } else {
+            return defaultcase.get();
+        }
+    }
+
+    interface TriFunction<S, T, U, R> {
+        R apply(S s, T t, U u);
+    }
+
     static class Expr {
     }
 
     static class Number extends Expr {
         int val;
+
         public Number(int val) {
             this.val = val;
         }
@@ -103,6 +125,7 @@ public class PatternMatching {
     static class BinOp extends Expr {
         String opname;
         Expr left, right;
+
         public BinOp(String opname, Expr left, Expr right) {
             this.opname = opname;
             this.left = left;
@@ -112,27 +135,6 @@ public class PatternMatching {
         @Override
         public String toString() {
             return "(" + left + " " + opname + " " + right + ")";
-        }
-    }
-
-    static <T> T MyIf(boolean b, Supplier<T> truecase, Supplier<T> falsecase) {
-        return b ? truecase.get() : falsecase.get();
-    }
-
-    static interface TriFunction<S, T, U, R> {
-        R apply(S s, T t, U u);
-    }
-
-    static <T> T patternMatchExpr(Expr e,
-            TriFunction<String, Expr, Expr, T> binopcase,
-            Function<Integer, T> numcase, Supplier<T> defaultcase) {
-
-        if (e instanceof BinOp) {
-            return binopcase.apply(((BinOp) e).opname, ((BinOp) e).left, ((BinOp) e).right);
-        } else if (e instanceof Number) {
-            return numcase.apply(((Number) e).val);
-        } else {
-            return defaultcase.get();
         }
     }
 

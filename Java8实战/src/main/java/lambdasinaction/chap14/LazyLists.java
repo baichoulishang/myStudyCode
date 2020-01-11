@@ -1,7 +1,7 @@
 package lambdasinaction.chap14;
 
-import java.util.function.Supplier;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class LazyLists {
 
@@ -26,6 +26,23 @@ public class LazyLists {
         // this will run until a stackoverflow occur because Java does not
         // support tail call elimination
         // printAll(primes(from(2)));
+    }
+
+    public static LazyList<Integer> from(int n) {
+        return new LazyList<Integer>(n, () -> from(n + 1));
+    }
+
+    public static MyList<Integer> primes(MyList<Integer> numbers) {
+        return new LazyList<>(numbers.head(), () -> primes(numbers.tail()
+                .filter(n -> n % numbers.head() != 0)));
+    }
+
+    static <T> void printAll(MyList<T> numbers) {
+        if (numbers.isEmpty()) {
+            return;
+        }
+        System.out.println(numbers.head());
+        printAll(numbers.tail());
     }
 
     interface MyList<T> {
@@ -107,23 +124,6 @@ public class LazyLists {
                     () -> tail().filter(p)) : tail().filter(p);
         }
 
-    }
-
-    public static LazyList<Integer> from(int n) {
-        return new LazyList<Integer>(n, () -> from(n + 1));
-    }
-
-    public static MyList<Integer> primes(MyList<Integer> numbers) {
-        return new LazyList<>(numbers.head(), () -> primes(numbers.tail()
-                .filter(n -> n % numbers.head() != 0)));
-    }
-
-    static <T> void printAll(MyList<T> numbers) {
-        if (numbers.isEmpty()) {
-            return;
-        }
-        System.out.println(numbers.head());
-        printAll(numbers.tail());
     }
 
 }

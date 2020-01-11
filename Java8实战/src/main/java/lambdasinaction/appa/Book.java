@@ -1,6 +1,7 @@
 package lambdasinaction.appa;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 @Author(name = "Raoul")
 @Author(name = "Mario")

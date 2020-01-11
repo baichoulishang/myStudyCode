@@ -26,7 +26,7 @@ public class Stock {
         return symbol;
     }
 
-    public void setSymbol( String symbol ) {
+    public void setSymbol(String symbol) {
         this.symbol = symbol;
     }
 
@@ -34,7 +34,7 @@ public class Stock {
         return market;
     }
 
-    public void setMarket( String market ) {
+    public void setMarket(String market) {
         this.market = market;
     }
 }
