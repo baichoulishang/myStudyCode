@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="844763bf-dee6-4b5d-86f6-fb606467a343" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appa/Author.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appa/Authors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appa/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appc/StreamForker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appc/StreamForkerExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appd/InnerClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/appd/Lambda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap1/FilteringApples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/Insurance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/OperationsWithOptional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/OptionalMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap10/ReadPositiveIntParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/AsyncShop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/AsyncShopClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/BestPriceFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/BestPriceFinderMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/Discount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/ExchangeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/Quote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/Shop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/v1/BestPriceFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/v1/BestPriceFinderMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/v1/Shop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap11/v1/ShopMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap12/DateTimeExamples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap13/Recursion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap13/SubsetsMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/Combinators.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/Currying.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/LazyLists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/PatternMatching.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/PersistentTrainJourney.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap14/PersistentTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap2/FilteringApples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap2/MeaningOfThis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap3/ExecuteAround.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap3/Lambdas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap3/Sorting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap4/Dish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap4/StreamBasic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap4/StreamVsCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/BuildingStreams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Filtering.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Finding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Laziness.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Mapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/NumericStreams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/PuttingIntoPractice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Reducing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Trader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/CollectorHarness.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Dish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Grouping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/GroupingTransactions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/PartitionPrimeNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Partitioning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Reducing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/Summarizing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap6/ToListCollector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ForkJoinSumCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ParallelStreamBenchmark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ParallelStreams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/ParallelStreamsHarness.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap7/WordCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/ChainOfResponsibilityMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/Debugging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/FactoryMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/ObserverMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/OnlineBanking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/OnlineBankingLambda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/Peek.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap8/StrategyMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Ambiguous.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Diamond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Drawable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Ellipse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Intro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Letter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/MostSpecific.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Resizable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap9/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/Grouping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/LambdaOrderBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/MethodChainingOrderBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/Mixed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/MixedBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/NestedFunctionOrderBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/TaxCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/model/Stock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/model/Tax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/dsl/model/Trade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/resources/lambdasinaction/chap3/data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java8实战/src/main/resources/lambdasinaction/chap5/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/多线程/src/main/java/test/SuperUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/多线程/src/main/java/test/SuperUtil.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\Study\m2\repository" />
+        <option name="userSettingsFile" value="F:\Study\m2\setting.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VyZt6OczXvt7Ldlb3WA9VnOMNp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Java8实战/src/main/resources" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17285156" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\study\project\学习过程中的代码\Java8实战\src\main\resources" />
+      <recent name="E:\study\project\学习过程中的代码\Java8实战\src\main\java" />
+      <recent name="E:\study\project\学习过程中的代码\算法\src\main\java" />
+      <recent name="E:\study\project\学习过程中的代码\SSM\src\main\java" />
+      <recent name="E:\study\project\学习过程中的代码\Java编程思想\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SuperUtil">
+    <configuration name="BetterRead" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bookCode.strings.BetterRead" />
+      <module name="Java编程思想" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bookCode.strings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Cake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="access.Cake" />
+      <module name="Java编程思想" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="access.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForEachInt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="control.ForEachInt" />
+      <module name="Java编程思想" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleJavaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.viscent.mtia.ch1.SimpleJavaApp" />
+      <module name="多线程" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.viscent.mtia.ch1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SuperUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.SuperUtil" />
+      <module name="多线程" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SuperUtil" />
+        <item itemvalue="Application.ForEachInt" />
+        <item itemvalue="Application.Cake" />
+        <item itemvalue="Application.BetterRead" />
+        <item itemvalue="Application.SimpleJavaApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="844763bf-dee6-4b5d-86f6-fb606467a343" name="Default Changelist" comment="" />
+      <created>1578227506326</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578227506326</updated>
+      <workItem from="1578227507549" duration="4057000" />
+      <workItem from="1578310872665" duration="1205000" />
+      <workItem from="1578398479098" duration="599000" />
+      <workItem from="1578655289748" duration="1856000" />
+      <workItem from="1578662808263" duration="597000" />
+      <workItem from="1578700210238" duration="915000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="628" y="149" key="CommitChangelistDialog2" timestamp="1578231825670">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="628" y="149" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1578231825670" />
+    <state x="890" y="256" key="FileChooserDialogImpl" timestamp="1578228993558">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="890" y="256" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1578228993558" />
+    <state x="874" y="447" key="Github.ShareDialog" timestamp="1578231761413">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="874" y="447" key="Github.ShareDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1578231761413" />
+    <state x="766" y="261" key="Github.UntrackedFilesDialog" timestamp="1578231767402">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="766" y="261" key="Github.UntrackedFilesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1578231767402" />
+    <state width="2005" height="204" key="GridCell.Tab.0.bottom" timestamp="1578662793555">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="204" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1578662793555" />
+    <state width="2005" height="204" key="GridCell.Tab.0.center" timestamp="1578662793555">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="204" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1578662793555" />
+    <state width="2005" height="204" key="GridCell.Tab.0.left" timestamp="1578662793555">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="204" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1578662793555" />
+    <state width="2005" height="204" key="GridCell.Tab.0.right" timestamp="1578662793555">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="204" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1578662793555" />
+    <state x="382" y="110" key="SettingsEditor" timestamp="1578711808051">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="382" y="110" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1578711808051" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1578231831827">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1578231831827" />
+    <state x="-262" y="138" width="1862" height="926" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578228247210">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="-262" y="138" width="1862" height="926" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1578228247210" />
+    <state x="469" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578227934256">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="469" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1578227934256" />
+    <state x="633" y="256" width="782" height="600" key="find.popup" timestamp="1578230996346">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="633" y="256" width="782" height="600" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1578230996346" />
+    <state x="626" y="223" key="new project wizard" timestamp="1578711727003">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="626" y="223" key="new project wizard/0.0.2048.1112@0.0.2048.1112" timestamp="1578711727003" />
+    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup" timestamp="1578661177882">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1578661177882" />
+  </component>
+</project>

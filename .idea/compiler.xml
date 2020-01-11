@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Java编程思想" />
         <module name="算法" />
+        <module name="Java8实战" />
         <module name="多线程" />
       </profile>
     </annotationProcessing>

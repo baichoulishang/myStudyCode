@@ -10,13 +10,13 @@ public class SuperUtil {
 
 
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException {
-        Map<String, String> map = new HashMap<>();
-        map.put("12", "11");
-        map.get("12");
-        List list = new ArrayList();
-        for (int i = 0; i < list.size(); i++) {
 
-        }
+        List<String> typeList = Arrays.asList("Short", "Integer", "Long");
+
+        String[] names = {"1", "2"};
+        List<String> nameList = new ArrayList<>();
+        nameList.addAll(Arrays.asList(names));
+        nameList.remove(1);
     }
 
 
