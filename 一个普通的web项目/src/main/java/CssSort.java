@@ -1,5 +1,3 @@
-package test;
-
 /**
  * @author 陈宜康
  * @date 2020/1/11 16:37
@@ -11,8 +9,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.List;
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 /**
  * @author 陈宜康
@@ -21,7 +20,7 @@ import java.util.Stack;
  */
 public class CssSort {
 
-    private static final String READFILE = "WebContent/WEB-INF/test.css";
+    private static final String READFILE = "E:\\study\\project\\学习过程中的代码\\一个普通的web项目\\src\\main\\webapp\\core\\css\\table.css";
     private static final String WRITEFILE = "E:\\ideaProject\\shask\\all\\all-web\\src\\main\\webapp\\shznzx\\css\\znzxWeb.css";
 
     public static void main(String[] args) throws IOException {
@@ -55,9 +54,8 @@ public class CssSort {
                 }
             }
         }
-        Collections.sort(list, (o1, o2) -> {
-            o1 = o1.replaceAll("\\/\\*[\\s\\S]*\\*\\/|\\/\\/.*", "");
-            o2 = o2.replaceAll("\\/\\*[\\s\\S]*\\*\\/|\\/\\/.*", "");
+        List<String> collect = list.stream().map(s -> s.replaceAll("\\/\\*[\\s\\S]*\\*\\/|\\/\\/.*", "")).collect(Collectors.toList());
+        collect.sort((o1, o2) -> {
             for (int i = 0, _lenth = Math.min(o1.length(), o2.length()); i < _lenth; i++) {
                 char a1 = o1.charAt(i);
                 char a2 = o2.charAt(i);

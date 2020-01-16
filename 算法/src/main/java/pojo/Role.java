@@ -4,23 +4,22 @@ public class Role implements Comparable {
     private String id;
     private String rolename;
     private String note;
+    private int age;
 
     public Role() {
     }
 
-    public Role(String id, String rolename, String note) {
-        this.id = id;
-        this.rolename = rolename;
-        this.note = note;
+
+    public Role(int age) {
+        this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return "pojo.Role{" +
-                "id='" + id + '\'' +
-                ", rolename='" + rolename + '\'' +
-                ", note='" + note + '\'' +
-                '}';
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getId() {

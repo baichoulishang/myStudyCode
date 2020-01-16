@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="844763bf-dee6-4b5d-86f6-fb606467a343" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/多线程/src/main/java/test/CssSort.java" afterDir="false" />
+    <list default="true" id="844763bf-dee6-4b5d-86f6-fb606467a343" name="Default Changelist" comment="增加了Java8的代码">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/一个普通的web项目/src/main/java/Tree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/多线程/src/main/java/test/TreeVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Mapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/Mapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/NumericStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5/NumericStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java编程思想/src/main/java/generics/Functional.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java编程思想/src/main/java/generics/Functional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java编程思想/src/main/java/io/Echo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java编程思想/src/main/java/io/Echo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/一个普通的web项目/src/main/webapp/core/css/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/一个普通的web项目/src/main/webapp/core/css/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/多线程/src/main/java/test/CssSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/一个普通的web项目/src/main/java/CssSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/多线程/src/main/java/test/SuperUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/多线程/src/main/java/test/SuperUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/多线程/target/classes/test/SuperUtil$TaskMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/多线程/target/classes/test/SuperUtil$TaskMonitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/多线程/target/classes/test/SuperUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/多线程/target/classes/test/SuperUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/算法/src/main/java/pojo/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/算法/src/main/java/pojo/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/算法/src/main/java/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/算法/src/main/java/test/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +64,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Java8实战/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Java8实战/src/main/java/lambdasinaction/chap5" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17285156" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\study\project\学习过程中的代码\Java8实战\src\main\resources" />
       <recent name="E:\study\project\学习过程中的代码\Java8实战\src\main\java" />
@@ -67,13 +84,13 @@
       <recent name="E:\study\project\学习过程中的代码\Java编程思想\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SuperUtil">
-    <configuration name="BetterRead" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bookCode.strings.BetterRead" />
+  <component name="RunManager" selected="Application.Echo">
+    <configuration name="Cake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="access.Cake" />
       <module name="Java编程思想" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bookCode.strings.*" />
+          <option name="PATTERN" value="access.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,12 +98,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Cake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="access.Cake" />
+    <configuration name="CssSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CssSort" />
+      <module name="一个普通的web项目" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Echo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.Echo" />
       <module name="Java编程思想" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="access.*" />
+          <option name="PATTERN" value="io.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,25 +131,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleJavaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.github.viscent.mtia.ch1.SimpleJavaApp" />
-      <module name="多线程" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.github.viscent.mtia.ch1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SuperUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.SuperUtil" />
       <module name="多线程" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Echo" />
         <item itemvalue="Application.SuperUtil" />
+        <item itemvalue="Application.CssSort" />
         <item itemvalue="Application.ForEachInt" />
         <item itemvalue="Application.Cake" />
-        <item itemvalue="Application.BetterRead" />
-        <item itemvalue="Application.SimpleJavaApp" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +181,12 @@
       <workItem from="1578398479098" duration="599000" />
       <workItem from="1578655289748" duration="1856000" />
       <workItem from="1578662808263" duration="597000" />
-      <workItem from="1578700210238" duration="10591000" />
+      <workItem from="1578700210238" duration="12724000" />
+      <workItem from="1578787381396" duration="6459000" />
+      <workItem from="1578809209360" duration="4792000" />
+      <workItem from="1578830502863" duration="1872000" />
+      <workItem from="1579001313205" duration="3859000" />
+      <workItem from="1579175821811" duration="485000" />
     </task>
     <task id="LOCAL-00001" summary="增加了Java8的代码">
       <created>1578712008695</created>
@@ -186,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578731656473</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="增加了Java8的代码">
+      <created>1578745217314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578745217314</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,18 +220,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="增加了Java8的代码" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="830" y="266" key="#com.intellij.ide.util.MemberChooser" timestamp="1578744752479">
+    <state x="617" y="215" key="#Updates" timestamp="1578830611554">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="830" y="266" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1578744752479" />
-    <state x="628" y="149" key="CommitChangelistDialog2" timestamp="1578731655036">
+    <state x="617" y="215" key="#Updates/0.0.2048.1112@0.0.2048.1112" timestamp="1578830611554" />
+    <state x="830" y="266" key="#com.intellij.ide.util.MemberChooser" timestamp="1578809610795">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="628" y="149" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1578731655036" />
-    <state x="890" y="256" key="FileChooserDialogImpl" timestamp="1578228993558">
+    <state x="830" y="266" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1578809610795" />
+    <state x="794" y="415" width="460" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1578793117212">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="890" y="256" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1578228993558" />
+    <state x="794" y="415" width="460" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2048.1112@0.0.2048.1112" timestamp="1578793117212" />
+    <state x="628" y="149" key="CommitChangelistDialog2" timestamp="1578745254084">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="628" y="149" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1578745254084" />
+    <state width="431" height="466" key="DebuggerActiveHint" timestamp="1578809844053">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="431" height="466" key="DebuggerActiveHint/0.0.2048.1112@0.0.2048.1112" timestamp="1578809844053" />
+    <state x="890" y="256" key="FileChooserDialogImpl" timestamp="1579006308721">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="890" y="256" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1579006308721" />
     <state x="874" y="447" key="Github.ShareDialog" timestamp="1578231761413">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -217,30 +252,50 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="766" y="261" key="Github.UntrackedFilesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1578231767402" />
-    <state width="2005" height="204" key="GridCell.Tab.0.bottom" timestamp="1578662793555">
+    <state width="2005" height="187" key="GridCell.Tab.0.bottom" timestamp="1578830916806">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="204" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1578662793555" />
-    <state width="2005" height="204" key="GridCell.Tab.0.center" timestamp="1578662793555">
+    <state width="2005" height="187" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1578830916806" />
+    <state width="2005" height="187" key="GridCell.Tab.0.center" timestamp="1578830916806">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="204" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1578662793555" />
-    <state width="2005" height="204" key="GridCell.Tab.0.left" timestamp="1578662793555">
+    <state width="2005" height="187" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1578830916806" />
+    <state width="2005" height="187" key="GridCell.Tab.0.left" timestamp="1578830916806">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="204" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1578662793555" />
-    <state width="2005" height="204" key="GridCell.Tab.0.right" timestamp="1578662793555">
+    <state width="2005" height="187" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1578830916806" />
+    <state width="2005" height="187" key="GridCell.Tab.0.right" timestamp="1578830916806">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="204" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1578662793555" />
-    <state x="382" y="110" key="SettingsEditor" timestamp="1578714399804">
+    <state width="2005" height="187" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1578830916806" />
+    <state width="2005" height="256" key="GridCell.Tab.1.bottom" timestamp="1578822288339">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="382" y="110" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1578714399804" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1578731663773">
+    <state width="2005" height="256" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1578822288339" />
+    <state width="2005" height="256" key="GridCell.Tab.1.center" timestamp="1578822288339">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1578731663773" />
+    <state width="2005" height="256" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1578822288339" />
+    <state width="2005" height="256" key="GridCell.Tab.1.left" timestamp="1578822288339">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="256" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1578822288339" />
+    <state width="2005" height="256" key="GridCell.Tab.1.right" timestamp="1578822288339">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="256" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1578822288339" />
+    <state x="544" y="123" key="SettingsEditor" timestamp="1578793905178">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="544" y="123" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1578793905178" />
+    <state x="746" y="298" width="543" height="524" key="StructurePopup" timestamp="1578830762694">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="746" y="298" width="543" height="524" key="StructurePopup/0.0.2048.1112@0.0.2048.1112" timestamp="1578830762694" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1578745266363">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1578745266363" />
     <state x="-262" y="138" width="1862" height="926" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578228247210">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -249,17 +304,28 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="469" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1578227934256" />
-    <state x="633" y="256" width="782" height="600" key="find.popup" timestamp="1578742137175">
+    <state x="633" y="256" width="782" height="600" key="find.popup" timestamp="1579175910666">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="633" y="256" width="782" height="600" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1578742137175" />
+    <state x="633" y="256" width="782" height="600" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1579175910666" />
     <state x="626" y="223" key="new project wizard" timestamp="1578712658416">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="626" y="223" key="new project wizard/0.0.2048.1112@0.0.2048.1112" timestamp="1578712658416" />
-    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup" timestamp="1578743500053">
+    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup" timestamp="1579176019976">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1578743500053" />
+    <state x="681" y="210" width="672" height="676" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1579176019976" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/多线程/src/main/java/test/SuperUtil.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

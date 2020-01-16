@@ -1,42 +1,72 @@
 package test;
 
+import dataStructure.algs4.RedBlackBST;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.util.*;
-import java.util.concurrent.Callable;
-import java.util.function.BinaryOperator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 
 public class SuperUtil {
 
 
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException {
+        List<TreeVO> list = new ArrayList<TreeVO>();
+        list.add(new TreeVO("1", "20200112141101", "0", 1));
+        list.add(new TreeVO("2", "20200112141104", "1", 2));
+        list.add(new TreeVO("3", "20200112141105", "1", 3));
+        list.add(new TreeVO("4", "20200112141107", "2", 4));
+        List<TreeVO> treeVOS = getTreeVOS(list);
+        treeVOS.stream().forEach(System.out::println);
 
-        List<String> typeList = Arrays.asList("Short", "Integer", "Long");
+        String s = "123456,1,1,1";
+        System.out.println("嗯?" + s.replace(",", ""));
+        System.out.println("ok" + s.replaceAll(",", ""));
 
-        String[] names = {"1", "2"};
-        List<String> nameList = new ArrayList<>();
-        nameList.addAll(Arrays.asList(names));
-        nameList.remove(1);
-        nameList.sort(Comparator.comparing(String::hashCode));
-        new Thread(()-> {});
-        new Callable<String>(){
-
-            @Override
-            public String call() throws Exception {
-                return null;
-            }
-        };
-
-        BinaryOperator<String> operator = new BinaryOperator<String>(){
-            @Override
-            public String apply(String s, String s2) {
-                return null;
-            }
-        };
+        List<Integer> nums = new ArrayList<>();
+        nums.add(1);
+        nums.add(2);
+        nums.add(3);
+        nums.add(4);
+        nums.add(6);
+        Optional<Integer> reduce = nums.stream().reduce(Integer::compare);
+        IntStream intStream = nums.stream().mapToInt(e -> e);
+        System.out.println(reduce.get());
     }
 
+    private static List<TreeVO> getTreeVOS(List<TreeVO> list) {
+        // 构造红黑树
+        RedBlackBST<String, Integer> bst = new RedBlackBST<>();
+        // 临时存放所有数据的数组
+        TreeVO[] voarray = new TreeVO[list.size() + 1];
+        voarray[0] = new TreeVO();
+        list.stream()
+                .forEach(vo -> {
+                    // 把所有的值都保存到数组中
+                    voarray[vo.getCode()] = vo;
+                    // 主键和数组下标的映射关系
+                    bst.put(vo.getId(), vo.getCode());
+                });
+        list.stream()
+                .filter(e -> !"0".equals(e.getPid()))
+                .forEach(vo -> {
+                    // 得到父节点的下标
+                    Integer parentIndex = bst.get(vo.getPid());
+                    // 如果是根节点"2",那么vos[2]=0
+                    List<TreeVO> children = voarray[parentIndex].getChildren();
+                    // 得到子节点
+                    TreeVO childVO = voarray[vo.getCode()];
+                    // 添加到子节点列表中
+                    children.add(childVO);
+                });
+        return Arrays.stream(voarray).filter(e -> "0".equals(e.getPid())).collect(Collectors.toList());
+    }
 
     private static void interatorMap(Map map) {
         Set set = map.entrySet();
