@@ -15,12 +15,12 @@ $button-hover-color: #e6ebf5;
 }
 
 .highcharts-popup.highcharts-annotation-toolbar button {
-  margin-top:0px;
+  margin-top: 0px;
 }
 
 .highcharts-popup.highcharts-annotation-toolbar > span {
-  display:block;
-  float:left;
+  display: block;
+  float: left;
   padding: 12px;
 }
 
@@ -40,9 +40,9 @@ $button-hover-color: #e6ebf5;
   max-width: 600px;
   position: absolute;
   z-index: 100;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(61,61,61,0.3);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(61,61,61,0.3);
-  box-shadow: 0px 0px 8px 0px rgba(61,61,61,0.3);
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(61, 61, 61, 0.3);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(61, 61, 61, 0.3);
+  box-shadow: 0px 0px 8px 0px rgba(61, 61, 61, 0.3);
 }
 
 .highcharts-popup div, .highcharts-popup span {
@@ -68,7 +68,7 @@ $button-hover-color: #e6ebf5;
   float: left;
 }
 
-.highcharts-popup-lhs-col.highcharts-popup-lhs-full { 
+.highcharts-popup-lhs-col.highcharts-popup-lhs-full {
   width: calc(100% - 52px);
   overflow-y: auto;
   overflow-x: hidden;
@@ -107,8 +107,8 @@ $button-hover-color: #e6ebf5;
 }
 
 .highcharts-popup-rhs-col-wrapper h3 {
-  margin-top:0px;
-  padding-bottom:0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
 }
 
 .highcharts-bindings-wrapper ul.highcharts-indicator-list,
@@ -141,7 +141,7 @@ $button-hover-color: #e6ebf5;
   background-color: $button-background-color;
   cursor: pointer;
   display: block;
-  float:left;
+  float: left;
   padding: 10px;
   height: 20px;
 }
@@ -151,7 +151,7 @@ $button-hover-color: #e6ebf5;
 }
 
 .highcharts-tab-item-content {
-  display: none; 
+  display: none;
   float: left;
   height: 100%;
   overflow: hidden;
@@ -187,9 +187,10 @@ $button-hover-color: #e6ebf5;
   border: none;
   background: $button-background-color;
   color: #666;
-  margin-left:5px;
-  margin-top:12px;
+  margin-left: 5px;
+  margin-top: 12px;
 }
+
 .highcharts-popup button:first-child {
   margin-left: 0;
 }
@@ -207,12 +208,12 @@ $button-hover-color: #e6ebf5;
 }
 
 .highcharts-popup button.highcharts-annotation-edit-button {
-  background:url("https://code.highcharts.com/#{$version}/gfx/stock-icons/edit.svg") no-repeat 50% 50% transparent;
+  background: url("https://code.highcharts.com/#{$version}/gfx/stock-icons/edit.svg") no-repeat 50% 50% transparent;
   text-indent: -9999px;
 }
 
 .highcharts-popup button.highcharts-annotation-remove-button {
-  background:url("https://code.highcharts.com/#{$version}/gfx/stock-icons/destroy.svg") no-repeat 50% 50% transparent;
+  background: url("https://code.highcharts.com/#{$version}/gfx/stock-icons/destroy.svg") no-repeat 50% 50% transparent;
   text-indent: -9999px;
 }
 

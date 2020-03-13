@@ -37,6 +37,12 @@ public class ExecuteAround {
 
     }
 
+    public static String processFile() throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+            return br.readLine();
+        }
+    }
+
     public interface BufferedReaderProcessor {
         String process(BufferedReader b) throws IOException;
 

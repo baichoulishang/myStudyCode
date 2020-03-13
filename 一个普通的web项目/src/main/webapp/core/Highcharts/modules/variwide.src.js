@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/variwide.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Highcharts variwide module
@@ -36,7 +38,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var addEvent = H.addEvent,
@@ -143,8 +144,8 @@
                     }
 
                     ret = slotLeft +
-                    xInsideLinearSlot * (slotRight - slotLeft) /
-                    (linearSlotRight - linearSlotLeft);
+                        xInsideLinearSlot * (slotRight - slotLeft) /
+                        (linearSlotRight - linearSlotLeft);
 
                     return ret;
                 },
@@ -210,10 +211,10 @@
                         // Adjust the tooltip position
                         if (!inverted) {
                             point.tooltipPos[0] =
-                            point.shapeArgs.x + point.shapeArgs.width / 2;
+                                point.shapeArgs.x + point.shapeArgs.width / 2;
                         } else {
                             point.tooltipPos[1] =
-                            xAxis.len - point.shapeArgs.x - point.shapeArgs.width / 2;
+                                xAxis.len - point.shapeArgs.x - point.shapeArgs.width / 2;
                         }
                     }, this);
                 }

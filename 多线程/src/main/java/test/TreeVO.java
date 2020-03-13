@@ -26,6 +26,7 @@ public class TreeVO {
     public TreeVO() {
 
     }
+
     public TreeVO(String id, String name, String pid, int code) {
         this.id = id;
         this.name = name;

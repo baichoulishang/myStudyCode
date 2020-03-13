@@ -40,7 +40,7 @@ public class CoffeeGenerator
         }
     }
 
-  public Iterator<Coffee> iterator() {
+    public Iterator<Coffee> iterator() {
         return new CoffeeIterator();
     }
 

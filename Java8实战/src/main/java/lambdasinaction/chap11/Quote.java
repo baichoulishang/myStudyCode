@@ -31,4 +31,14 @@ public class Quote {
     public Discount.Code getDiscountCode() {
         return discountCode;
     }
+
+
+    @Override
+    public String toString() {
+        return "Quote{" +
+                "shopName='" + shopName + '\'' +
+                ", price=" + price +
+                ", discountCode=" + discountCode +
+                '}';
+    }
 }

@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/streamgraph.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Streamgraph module
@@ -36,7 +38,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var seriesType = H.seriesType;
@@ -76,7 +77,7 @@
                 // Modifier function for stream stacks. It simply moves the point up or
                 // down in order to center the full stack vertically.
                 streamStacker: function (pointExtremes, stack, i) {
-                // Y bottom value
+                    // Y bottom value
                     pointExtremes[0] -= stack.total / 2;
                     // Y value
                     pointExtremes[1] -= stack.total / 2;

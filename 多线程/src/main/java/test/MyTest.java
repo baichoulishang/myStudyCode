@@ -12,7 +12,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class MyTest implements Comparator, Comparable {
 
-
+    static long counter = 0;
+    long id = counter++;
     final static int N_CPU = Runtime.getRuntime().availableProcessors();
     static final ThreadPoolExecutor executor = new ThreadPoolExecutor(
             2,
@@ -23,7 +24,18 @@ public class MyTest implements Comparator, Comparable {
             new ThreadPoolExecutor.CallerRunsPolicy());
     private static final Lock lock = new ReentrantLock();
 
+    @Override
+    public String toString() {
+        return "MyTest{" +
+                "id=" + id +
+                '}';
+    }
+
     public static void main(String[] args) throws ExecutionException, InterruptedException {
+        MyTest myTest = new MyTest();
+        for (int i = 0; i < 10; i++) {
+            System.out.println(myTest);
+        }
     }
 
     public static void fuckRole(Role role) {

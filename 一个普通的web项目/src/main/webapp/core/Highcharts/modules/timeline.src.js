@@ -24,11 +24,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/timeline.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          *
@@ -41,7 +43,6 @@
          *  License: www.highcharts.com/license
          *
          * */
-
 
 
         var addEvent = H.addEvent,
@@ -329,7 +330,7 @@
                                 width: targetDLWidth,
                                 // Apply ellipsis when data label height is exceeded.
                                 textOverflow: dataLabel.width / targetDLWidth *
-                                    dataLabel.height / 2 > availableSpace * multiplier ?
+                                dataLabel.height / 2 > availableSpace * multiplier ?
                                     'ellipsis' : 'none'
                             };
                         } else {
@@ -394,7 +395,7 @@
                 getVisibilityMap: function () {
                     var series = this,
                         map = (series.data.length ?
-                            series.data : series.userOptions.data
+                                series.data : series.userOptions.data
                         ).map(function (point) {
                             return (
                                 point &&
@@ -553,7 +554,7 @@
                         },
                         negativeDistance = (
                             (dl.alignAttr || dl)[direction[0]] <
-                                point.series.yAxis.len / 2
+                            point.series.yAxis.len / 2
                         ),
                         path;
 

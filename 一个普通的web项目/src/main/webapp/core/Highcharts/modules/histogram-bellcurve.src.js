@@ -22,11 +22,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'mixins/derived-series.js', [_modules['parts/Globals.js']], function (H) {
 
 
@@ -343,13 +345,13 @@
                         // was sometimes noticeable on the graph, because of too small
                         // precision of float correction.
                         x < max &&
-                            (
-                                series.userOptions.binWidth ||
-                                correctFloat(max - x) >= binWidth ||
-                                correctFloat(
-                                    min + (frequencies.length * binWidth) - x
-                                ) <= 0
-                            );
+                        (
+                            series.userOptions.binWidth ||
+                            correctFloat(max - x) >= binWidth ||
+                            correctFloat(
+                                min + (frequencies.length * binWidth) - x
+                            ) <= 0
+                        );
                         x = correctFloat(x + binWidth)
                     ) {
                         frequencies.push(x);
@@ -434,7 +436,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var seriesType = H.seriesType,

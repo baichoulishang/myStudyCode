@@ -24,11 +24,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/pattern-fill.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Module for using patterns or images as point fills.
@@ -126,7 +128,8 @@
          * Pattern options
          * @name Highcharts.PatternObject#pattern
          * @type {Highcharts.PatternOptionsObject}
-         *//**
+         */
+        /**
          * Animation options for the image pattern loading.
          * @name Highcharts.PatternObject#animation
          * @type {boolean|Highcharts.AnimationOptionsObject|undefined}
@@ -349,7 +352,7 @@
                 this.createElement('path').attr(attribs).add(pattern);
                 pattern.color = color;
 
-            // Image pattern
+                // Image pattern
             } else if (options.image) {
                 if (animate) {
                     this.image(
@@ -360,7 +363,7 @@
                             }, animationOptions);
                             H.removeEvent(this.element, 'load');
                         }
-                    ).attr({ opacity: 0 }).add(pattern);
+                    ).attr({opacity: 0}).add(pattern);
                 } else {
                     this.image(options.image, 0, 0, width, height).add(pattern);
                 }
@@ -490,7 +493,7 @@
                 // and running the algorithm again.
                 if (pattern._width === 'defer' || pattern._height === 'defer') {
                     H.Point.prototype.calculatePatternDimensions.call(
-                        { graphic: { element: element } }, pattern
+                        {graphic: {element: element}}, pattern
                     );
                 }
 
@@ -511,7 +514,7 @@
                 this.addPattern(pattern, !this.forExport && H.pick(
                     pattern.animation,
                     this.globalAnimation,
-                    { duration: 100 }
+                    {duration: 100}
                 ));
 
                 value = 'url(' + this.url + '#' + pattern.id + ')';
@@ -580,8 +583,8 @@
                     ),
                     function (node) {
                         var id = node.getAttribute('fill') ||
-                                node.getAttribute('color') ||
-                                node.getAttribute('stroke');
+                            node.getAttribute('color') ||
+                            node.getAttribute('stroke');
 
                         if (id) {
                             usedIds.push(

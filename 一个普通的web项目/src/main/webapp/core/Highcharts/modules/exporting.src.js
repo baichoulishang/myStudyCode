@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/full-screen.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2009-2019 Sebastian Bochann
@@ -212,7 +214,7 @@
 
 
 
-        // create shortcuts
+            // create shortcuts
         var defaultOptions = H.defaultOptions,
             doc = H.doc,
             Chart = H.Chart,
@@ -1170,8 +1172,8 @@
                 if (options && options.exporting && options.exporting.allowHTML) {
                     if (html) {
                         html = '<foreignObject x="0" y="0" ' +
-                                    'width="' + options.chart.width + '" ' +
-                                    'height="' + options.chart.height + '">' +
+                            'width="' + options.chart.width + '" ' +
+                            'height="' + options.chart.height + '">' +
                             '<body xmlns="http://www.w3.org/1999/xhtml">' +
                             html +
                             '</body>' +
@@ -1361,7 +1363,7 @@
 
                 // Get the SVG from the container's innerHTML
                 svg = chartCopy.getChartHTML();
-                fireEvent(this, 'getSVG', { chartCopy: chartCopy });
+                fireEvent(this, 'getSVG', {chartCopy: chartCopy});
 
                 svg = chart.sanitizeSVG(svg, options);
 
@@ -1387,7 +1389,7 @@
                 var chartExportingOptions = this.options.exporting;
 
                 return this.getSVG(merge(
-                    { chart: { borderRadius: 0 } },
+                    {chart: {borderRadius: 0}},
                     chartExportingOptions.chartOptions,
                     chartOptions,
                     {
@@ -1619,18 +1621,18 @@
 
                     // create a HTML element above the SVG
                     chart.exportContextMenu = chart[cacheName] = menu =
-                    createElement('div', {
-                        className: className
-                    }, {
-                        position: 'absolute',
-                        zIndex: 1000,
-                        padding: menuPadding + 'px',
-                        pointerEvents: 'auto'
-                    }, chart.fixedDiv || chart.container);
+                        createElement('div', {
+                            className: className
+                        }, {
+                            position: 'absolute',
+                            zIndex: 1000,
+                            padding: menuPadding + 'px',
+                            pointerEvents: 'auto'
+                        }, chart.fixedDiv || chart.container);
 
                     innerMenu = createElement(
                         'div',
-                        { className: 'highcharts-menu' },
+                        {className: 'highcharts-menu'},
                         null,
                         menu
                     );
@@ -1646,12 +1648,12 @@
 
                     // hide on mouse out
                     menu.hideMenu = function () {
-                        css(menu, { display: 'none' });
+                        css(menu, {display: 'none'});
                         if (button) {
                             button.setState(0);
                         }
                         chart.openMenu = false;
-                        css(chart.renderTo, { overflow: 'hidden' }); // #10361
+                        css(chart.renderTo, {overflow: 'hidden'}); // #10361
                         H.clearTimeout(menu.hideTimer);
                         fireEvent(chart, 'exportMenuHidden');
                     };
@@ -1737,7 +1739,7 @@
                     chart.exportMenuHeight = menu.offsetHeight;
                 }
 
-                menuStyle = { display: 'block' };
+                menuStyle = {display: 'block'};
 
                 // if outside right, right align it
                 if (x + chart.exportMenuWidth > chartWidth) {
@@ -1756,7 +1758,7 @@
                 }
 
                 css(menu, menuStyle);
-                css(chart.renderTo, { overflow: '' }); // #10361
+                css(chart.renderTo, {overflow: ''}); // #10361
                 chart.openMenu = true;
             },
 
@@ -1857,8 +1859,8 @@
                     .addClass(options.className)
                     .attr({
                         title: pick(chart.options.lang[
-                            btnOptions._titleKey || btnOptions.titleKey
-                        ], '')
+                        btnOptions._titleKey || btnOptions.titleKey
+                            ], '')
                     });
 
                 button.menuClassName = (
@@ -1961,9 +1963,9 @@
                         // Remove inline events
                         chart.exportDivElements[i] =
                             elem.onmouseout =
-                            elem.onmouseover =
-                            elem.ontouchstart =
-                            elem.onclick = null;
+                                elem.onmouseover =
+                                    elem.ontouchstart =
+                                        elem.onclick = null;
 
                         // Destroy the div by moving to garbage bin
                         discardElement(elem);
@@ -2112,7 +2114,7 @@
                             // Attributes
                             if (inlineToAttributes.indexOf(prop) !== -1) {
                                 node.setAttribute(hyphenate(prop), val);
-                            // Styles
+                                // Styles
                             } else {
                                 cssText += hyphenate(prop) + ':' + val + ';';
                             }

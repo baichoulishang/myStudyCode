@@ -16,18 +16,18 @@ $axis-labels-font-size: 12px;
 
 // Tooltip
 $tooltip-border: 0px;
-$tooltip-background: rgba(219,219,216,0.8);
+$tooltip-background: rgba(219, 219, 216, 0.8);
 
 // Axes
 $xaxis-grid-line: 1px !default;
 
 // Title
 .highcharts-title, .highcharts-subtitle, .highcharts-yaxis .highcharts-axis-title {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .highcharts-title {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 @import '../highcharts';

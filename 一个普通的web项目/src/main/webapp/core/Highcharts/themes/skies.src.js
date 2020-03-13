@@ -21,11 +21,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'themes/skies.js', [_modules['parts/Globals.js']], function (Highcharts) {
         /* *
          *
@@ -36,7 +38,6 @@
          *  Skies theme for Highcharts JS
          *
          * */
-
 
 
         Highcharts.theme = {
@@ -84,7 +85,7 @@
                     style: {
                         color: '#666',
                         font: '12px Lucida Grande, Lucida Sans Unicode,' +
-                        ' Verdana, Arial, Helvetica, sans-serif'
+                            ' Verdana, Arial, Helvetica, sans-serif'
                     }
                 }
             },
@@ -103,7 +104,7 @@
                     style: {
                         color: '#666',
                         font: '12px Lucida Grande, Lucida Sans Unicode,' +
-                        ' Verdana, Arial, Helvetica, sans-serif'
+                            ' Verdana, Arial, Helvetica, sans-serif'
                     }
                 }
             },

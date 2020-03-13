@@ -17,7 +17,6 @@ import io.github.viscent.mtia.util.Tools;
 
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.ByteBuffer;
 import java.nio.channels.Channels;

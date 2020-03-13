@@ -24,11 +24,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/boost-canvas.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * License: www.highcharts.com/license
@@ -42,10 +44,10 @@
          */
 
 
-
         var win = H.win,
             doc = win.document,
-            noop = function () {},
+            noop = function () {
+            },
             Color = H.Color,
             Series = H.Series,
             seriesTypes = H.seriesTypes,
@@ -194,7 +196,7 @@
                             );
 
                             if (target === this) {
-                                target.renderTarget.attr({ href: '' });
+                                target.renderTarget.attr({href: ''});
                             }
                         };
 
@@ -336,7 +338,7 @@
                             if (
                                 chart.scroller &&
                                 series.options.className ===
-                                    'highcharts-navigator-series'
+                                'highcharts-navigator-series'
                             ) {
                                 plotY += chart.scroller.top;
                                 if (yBottom) {
@@ -419,7 +421,7 @@
                         };
 
                     if (this.renderTarget) {
-                        this.renderTarget.attr({ 'href': '' });
+                        this.renderTarget.attr({'href': ''});
                     }
 
                     // If we are zooming out from SVG mode, destroy the graphics
@@ -662,8 +664,8 @@
 
                         series.buildKDTree();
 
-                    // Don't do async on export, the exportChart, getSVGForExport and
-                    // getSVG methods are not chained for it.
+                        // Don't do async on export, the exportChart, getSVGForExport and
+                        // getSVG methods are not chained for it.
                     }, chart.renderer.forExport ? Number.MAX_VALUE : undefined);
                 }
             });
@@ -739,7 +741,7 @@
 
                 function clear() {
                     if (chart.renderTarget) {
-                        chart.renderTarget.attr({ href: '' });
+                        chart.renderTarget.attr({href: ''});
                     }
 
                     if (chart.canvas) {

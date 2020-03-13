@@ -18,7 +18,6 @@ import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 
 public class DESEncryption {

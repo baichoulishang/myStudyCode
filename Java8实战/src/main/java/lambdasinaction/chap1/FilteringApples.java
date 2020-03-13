@@ -15,6 +15,8 @@ public class FilteringApples {
         // [Apple{color='green', weight=80}, Apple{color='green', weight=155}]
 
         List<Apple> greenApples = filterApples(inventory, FilteringApples::isGreenApple);
+
+
         System.out.println(greenApples);
 
         // [Apple{color='green', weight=155}]
@@ -67,10 +69,10 @@ public class FilteringApples {
         return apple.getWeight() > 150;
     }
 
-    public static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> p) {
+    public static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> predicate) {
         List<Apple> result = new ArrayList<>();
         for (Apple apple : inventory) {
-            if (p.test(apple)) {
+            if (predicate.test(apple)) {
                 result.add(apple);
             }
         }

@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'parts-gantt/GridAxis.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2016 Highsoft AS
@@ -35,7 +37,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var addEvent = H.addEvent,
@@ -88,7 +89,7 @@
             // axis option if set
             if (axis.horiz) {
                 options.tickLength = gridOptions.cellHeight ||
-                        fontMetrics.h * fontSizeToCellHeightRatio;
+                    fontMetrics.h * fontSizeToCellHeightRatio;
             }
 
             // Prevents rotation of labels when squished, as rotating them would not
@@ -151,18 +152,18 @@
          */
 
 
-        // Enum for which side the axis is on.
-        // Maps to axis.side
+            // Enum for which side the axis is on.
+            // Maps to axis.side
         var axisSide = {
-            top: 0,
-            right: 1,
-            bottom: 2,
-            left: 3,
-            0: 'top',
-            1: 'right',
-            2: 'bottom',
-            3: 'left'
-        };
+                top: 0,
+                right: 1,
+                bottom: 2,
+                left: 3,
+                0: 'top',
+                1: 'right',
+                2: 'bottom',
+                3: 'left'
+            };
 
         /**
          * Checks if an axis is a navigator axis.
@@ -819,7 +820,7 @@
                 var axis = this,
                     options = axis.options,
                     gridOptions = ((
-                        options && isObject(options.grid)) ? options.grid : {}
+                            options && isObject(options.grid)) ? options.grid : {}
                     ),
                     labelPadding,
                     distance,
@@ -900,10 +901,10 @@
                             if (!axis.axisLineExtra) {
                                 axis.axisLineExtra = renderer.path(linePath)
                                     .attr({
-                                
+
                                         stroke: options.lineColor,
                                         'stroke-width': lineWidth,
-                                
+
                                         zIndex: 7
                                     })
                                     .addClass('highcharts-axis-line')
@@ -976,8 +977,8 @@
                     var columnOptions = merge(
                         userOptions,
                         gridOptions.columns[
-                            gridOptions.columns.length - columnIndex - 1
-                        ],
+                        gridOptions.columns.length - columnIndex - 1
+                            ],
                         {
                             linkedTo: 0,
                             // Force to behave like category axis
@@ -1084,7 +1085,6 @@
         /* eslint no-console: 0 */
 
 
-
         var extend = H.extend,
             isNumber = H.isNumber,
             pick = H.pick,
@@ -1157,12 +1157,12 @@
             // node, and the number of descendants.
             children = ((mapOfIdToChildren[id] || [])).map(function (child) {
                 var node = getNode(
-                        child.id,
-                        id,
-                        (level + 1),
-                        child,
-                        mapOfIdToChildren,
-                        options
+                    child.id,
+                    id,
+                    (level + 1),
+                    child,
+                    mapOfIdToChildren,
+                    options
                     ),
                     childStart = child.start,
                     childEnd = (
@@ -1339,8 +1339,8 @@
 
                 if (getColorByPoint) {
                     colorIndexByPoint = point.index % (colors ?
-                        colors.length :
-                        chartOptionsChart.colorCount
+                            colors.length :
+                            chartOptionsChart.colorCount
                     );
                     colorByPoint = colors && colors[colorIndexByPoint];
                 }
@@ -1492,7 +1492,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var addEvent = H.addEvent,
@@ -1901,7 +1900,7 @@
                             eventName = 'pointInBreak';
                         }
                         if (eventName) {
-                            fireEvent(axis, eventName, { point: point, brk: brk });
+                            fireEvent(axis, eventName, {point: point, brk: brk});
                         }
                     });
                 });
@@ -2033,7 +2032,6 @@
          */
 
         /* eslint no-console: 0 */
-
 
 
         var addEvent = H.addEvent,
@@ -2260,7 +2258,7 @@
 
             // Set the new position, and show or hide
             if (!shouldRender) {
-                icon.attr({ y: -9999 }); // #1338
+                icon.attr({y: -9999}); // #1338
             }
 
             // Presentational attributes
@@ -2615,31 +2613,31 @@
                             align: 'left',
 
                             /**
-                            * Set options on specific levels in a tree grid axis. Takes
-                            * precedence over labels options.
-                            *
-                            * @sample {gantt} gantt/treegrid-axis/labels-levels
-                            *         Levels on TreeGrid Labels
-                            *
-                            * @type      {Array<*>}
-                            * @product   gantt
-                            * @apioption yAxis.labels.levels
-                            *
-                            * @private
-                            */
+                             * Set options on specific levels in a tree grid axis. Takes
+                             * precedence over labels options.
+                             *
+                             * @sample {gantt} gantt/treegrid-axis/labels-levels
+                             *         Levels on TreeGrid Labels
+                             *
+                             * @type      {Array<*>}
+                             * @product   gantt
+                             * @apioption yAxis.labels.levels
+                             *
+                             * @private
+                             */
                             levels: [{
                                 /**
-                                * Specify the level which the options within this object
-                                * applies to.
-                                *
-                                * @sample {gantt} gantt/treegrid-axis/labels-levels
-                                *
-                                * @type      {number}
-                                * @product   gantt
-                                * @apioption yAxis.labels.levels.level
-                                *
-                                * @private
-                                */
+                                 * Specify the level which the options within this object
+                                 * applies to.
+                                 *
+                                 * @sample {gantt} gantt/treegrid-axis/labels-levels
+                                 *
+                                 * @type      {number}
+                                 * @product   gantt
+                                 * @apioption yAxis.labels.levels.level
+                                 *
+                                 * @private
+                                 */
                                 level: undefined
                             }, {
                                 level: 1,

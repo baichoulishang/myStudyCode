@@ -21,18 +21,19 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/broken-axis.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2009-2019 Torstein Honsi
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var addEvent = H.addEvent,
@@ -441,7 +442,7 @@
                             eventName = 'pointInBreak';
                         }
                         if (eventName) {
-                            fireEvent(axis, eventName, { point: point, brk: brk });
+                            fireEvent(axis, eventName, {point: point, brk: brk});
                         }
                     });
                 });

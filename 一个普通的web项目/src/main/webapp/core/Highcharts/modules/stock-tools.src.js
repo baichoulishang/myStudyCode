@@ -24,11 +24,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/stock-tools-bindings.js', [_modules['parts/Globals.js']], function (H) {
         /**
          *
@@ -60,7 +62,8 @@
          * Event fired on first click on a chart.
          * @name Highcharts.StockToolsBindingsObject#start
          * @type {Function|undefined}
-         *//**
+         */
+        /**
          * Last event to be fired after last step event. Array of step events to be
          * called sequentially after each user click.
          * @name Highcharts.StockToolsBindingsObject#steps
@@ -436,8 +439,8 @@
 
                 positions = yAxes.map(function (yAxis) {
                     var height = isPercentage(yAxis.options.height) ?
-                            parseFloat(yAxis.options.height) / 100 :
-                            yAxis.height / plotHeight,
+                        parseFloat(yAxis.options.height) / 100 :
+                        yAxis.height / plotHeight,
                         top = isPercentage(yAxis.options.top) ?
                             parseFloat(yAxis.options.top) / 100 :
                             correctFloat(
@@ -680,20 +683,20 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'segment',
-                            type: type,
-                            typeOptions: {
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'segment',
+                                type: type,
+                                typeOptions: {
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -721,23 +724,23 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'arrowSegment',
-                            type: type,
-                            typeOptions: {
-                                line: {
-                                    markerEnd: 'arrow'
-                                },
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'arrowSegment',
+                                type: type,
+                                typeOptions: {
+                                    line: {
+                                        markerEnd: 'arrow'
+                                    },
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -765,21 +768,21 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'ray',
-                            type: type,
-                            typeOptions: {
-                                type: 'ray',
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'ray',
+                                type: type,
+                                typeOptions: {
+                                    type: 'ray',
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -807,24 +810,24 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'arrowRay',
-                            type: type,
-                            typeOptions: {
-                                type: 'ray',
-                                line: {
-                                    markerEnd: 'arrow'
-                                },
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'arrowRay',
+                                type: type,
+                                typeOptions: {
+                                    type: 'ray',
+                                    line: {
+                                        markerEnd: 'arrow'
+                                    },
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -851,21 +854,21 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'infinityLine',
-                            type: type,
-                            typeOptions: {
-                                type: 'line',
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'infinityLine',
+                                type: type,
+                                typeOptions: {
+                                    type: 'line',
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -893,24 +896,24 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'arrowInfinityLine',
-                            type: type,
-                            typeOptions: {
-                                type: 'line',
-                                line: {
-                                    markerEnd: 'arrow'
-                                },
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'arrowInfinityLine',
+                                type: type,
+                                typeOptions: {
+                                    type: 'line',
+                                    line: {
+                                        markerEnd: 'arrow'
+                                    },
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -937,18 +940,18 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'horizontalLine',
-                            type: type,
-                            typeOptions: {
-                                type: 'horizontalLine',
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'horizontalLine',
+                                type: type,
+                                typeOptions: {
+                                    type: 'horizontalLine',
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     this.chart.addAnnotation(options);
                 }
@@ -971,18 +974,18 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'verticalLine',
-                            type: type,
-                            typeOptions: {
-                                type: 'verticalLine',
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'verticalLine',
+                                type: type,
+                                typeOptions: {
+                                    type: 'verticalLine',
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     this.chart.addAnnotation(options);
                 }
@@ -1007,23 +1010,23 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'crooked3',
-                            type: type,
-                            typeOptions: {
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'crooked3',
+                                type: type,
+                                typeOptions: {
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -1052,29 +1055,29 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'crookedLine',
-                            type: type,
-                            typeOptions: {
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'crookedLine',
+                                type: type,
+                                typeOptions: {
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -1105,31 +1108,31 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'elliott3',
-                            type: type,
-                            typeOptions: {
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            },
-                            labelOptions: {
-                                style: {
-                                    color: '#666666'
+                                langKey: 'elliott3',
+                                type: type,
+                                typeOptions: {
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                },
+                                labelOptions: {
+                                    style: {
+                                        color: '#666666'
+                                    }
                                 }
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -1159,37 +1162,37 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'elliott5',
-                            type: type,
-                            typeOptions: {
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            },
-                            labelOptions: {
-                                style: {
-                                    color: '#666666'
+                                langKey: 'elliott5',
+                                type: type,
+                                typeOptions: {
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                },
+                                labelOptions: {
+                                    style: {
+                                        color: '#666666'
+                                    }
                                 }
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -1221,41 +1224,41 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'measure',
-                            type: type,
-                            typeOptions: {
-                                selectType: 'x',
-                                point: {
-                                    x: x,
-                                    y: y,
-                                    xAxis: 0,
-                                    yAxis: 0
+                                langKey: 'measure',
+                                type: type,
+                                typeOptions: {
+                                    selectType: 'x',
+                                    point: {
+                                        x: x,
+                                        y: y,
+                                        xAxis: 0,
+                                        yAxis: 0
+                                    },
+                                    crosshairX: {
+                                        strokeWidth: 1,
+                                        stroke: '#000000'
+                                    },
+                                    crosshairY: {
+                                        enabled: false,
+                                        strokeWidth: 0,
+                                        stroke: '#000000'
+                                    },
+                                    background: {
+                                        width: 0,
+                                        height: 0,
+                                        strokeWidth: 0,
+                                        stroke: '#ffffff',
+                                        fill: 'red'
+                                    }
                                 },
-                                crosshairX: {
-                                    strokeWidth: 1,
-                                    stroke: '#000000'
-                                },
-                                crosshairY: {
-                                    enabled: false,
-                                    strokeWidth: 0,
-                                    stroke: '#000000'
-                                },
-                                background: {
-                                    width: 0,
-                                    height: 0,
-                                    strokeWidth: 0,
-                                    stroke: '#ffffff',
-                                    fill: 'red'
+                                labelOptions: {
+                                    style: {
+                                        color: '#666666'
+                                    }
                                 }
                             },
-                            labelOptions: {
-                                style: {
-                                    color: '#666666'
-                                }
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -1283,40 +1286,40 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'measure',
-                            type: type,
-                            typeOptions: {
-                                selectType: 'y',
-                                point: {
-                                    x: x,
-                                    y: y,
-                                    xAxis: 0,
-                                    yAxis: 0
+                                langKey: 'measure',
+                                type: type,
+                                typeOptions: {
+                                    selectType: 'y',
+                                    point: {
+                                        x: x,
+                                        y: y,
+                                        xAxis: 0,
+                                        yAxis: 0
+                                    },
+                                    crosshairX: {
+                                        enabled: false,
+                                        strokeWidth: 0,
+                                        stroke: '#000000'
+                                    },
+                                    crosshairY: {
+                                        strokeWidth: 1,
+                                        stroke: '#000000'
+                                    },
+                                    background: {
+                                        width: 0,
+                                        height: 0,
+                                        strokeWidth: 0,
+                                        stroke: '#ffffff'
+                                    }
                                 },
-                                crosshairX: {
-                                    enabled: false,
-                                    strokeWidth: 0,
-                                    stroke: '#000000'
-                                },
-                                crosshairY: {
-                                    strokeWidth: 1,
-                                    stroke: '#000000'
-                                },
-                                background: {
-                                    width: 0,
-                                    height: 0,
-                                    strokeWidth: 0,
-                                    stroke: '#ffffff'
+                                labelOptions: {
+                                    style: {
+                                        color: '#666666'
+                                    }
                                 }
                             },
-                            labelOptions: {
-                                style: {
-                                    color: '#666666'
-                                }
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -1344,38 +1347,38 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'measure',
-                            type: 'measure',
-                            typeOptions: {
-                                selectType: 'xy',
-                                point: {
-                                    x: x,
-                                    y: y,
-                                    xAxis: 0,
-                                    yAxis: 0
+                                langKey: 'measure',
+                                type: 'measure',
+                                typeOptions: {
+                                    selectType: 'xy',
+                                    point: {
+                                        x: x,
+                                        y: y,
+                                        xAxis: 0,
+                                        yAxis: 0
+                                    },
+                                    background: {
+                                        width: 0,
+                                        height: 0,
+                                        strokeWidth: 10
+                                    },
+                                    crosshairX: {
+                                        strokeWidth: 1,
+                                        stroke: '#000000'
+                                    },
+                                    crosshairY: {
+                                        strokeWidth: 1,
+                                        stroke: '#000000'
+                                    }
                                 },
-                                background: {
-                                    width: 0,
-                                    height: 0,
-                                    strokeWidth: 10
-                                },
-                                crosshairX: {
-                                    strokeWidth: 1,
-                                    stroke: '#000000'
-                                },
-                                crosshairY: {
-                                    strokeWidth: 1,
-                                    stroke: '#000000'
+                                labelOptions: {
+                                    style: {
+                                        color: '#666666'
+                                    }
                                 }
                             },
-                            labelOptions: {
-                                style: {
-                                    color: '#666666'
-                                }
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -1404,25 +1407,25 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'fibonacci',
-                            type: type,
-                            typeOptions: {
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            },
-                            labelOptions: {
-                                style: {
-                                    color: '#666666'
+                                langKey: 'fibonacci',
+                                type: type,
+                                typeOptions: {
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                },
+                                labelOptions: {
+                                    style: {
+                                        color: '#666666'
+                                    }
                                 }
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -1451,20 +1454,20 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'parallelChannel',
-                            type: type,
-                            typeOptions: {
-                                points: [{
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }]
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                                langKey: 'parallelChannel',
+                                type: type,
+                                typeOptions: {
+                                    points: [{
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }]
+                                }
+                            },
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -1493,34 +1496,34 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'pitchfork',
-                            type: type,
-                            typeOptions: {
-                                points: [{
-                                    x: x,
-                                    y: y,
-                                    controlPoint: {
-                                        style: {
-                                            fill: 'red'
+                                langKey: 'pitchfork',
+                                type: type,
+                                typeOptions: {
+                                    points: [{
+                                        x: x,
+                                        y: y,
+                                        controlPoint: {
+                                            style: {
+                                                fill: 'red'
+                                            }
                                         }
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }, {
+                                        x: x,
+                                        y: y
+                                    }],
+                                    innerBackground: {
+                                        fill: 'rgba(100, 170, 255, 0.8)'
                                     }
-                                }, {
-                                    x: x,
-                                    y: y
-                                }, {
-                                    x: x,
-                                    y: y
-                                }],
-                                innerBackground: {
-                                    fill: 'rgba(100, 170, 255, 0.8)'
+                                },
+                                shapeOptions: {
+                                    strokeWidth: 2
                                 }
                             },
-                            shapeOptions: {
-                                strokeWidth: 2
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions);
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions);
 
                     return this.chart.addAnnotation(options);
                 },
@@ -1552,33 +1555,33 @@
                         verticalCounter = !defined(this.verticalCounter) ? 0 :
                             this.verticalCounter,
                         options = merge({
-                            langKey: 'verticalCounter',
-                            type: type,
-                            typeOptions: {
-                                point: {
-                                    x: closestPoint.x,
-                                    y: closestPoint.y,
-                                    xAxis: closestPoint.xAxis,
-                                    yAxis: closestPoint.yAxis
+                                langKey: 'verticalCounter',
+                                type: type,
+                                typeOptions: {
+                                    point: {
+                                        x: closestPoint.x,
+                                        y: closestPoint.y,
+                                        xAxis: closestPoint.xAxis,
+                                        yAxis: closestPoint.yAxis
+                                    },
+                                    label: {
+                                        offset: closestPoint.below ? 40 : -40,
+                                        text: verticalCounter.toString()
+                                    }
                                 },
-                                label: {
-                                    offset: closestPoint.below ? 40 : -40,
-                                    text: verticalCounter.toString()
+                                labelOptions: {
+                                    style: {
+                                        color: '#666666',
+                                        fontSize: '11px'
+                                    }
+                                },
+                                shapeOptions: {
+                                    stroke: 'rgba(0, 0, 0, 0.75)',
+                                    strokeWidth: 1
                                 }
                             },
-                            labelOptions: {
-                                style: {
-                                    color: '#666666',
-                                    fontSize: '11px'
-                                }
-                            },
-                            shapeOptions: {
-                                stroke: 'rgba(0, 0, 0, 0.75)',
-                                strokeWidth: 1
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions),
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions),
                         annotation;
 
                     annotation = this.chart.addAnnotation(options);
@@ -1607,32 +1610,32 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'verticalLabel',
-                            type: type,
-                            typeOptions: {
-                                point: {
-                                    x: closestPoint.x,
-                                    y: closestPoint.y,
-                                    xAxis: closestPoint.xAxis,
-                                    yAxis: closestPoint.yAxis
+                                langKey: 'verticalLabel',
+                                type: type,
+                                typeOptions: {
+                                    point: {
+                                        x: closestPoint.x,
+                                        y: closestPoint.y,
+                                        xAxis: closestPoint.xAxis,
+                                        yAxis: closestPoint.yAxis
+                                    },
+                                    label: {
+                                        offset: closestPoint.below ? 40 : -40
+                                    }
                                 },
-                                label: {
-                                    offset: closestPoint.below ? 40 : -40
+                                labelOptions: {
+                                    style: {
+                                        color: '#666666',
+                                        fontSize: '11px'
+                                    }
+                                },
+                                shapeOptions: {
+                                    stroke: 'rgba(0, 0, 0, 0.75)',
+                                    strokeWidth: 1
                                 }
                             },
-                            labelOptions: {
-                                style: {
-                                    color: '#666666',
-                                    fontSize: '11px'
-                                }
-                            },
-                            shapeOptions: {
-                                stroke: 'rgba(0, 0, 0, 0.75)',
-                                strokeWidth: 1
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions),
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions),
                         annotation;
 
                     annotation = this.chart.addAnnotation(options);
@@ -1659,31 +1662,31 @@
                         navigation = this.chart.options.navigation,
                         bindings = navigation && navigation.bindings,
                         options = merge({
-                            langKey: 'verticalArrow',
-                            type: type,
-                            typeOptions: {
-                                point: {
-                                    x: closestPoint.x,
-                                    y: closestPoint.y,
-                                    xAxis: closestPoint.xAxis,
-                                    yAxis: closestPoint.yAxis
+                                langKey: 'verticalArrow',
+                                type: type,
+                                typeOptions: {
+                                    point: {
+                                        x: closestPoint.x,
+                                        y: closestPoint.y,
+                                        xAxis: closestPoint.xAxis,
+                                        yAxis: closestPoint.yAxis
+                                    },
+                                    label: {
+                                        offset: closestPoint.below ? 40 : -40,
+                                        format: ' '
+                                    },
+                                    connector: {
+                                        fill: 'none',
+                                        stroke: closestPoint.below ? 'red' : 'green'
+                                    }
                                 },
-                                label: {
-                                    offset: closestPoint.below ? 40 : -40,
-                                    format: ' '
-                                },
-                                connector: {
-                                    fill: 'none',
-                                    stroke: closestPoint.below ? 'red' : 'green'
+                                shapeOptions: {
+                                    stroke: 'rgba(0, 0, 0, 0.75)',
+                                    strokeWidth: 1
                                 }
                             },
-                            shapeOptions: {
-                                stroke: 'rgba(0, 0, 0, 0.75)',
-                                strokeWidth: 1
-                            }
-                        },
-                        navigation.annotationsOptions,
-                        bindings[type] && bindings[type].annotationsOptions),
+                            navigation.annotationsOptions,
+                            bindings[type] && bindings[type].annotationsOptions),
                         annotation;
 
                     annotation = this.chart.addAnnotation(options);
@@ -1777,7 +1780,7 @@
                     fireEvent(
                         this,
                         'deselectButton',
-                        { button: button }
+                        {button: button}
                     );
                 }
             },
@@ -1802,7 +1805,7 @@
                     fireEvent(
                         this,
                         'deselectButton',
-                        { button: button }
+                        {button: button}
                     );
                 }
             },
@@ -1828,7 +1831,7 @@
                     fireEvent(
                         this,
                         'deselectButton',
-                        { button: button }
+                        {button: button}
                     );
                 }
             },
@@ -1852,7 +1855,7 @@
                     fireEvent(
                         this,
                         'deselectButton',
-                        { button: button }
+                        {button: button}
                     );
                 }
             },
@@ -1875,7 +1878,7 @@
                     fireEvent(
                         this,
                         'deselectButton',
-                        { button: button }
+                        {button: button}
                     );
                 }
             },
@@ -1898,7 +1901,7 @@
                     fireEvent(
                         this,
                         'deselectButton',
-                        { button: button }
+                        {button: button}
                     );
                 }
             },
@@ -1921,7 +1924,7 @@
                     fireEvent(
                         this,
                         'deselectButton',
-                        { button: button }
+                        {button: button}
                     );
                 }
             },
@@ -1942,7 +1945,7 @@
                     var series = this.chart.series[0],
                         options = series.options,
                         lastVisiblePrice = options.lastVisiblePrice &&
-                                        options.lastVisiblePrice.enabled,
+                            options.lastVisiblePrice.enabled,
                         lastPrice = options.lastPrice && options.lastPrice.enabled,
                         gui = this.chart.stockTools;
 
@@ -1976,7 +1979,7 @@
                     fireEvent(
                         this,
                         'deselectButton',
-                        { button: button }
+                        {button: button}
                     );
                 }
             },
@@ -2035,18 +2038,18 @@
                         if (this.toggledAnnotations) {
                             button.firstChild.style['background-image'] =
                                 'url("' + gui.options.iconsURL +
-                                    'annotations-hidden.svg")';
+                                'annotations-hidden.svg")';
                         } else {
                             button.firstChild.style['background-image'] =
                                 'url("' + gui.options.iconsURL +
-                                    'annotations-visible.svg")';
+                                'annotations-visible.svg")';
                         }
                     }
 
                     fireEvent(
                         this,
                         'deselectButton',
-                        { button: button }
+                        {button: button}
                     );
                 }
             },
@@ -2104,7 +2107,7 @@
                     fireEvent(
                         this,
                         'deselectButton',
-                        { button: button }
+                        {button: button}
                     );
                 }
             }
@@ -3067,7 +3070,7 @@
                             submenuWrapper.style.display = 'block';
 
                             topMargin = submenuWrapper.offsetHeight -
-                                        buttonWrapper.offsetHeight - 3;
+                                buttonWrapper.offsetHeight - 3;
 
                             // calculate position of submenu in the box
                             // if submenu is inside, reset top margin
@@ -3075,9 +3078,9 @@
                                 // cut on the bottom
                                 !(submenuWrapper.offsetHeight +
                                     buttonWrapper.offsetTop >
-                                wrapper.offsetHeight &&
-                                // cut on the top
-                                buttonWrapper.offsetTop > topMargin)
+                                    wrapper.offsetHeight &&
+                                    // cut on the top
+                                    buttonWrapper.offsetTop > topMargin)
                             ) {
                                 topMargin = 0;
                             }
@@ -3091,8 +3094,8 @@
                             buttonWrapper.className += ' ' + PREFIX + 'current';
                             menuWrapper.startWidth = wrapper.offsetWidth;
                             menuWrapper.style.width = menuWrapper.startWidth +
-                                            H.getStyle(menuWrapper, 'padding-left') +
-                                            submenuWrapper.offsetWidth + 3 + 'px';
+                                H.getStyle(menuWrapper, 'padding-left') +
+                                submenuWrapper.offsetWidth + 3 + 'px';
                         }
                     });
                 });
@@ -3298,7 +3301,7 @@
                 // toolbar
                 stockToolbar.toolbar = toolbar = createElement(UL, {
                     className: PREFIX + 'stocktools-toolbar ' +
-                            guiOptions.toolbarClassName
+                        guiOptions.toolbarClassName
                 });
 
                 // add container for list of buttons

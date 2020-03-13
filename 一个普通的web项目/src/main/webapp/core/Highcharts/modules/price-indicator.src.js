@@ -24,11 +24,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/price-indicator.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2009-2019 Sebastian Bochann
@@ -105,7 +107,7 @@
                 lastPrice = seriesOptions.lastPrice;
 
             if ((lastVisiblePrice || lastPrice) &&
-                    seriesOptions.id !== 'highcharts-navigator-series') {
+                seriesOptions.id !== 'highcharts-navigator-series') {
 
                 var xAxis = serie.xAxis,
                     yAxis = serie.yAxis,

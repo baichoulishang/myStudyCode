@@ -62,6 +62,7 @@ class Mail {
                 ", Address Address: " + address +
                 ", Return address: " + returnAddress;
     }
+
     // The NO's lower the probability of random selection:
     enum GeneralDelivery {YES, NO1, NO2, NO3, NO4, NO5}
 
@@ -75,17 +76,25 @@ class Mail {
 }
 
 public class PostOffice {
-    static void handle(Mail m) {
-        for (MailHandler handler : MailHandler.values())
-            if (handler.handle(m))
+    /**
+     * 稍微改个名字,不然和枚举的handle混在一起
+     *
+     * @param mail
+     */
+    static void postHandle(Mail mail) {
+        for (MailHandler mailHandler : MailHandler.values()) {
+            if (mailHandler.handle(mail)) {
                 return;
-        print(m + " is a dead letter");
+            }
+        }
+        print(mail + " is a dead letter");
     }
 
     public static void main(String[] args) {
         for (Mail mail : Mail.generator(10)) {
-            print(mail.details());
-            handle(mail);
+            // print(mail.details());
+            // postHandle(mail);
+            System.out.println(mail.toString());
             print("*****");
         }
     }

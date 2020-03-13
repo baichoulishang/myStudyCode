@@ -24,11 +24,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/oldie.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2010-2019 Torstein Honsi
@@ -37,7 +39,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var VMLRenderer,
@@ -83,7 +84,7 @@
         if (doc && !doc.defaultView) {
             H.getStyle = function (el, prop) {
                 var val,
-                    alias = { width: 'clientWidth', height: 'clientHeight' }[prop];
+                    alias = {width: 'clientWidth', height: 'clientHeight'}[prop];
 
                 if (el.style[prop]) {
                     return H.pInt(el.style[prop]);
@@ -887,8 +888,8 @@
             // Some shared setters
             VMLElement.prototype.ySetter =
                 VMLElement.prototype.widthSetter =
-                VMLElement.prototype.heightSetter =
-                VMLElement.prototype.xSetter;
+                    VMLElement.prototype.heightSetter =
+                        VMLElement.prototype.xSetter;
 
 
             /**
@@ -926,7 +927,7 @@
                     renderer.alignedObjects = [];
 
                     boxWrapper = renderer.createElement('div')
-                        .css({ position: 'relative' });
+                        .css({position: 'relative'});
                     box = boxWrapper.element;
                     container.appendChild(boxWrapper.element);
 
@@ -1095,9 +1096,9 @@
                                 // Add the fill subnode. When colors attribute is used,
                                 // the meanings of opacity and o:opacity2 are reversed.
                                 markup = ['<fill colors="' + colors.join(',') +
-                                    '" opacity="', opacity2, '" o:opacity2="',
-                                opacity1, '" type="', fillType, '" ', fillAttr,
-                                'focus="100%" method="any" />'];
+                                '" opacity="', opacity2, '" o:opacity2="',
+                                    opacity1, '" type="', fillType, '" ', fillAttr,
+                                    'focus="100%" method="any" />'];
                                 createElement(
                                     renderer.prepVML(markup),
                                     null,
@@ -1163,7 +1164,7 @@
 
                                 addFillNode();
 
-                            // Radial (circular) gradient
+                                // Radial (circular) gradient
                             } else {
 
                                 var r = gradient.r,
@@ -1209,14 +1210,14 @@
                                 ret = color1;
                             }
 
-                        // Gradients are not supported for VML stroke, return the first
-                        // color. #722.
+                            // Gradients are not supported for VML stroke, return the first
+                            // color. #722.
                         } else {
                             ret = stopColor;
                         }
 
-                    // If the color is an rgba color, split it and add a fill node
-                    // to hold the opacity component
+                        // If the color is an rgba color, split it and add a fill node
+                        // to hold the opacity component
                     } else if (regexRgba.test(color) && elem.tagName !== 'IMG') {
 
                         colorObject = H.color(color);
@@ -1336,7 +1337,7 @@
                     }
                     circle.isCircle = true; // Causes x and y to mean center (#1682)
                     circle.r = r;
-                    return circle.attr({ x: x, y: y });
+                    return circle.attr({x: x, y: y});
                 },
 
                 /**
@@ -1384,7 +1385,7 @@
                  */
                 image: function (src, x, y, width, height) {
                     var obj = this.createElement('img')
-                        .attr({ src: src });
+                        .attr({src: src});
 
                     if (arguments.length > 1) {
                         obj.attr({
@@ -1541,7 +1542,7 @@
                     rect: function (x, y, w, h, options) {
                         return SVGRenderer.prototype.symbols[
                             !defined(options) || !options.r ? 'square' : 'callout'
-                        ].call(0, x, y, w, h, options);
+                            ].call(0, x, y, w, h, options);
                     }
                 }
             };

@@ -31,7 +31,9 @@ $button-hover-color: #e6ebf5;
   position: relative;
 }
 
-.highcharts-draw-mode { cursor: crosshair; }
+.highcharts-draw-mode {
+  cursor: crosshair;
+}
 
 .highcharts-bindings-wrapper * {
   box-sizing: content-box;
@@ -98,6 +100,7 @@ $button-hover-color: #e6ebf5;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   transform: rotate(90deg);
 }
+
 .highcharts-bindings-wrapper .highcharts-arrow-up {
   background-image: url("https://code.highcharts.com/#{$version}/gfx/stock-icons/arrow-right.svg");
   background-size: cover;
@@ -133,7 +136,7 @@ $button-hover-color: #e6ebf5;
 }
 
 .highcharts-bindings-wrapper .highcharts-arrow-left.highcharts-arrow-right {
-   /* Safari */
+  /* Safari */
   -webkit-transform: rotate(0deg);
   /* Firefox */
   -moz-transform: rotate(0deg);
@@ -170,7 +173,7 @@ $button-hover-color: #e6ebf5;
   transition: margin 250ms;
 }
 
-.highcharts-bindings-wrapper>ul {
+.highcharts-bindings-wrapper > ul {
   width: 40px;
   position: relative;
 }
@@ -186,6 +189,7 @@ $button-hover-color: #e6ebf5;
   position: relative;
   background-color: $button-background-color;
 }
+
 .highcharts-bindings-wrapper .highcharts-stocktools-toolbar li.highcharts-disabled-btn {
   cursor: default;
 }
@@ -202,7 +206,7 @@ $button-hover-color: #e6ebf5;
   background-color: transparent;
 }
 
-.highcharts-bindings-wrapper li>span.highcharts-menu-item-btn {
+.highcharts-bindings-wrapper li > span.highcharts-menu-item-btn {
   display: block;
   float: left;
   width: 100%;
@@ -211,11 +215,11 @@ $button-hover-color: #e6ebf5;
   background-position: 50% 50%;
 }
 
-.highcharts-submenu-wrapper li>span.highcharts-menu-item-btn {
+.highcharts-submenu-wrapper li > span.highcharts-menu-item-btn {
   width: 40px;
 }
 
-.highcharts-bindings-wrapper li>span.highcharts-submenu-item-arrow {
+.highcharts-bindings-wrapper li > span.highcharts-submenu-item-arrow {
   float: left;
   width: 10px;
   height: 100%;
@@ -232,12 +236,12 @@ $button-hover-color: #e6ebf5;
   pointer-events: none;
 }
 
-.highcharts-bindings-wrapper li.highcharts-separator>span.highcharts-menu-item-btn {
+.highcharts-bindings-wrapper li.highcharts-separator > span.highcharts-menu-item-btn {
   width: 100%;
 }
 
-.highcharts-bindings-wrapper li.highcharts-active>span.highcharts-menu-item-btn,
-.highcharts-bindings-wrapper li>span.highcharts-menu-item-btn:hover,
+.highcharts-bindings-wrapper li.highcharts-active > span.highcharts-menu-item-btn,
+.highcharts-bindings-wrapper li > span.highcharts-menu-item-btn:hover,
 .highcharts-bindings-wrapper .highcharts-arrow-wrapper > div:hover,
 .highcharts-bindings-wrapper li.highcharts-active,
 .highcharts-toggle-toolbar:hover {

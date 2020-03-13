@@ -23,18 +23,19 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/bullet.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2010-2019 Kacper Madej
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var pick = H.pick,
@@ -132,8 +133,8 @@
 
                 tooltip: {
                     pointFormat: '<span style="color:{series.color}">\u25CF</span>' +
-                    ' {series.name}: <b>{point.y}</b>. Target: <b>{point.target}' +
-                    '</b><br/>'
+                        ' {series.name}: <b>{point.y}</b>. Target: <b>{point.target}' +
+                        '</b><br/>'
                 }
             }, {
                 pointArrayMap: ['y', 'target'],
@@ -188,7 +189,7 @@
                             ) - targetOptions.height / 2 - 0.5;
 
                             targetShapeArgs = series.crispCol.apply({
-                            // Use fake series object to set borderWidth of target
+                                // Use fake series object to set borderWidth of target
                                 chart: chart,
                                 borderWidth: targetOptions.borderWidth,
                                 options: {
@@ -202,12 +203,12 @@
                             ]);
 
                             if (targetGraphic) {
-                            // Update
+                                // Update
                                 targetGraphic[
                                     chart.pointCount < animationLimit ?
                                         'animate' :
                                         'attr'
-                                ](targetShapeArgs);
+                                    ](targetShapeArgs);
 
                                 // Add or remove tooltip reference
                                 if (isNumber(pointVal) && pointVal !== null) {
@@ -252,7 +253,7 @@
                             }
 
                             targetGraphic.addClass(point.getClassName() +
-                            ' highcharts-bullet-target', true);
+                                ' highcharts-bullet-target', true);
                         } else if (targetGraphic) {
                             point.targetGraphic = targetGraphic.destroy(); // #1269
                         }

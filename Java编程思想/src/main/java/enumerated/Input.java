@@ -27,7 +27,7 @@ public enum Input {
     Input() {
     }
 
-  // In cents
+    // In cents
 
     public static Input randomSelection() {
         // Don't include STOP:

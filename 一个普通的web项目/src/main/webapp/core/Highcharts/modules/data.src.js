@@ -23,18 +23,19 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'mixins/ajax.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2010-2017 Christer Vasseng, Torstein Honsi
          *
          * License: www.highcharts.com/license
          */
-
 
 
         /**
@@ -146,7 +147,8 @@
 
             try {
                 options.data = JSON.stringify(options.data);
-            } catch (e) {}
+            } catch (e) {
+            }
 
             r.send(options.data || true);
         };
@@ -236,7 +238,7 @@
 
 
 
-        // Utilities
+            // Utilities
         var addEvent = Highcharts.addEvent,
             Chart = Highcharts.Chart,
             win = Highcharts.win,
@@ -795,7 +797,7 @@
                             chartOptions &&
                             chartOptions.series &&
                             chartOptions.series.map(function () {
-                                return { x: 0 };
+                                return {x: 0};
                             })
                         ) ||
                         []
@@ -1065,17 +1067,17 @@
                                 read(++i);
                             }
 
-                        // Perform "plugin" handling
+                            // Perform "plugin" handling
                         } else if (callbacks && callbacks[c]) {
                             if (callbacks[c](c, token)) {
                                 push();
                             }
 
-                        // Delimiter - push current token
+                            // Delimiter - push current token
                         } else if (c === itemDelimiter) {
                             push();
 
-                        // Actual column data
+                            // Actual column data
                         } else {
                             token += c;
                         }
@@ -1852,8 +1854,8 @@
                             descending = floatVal > column[row + 1];
                         }
 
-                    // String, continue to determine if it is a date string or really a
-                    // string
+                        // String, continue to determine if it is a date string or really a
+                        // string
                     } else {
                         if (trimVal && trimVal.length) {
                             dateVal = this.parseDate(val);
@@ -1999,7 +2001,7 @@
                                 break;
                             }
                         }
-                    // Next time, use the one previously found
+                        // Next time, use the one previously found
                     } else {
                         format = this.dateFormats[dateFormat];
 
@@ -2027,7 +2029,7 @@
                         ) {
                             ret = match.getTime() - match.getTimezoneOffset() * 60000;
 
-                        // Timestamp
+                            // Timestamp
                         } else if (isNumber(match)) {
                             ret = match - (new Date(match)).getTimezoneOffset() * 60000;
                         }

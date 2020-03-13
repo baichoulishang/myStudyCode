@@ -22,11 +22,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'mixins/draw-point.js', [], function () {
         var isFn = function (x) {
             return typeof x === 'function';
@@ -411,7 +413,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var extend = H.extend,
@@ -897,7 +898,7 @@
                     intersectsAnyWord(point, placed) ||
                     outsidePlayingField(rect, field)
                 )
-            ) {
+                ) {
                 delta = spiral(attempt);
                 if (isObject(delta)) {
                     // Update the DOMRect with new positions.
@@ -1181,7 +1182,7 @@
                     placed = [],
                     placementStrategy = series.placementStrategy[
                         options.placementStrategy
-                    ],
+                        ],
                     spiral,
                     rotation = options.rotation,
                     scale,
@@ -1314,7 +1315,7 @@
                         if (!hasRendered) {
                             attr.x = 0;
                             attr.y = 0;
-                        // or animate from previous position
+                            // or animate from previous position
                         } else {
                             delete attr.x;
                             delete attr.y;

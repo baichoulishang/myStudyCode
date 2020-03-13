@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/item-series.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          *
@@ -38,7 +40,6 @@
          *  License: www.highcharts.com/license
          *
          * */
-
 
 
         var extend = H.extend,
@@ -219,9 +220,9 @@
                             if (innerSize >= 0) {
                                 rowCount = rowsOption;
 
-                            // If innerSize is negative, we are trying to set too
-                            // many rows in the rows option, so fall back to
-                            // treating it as innerSize 0
+                                // If innerSize is negative, we are trying to set too
+                                // many rows in the rows option, so fall back to
+                                // treating it as innerSize 0
                             } else {
                                 innerSize = 0;
                                 rowFraction = 1;
@@ -256,12 +257,14 @@
                     // For each iteration we sort the last slot by the angle, and
                     // remove those with the highest angles.
                     var overshoot = finalItemCount - this.total;
+
                     function cutOffRow(item) {
                         if (overshoot > 0) {
                             item.row.colCount--;
                             overshoot--;
                         }
                     }
+
                     while (overshoot > 0) {
                         rows
                             // Return a simplified representation of the angle of
@@ -294,7 +297,7 @@
                             angle = this.startAngleRad + col * increment;
                             x = center[0] + Math.cos(angle) * rowRadius;
                             y = center[1] + Math.sin(angle) * rowRadius;
-                            slots.push({ x: x, y: y, angle: angle });
+                            slots.push({x: x, y: y, angle: angle});
                         }
                     }, this);
 
@@ -475,11 +478,11 @@
                     if (this.center && this.slots) {
                         H.seriesTypes.pie.prototype.drawDataLabels.call(this);
 
-                    // else, it's just a dot chart with no natural place to put the
-                    // data labels
+                        // else, it's just a dot chart with no natural place to put the
+                        // data labels
                     } else {
                         this.points.forEach(function (point) {
-                            point.destroyElements({ dataLabel: 1 });
+                            point.destroyElements({dataLabel: 1});
                         });
                     }
                 },

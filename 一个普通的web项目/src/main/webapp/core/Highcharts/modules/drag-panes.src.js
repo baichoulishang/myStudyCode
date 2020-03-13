@@ -24,11 +24,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/drag-panes.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Plugin for resizing axes / panes in a chart.
@@ -38,7 +40,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var hasTouch = H.hasTouch,
@@ -334,7 +335,7 @@
                 /**
                  * Add mouse move and mouseup events. These are bind to doc/container,
                  * because resizer.grabbed flag is stored in mousedown events.
-                */
+                 */
                 eventsToUnbind.push(
                     addEvent(container, 'mousemove', mouseMoveHandler),
                     addEvent(container.ownerDocument, 'mouseup', mouseUpHandler),
@@ -452,16 +453,16 @@
                     axesGroup.forEach(function (axisInfo, i) {
                         // Axes given as array index, axis object or axis id
                         var axis = isNumber(axisInfo) ?
-                                // If it's a number - it's an index
-                                chart.yAxis[axisInfo] :
-                                (
-                                    // If it's first elem. in first group
-                                    (!isNext && !i) ?
-                                        // then it's an Axis object
-                                        axisInfo :
-                                        // else it should be an id
-                                        chart.get(axisInfo)
-                                ),
+                            // If it's a number - it's an index
+                            chart.yAxis[axisInfo] :
+                            (
+                                // If it's first elem. in first group
+                                (!isNext && !i) ?
+                                    // then it's an Axis object
+                                    axisInfo :
+                                    // else it should be an id
+                                    chart.get(axisInfo)
+                            ),
                             axisOptions = axis && axis.options,
                             optionsToUpdate = {},
                             hDelta = 0,
@@ -612,7 +613,7 @@
                         // Update options
                         resizer.init(axis, true);
 
-                    // Resizer present, but disabled
+                        // Resizer present, but disabled
                     } else {
                         // Destroy the resizer
                         resizer.destroy();

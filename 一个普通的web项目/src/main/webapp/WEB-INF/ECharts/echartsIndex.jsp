@@ -9,7 +9,9 @@
 <link href="${ctx}/core/css/table.css" rel="stylesheet">
 <link rel="stylesheet" href="${ctx}/core/layui/css/layui.css" media="all">
 <style>
-    .grid-demo,.grid-demo>div{height: 500px}
+    .grid-demo, .grid-demo > div {
+        height: 500px
+    }
 </style>
 <body>
 
@@ -43,7 +45,7 @@
         var myChart = echarts.init(dom);
         var app = {};
         var option = null;
-        var arr = [1,2,3,4,5,6,7];
+        var arr = [1, 2, 3, 4, 5, 6, 7];
         arr.sort(function () {
 
             return 0.5 - Math.random();

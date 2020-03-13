@@ -23,18 +23,19 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'mixins/on-series.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2010-2019 Torstein Honsi
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var defined = H.defined,
@@ -204,7 +205,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var noop = H.noop,
@@ -379,8 +379,8 @@
                     if (state) {
                         stroke = options.states[state].color || stroke;
                         strokeWidth =
-                        (options.states[state].lineWidth || strokeWidth) +
-                        (options.states[state].lineWidthPlus || 0);
+                            (options.states[state].lineWidth || strokeWidth) +
+                            (options.states[state].lineWidthPlus || 0);
                     }
 
                     return {
@@ -439,7 +439,6 @@
                                 'L',
                                 0,
                                 pos * u + 4
-
                             );
 
                             // Substract from the rest and move position for next

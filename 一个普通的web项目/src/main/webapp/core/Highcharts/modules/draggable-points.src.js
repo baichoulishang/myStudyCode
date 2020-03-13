@@ -21,11 +21,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/draggable-points.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2009-2019 Highsoft AS
@@ -160,7 +162,8 @@
          * New values.
          * @name Highcharts.SeriesPointDropPointObject#newValues
          * @type {Highcharts.Dictionary<number>}
-         *//**
+         */
+        /**
          * Dragged point.
          * @name Highcharts.SeriesPointDropPointObject#point
          * @type {Highcharts.Point}
@@ -719,7 +722,7 @@
                         return bBox ? {
                             x: bBox.x + bBox.width / 2,
                             y: bBox.y + bBox.height / 2
-                        } : { x: -999, y: -999 };
+                        } : {x: -999, y: -999};
                     },
                     handleFormatter: arearangeHandleFormatter,
                     propValidate: columnrangeDragDropProps.low.propValidate
@@ -744,7 +747,7 @@
                         return bBox ? {
                             x: bBox.x + bBox.width / 2,
                             y: bBox.y + bBox.height / 2
-                        } : { x: -999, y: -999 };
+                        } : {x: -999, y: -999};
                     },
                     handleFormatter: arearangeHandleFormatter,
                     propValidate: columnrangeDragDropProps.high.propValidate
@@ -1361,9 +1364,9 @@
             // We can only move the point if draggableX/Y is set, even if all the
             // individual prop options are set.
             return (
-                seriesDragDropOptions.draggableX && hasMovableX ||
+                    seriesDragDropOptions.draggableX && hasMovableX ||
                     seriesDragDropOptions.draggableY && hasMovableY
-            ) &&
+                ) &&
                 !(
                     pointDragDropOptions &&
                     pointDragDropOptions.draggableX === false &&
@@ -1567,29 +1570,29 @@
             var resizeAttrs;
 
             switch (updateSide) {
-            case 'left':
-                resizeAttrs = {
-                    x: rect.attr('x') + update.x,
-                    width: Math.max(1, rect.attr('width') - update.x)
-                };
-                break;
-            case 'right':
-                resizeAttrs = {
-                    width: Math.max(1, rect.attr('width') + update.x)
-                };
-                break;
-            case 'top':
-                resizeAttrs = {
-                    y: rect.attr('y') + update.y,
-                    height: Math.max(1, rect.attr('height') - update.y)
-                };
-                break;
-            case 'bottom':
-                resizeAttrs = {
-                    height: Math.max(1, rect.attr('height') + update.y)
-                };
-                break;
-            default:
+                case 'left':
+                    resizeAttrs = {
+                        x: rect.attr('x') + update.x,
+                        width: Math.max(1, rect.attr('width') - update.x)
+                    };
+                    break;
+                case 'right':
+                    resizeAttrs = {
+                        width: Math.max(1, rect.attr('width') + update.x)
+                    };
+                    break;
+                case 'top':
+                    resizeAttrs = {
+                        y: rect.attr('y') + update.y,
+                        height: Math.max(1, rect.attr('height') - update.y)
+                    };
+                    break;
+                case 'bottom':
+                    resizeAttrs = {
+                        height: Math.max(1, rect.attr('height') + update.y)
+                    };
+                    break;
+                default:
             }
             rect.attr(resizeAttrs);
         }
@@ -1884,7 +1887,7 @@
                     zIndex: stateOptions.zIndex
                 })
                 // Use pointerEvents 'none' to avoid capturing the click event
-                .css({ pointerEvents: 'none' });
+                .css({pointerEvents: 'none'});
         };
 
 
@@ -2147,9 +2150,9 @@
             // for it.
             objectEach(series.dragDropProps, function (val, key) {
                 var handleOptions = merge(
-                        defaultDragHandleOptions,
-                        val.handleOptions,
-                        options.dragHandle
+                    defaultDragHandleOptions,
+                    val.handleOptions,
+                    options.dragHandle
                     ),
                     handleAttrs = {
                         className: handleOptions.className,
@@ -2202,7 +2205,7 @@
 
                     // If cursor is not set explicitly, use axis direction
                     handleAttrs.cursor = handleOptions.cursor ||
-                        (val.axis === 'x') !== !!chart.inverted ?
+                    (val.axis === 'x') !== !!chart.inverted ?
                         'ew-resize' : 'ns-resize';
 
                     // Create and add the handle element if it doesn't exist
@@ -2386,9 +2389,9 @@
                     dragDropData.draggedPastSensitivity = hasDraggedPastSensitivity(
                         e, chart, pick(
                             point.options.dragDrop &&
-                                point.options.dragDrop.dragSensitivity,
+                            point.options.dragDrop.dragSensitivity,
                             seriesDragDropOpts &&
-                                seriesDragDropOpts.dragSensitivity,
+                            seriesDragDropOpts.dragSensitivity,
                             defaultDragSensitivity
                         )
                     );

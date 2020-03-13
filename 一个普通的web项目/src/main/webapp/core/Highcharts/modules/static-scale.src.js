@@ -23,18 +23,19 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/static-scale.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2016-2019 Torstein Honsi, Lars Cabrera
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var Chart = H.Chart,

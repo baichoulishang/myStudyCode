@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/parallel-coordinates.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Parallel coordinates module
@@ -36,7 +38,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         // Extensions for parallel coordinates plot.
@@ -425,7 +426,7 @@
                 }
                 this.closestPointRangePx = closestPointRangePx;
             }
-        }, { order: 1 });
+        }, {order: 1});
 
         // On destroy, we need to remove series from each axis.series
         H.addEvent(H.Series, 'destroy', function () {
@@ -492,7 +493,7 @@
                         labelFormat,
                         extend(
                             this,
-                            { value: this.y }
+                            {value: this.y}
                         ),
                         chart.time
                     );
@@ -500,7 +501,7 @@
                     formattedValue = chart.time.dateFormat(
                         chart.time.resolveDTLFormat(yAxisOptions.dateTimeLabelFormats[
                             yAxis.tickPositions.info.unitName
-                        ]).main,
+                            ]).main,
                         this.y
                     );
                 } else if (yAxisOptions.categories) {

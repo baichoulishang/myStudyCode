@@ -8,9 +8,14 @@ public class UpcastEnum {
     public static void main(String[] args) {
         Search[] vals = Search.values();
         Enum e = Search.HITHER; // Upcast
+        Search e2 = Search.HITHER; // Upcast
         // e.values(); // No values() in Enum
-        for (Enum en : e.getClass().getEnumConstants())
+        for (Enum en : e2.getClass().getEnumConstants()) {
             System.out.println(en);
+        }
+        for (Enum en : e.getClass().getEnumConstants()) {
+            System.out.println(en);
+        }
     }
 } /* Output:
 HITHER

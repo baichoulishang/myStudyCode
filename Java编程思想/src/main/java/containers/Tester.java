@@ -21,6 +21,7 @@ public class Tester<C> {
         if (container != null)
             headline = container.getClass().getSimpleName();
     }
+
     public Tester(C container, List<Test<C>> tests,
                   TestParam[] paramList) {
         this(container, tests);

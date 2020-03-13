@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/dependency-wheel.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Dependency wheel module
@@ -36,7 +38,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var base = H.seriesTypes.sankey.prototype;
@@ -269,11 +270,11 @@
                         this.nodes.forEach(function (point, i) {
                             var graphic = point.graphic;
                             if (graphic) {
-                                graphic.attr({ opacity: 0 });
+                                graphic.attr({opacity: 0});
                                 setTimeout(function () {
                                     graphic.animate(
-                                        { opacity: 1 },
-                                        { duration: step }
+                                        {opacity: 1},
+                                        {duration: step}
                                     );
                                 }, step * i);
                             }
@@ -281,7 +282,7 @@
                         this.points.forEach(function (point) {
                             var graphic = point.graphic;
                             if (!point.isNode && graphic) {
-                                graphic.attr({ opacity: 0 })
+                                graphic.attr({opacity: 0})
                                     .animate({
                                         opacity: 1
                                     }, this.options.animation);
@@ -306,7 +307,7 @@
 
                     if (!this.dataLabelPath) {
                         this.dataLabelPath = renderer
-                            .arc({ open: true })
+                            .arc({open: true})
 
                             // Add it inside the data label group so it gets destroyed
                             // with the label

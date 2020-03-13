@@ -21,11 +21,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'parts-map/ColorAxis.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          *
@@ -1073,7 +1075,8 @@
          *
          * @private
          * @function Highcharts.Fx#fillSetter
-         *//**
+         */
+        /**
          * Handle animation of the color attributes directly
          *
          * @private
@@ -1118,7 +1121,7 @@
                     // Data classes
                     if (colorAxis.options.dataClasses) {
                         colorAxisItems = colorAxis.getDataClassLegendSymbols();
-                    // Gradient legend
+                        // Gradient legend
                     } else {
                         // Add this axis on top
                         colorAxisItems.push(colorAxis);
@@ -1161,7 +1164,6 @@
          *  License: www.highcharts.com/license
          *
          * */
-
 
 
         var defined = H.defined,
@@ -1304,7 +1306,6 @@
          *  License: www.highcharts.com/license
          *
          * */
-
 
 
         var colorPointMixin = H.colorPointMixin,
@@ -1515,24 +1516,24 @@
                             x1 = between(
                                 Math.round(
                                     xAxis.len -
-                                xAxis.translate(point.x - xPad,
-                                    0,
-                                    1,
-                                    0,
-                                    1,
-                                    -pointPlacement)
+                                    xAxis.translate(point.x - xPad,
+                                        0,
+                                        1,
+                                        0,
+                                        1,
+                                        -pointPlacement)
                                 ),
                                 -xAxis.len, 2 * xAxis.len
                             ),
                             x2 = between(
                                 Math.round(
                                     xAxis.len -
-                                xAxis.translate(point.x + xPad,
-                                    0,
-                                    1,
-                                    0,
-                                    1,
-                                    -pointPlacement)
+                                    xAxis.translate(point.x + xPad,
+                                        0,
+                                        1,
+                                        0,
+                                        1,
+                                        -pointPlacement)
                                 ),
                                 -xAxis.len, 2 * xAxis.len
                             ),
@@ -1627,7 +1628,7 @@
                  * @function Highcharts.seriesTypes.heatmap#getExtremes
                  */
                 getExtremes: function () {
-                // Get the extremes from the value data
+                    // Get the extremes from the value data
                     Series.prototype.getExtremes.call(this, this.valueData);
                     this.valueMin = this.dataMin;
                     this.valueMax = this.dataMax;

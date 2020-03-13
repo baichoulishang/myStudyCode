@@ -22,11 +22,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/organization.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Organization chart module
@@ -47,7 +49,8 @@
         /**
          * @interface Highcharts.SeriesOrganizationDataLabelsOptionsObject
          * @extends Highcharts.SeriesSankeyDataLabelsOptionsObject
-         *//**
+         */
+        /**
          * A callback for defining the format for _nodes_ in the
          * organization chart. The `nodeFormat` option takes precedence over
          * `nodeFormatter`.
@@ -355,7 +358,7 @@
                         } else if (i === path.length - 1) {
                             d.push('L', x, y);
 
-                        // curveTo
+                            // curveTo
                         } else if (r) {
                             x1 = path[i - 1][0];
                             y1 = path[i - 1][1];
@@ -380,7 +383,7 @@
                                 );
                             }
 
-                        // lineTo
+                            // lineTo
                         } else {
                             d.push('L', x, y);
                         }
@@ -513,7 +516,6 @@
                     );
                 }
             }
-
         );
 
         /**

@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'mixins/nodes.js', [_modules['parts/Globals.js']], function (H) {
 
         var pick = H.pick,
@@ -1338,7 +1340,7 @@
                     if (!sortedNodes.length) {
                         sortedNodes = nodes;
 
-                    // Dangling, cyclic trees
+                        // Dangling, cyclic trees
                     } else {
                         nodes.forEach(function (node) {
                             if (sortedNodes.indexOf(node) === -1) {
@@ -2016,7 +2018,8 @@
          * @name Highcharts.SeriesNetworkDataLabelsOptionsObject#linkFormatter
          * @type {Highcharts.SeriesNetworkDataLabelsFormatterCallbackFunction|undefined}
          * @since 7.1.0
-         *//**
+         */
+        /**
          * Options for a _link_ label text which should follow link connection. Border
          * and background are disabled for a label that follows a path.
          * **Note:** Only SVG-based renderer supports this option. Setting `useHTML` to
@@ -2703,7 +2706,7 @@
                             this,
                             'mouseOver',
                             function () {
-                                H.css(this.series.chart.container, { cursor: 'move' });
+                                H.css(this.series.chart.container, {cursor: 'move'});
                             }
                         );
                         addEvent(
@@ -2711,7 +2714,7 @@
                             'mouseOut',
                             function () {
                                 H.css(
-                                    this.series.chart.container, { cursor: 'default' }
+                                    this.series.chart.container, {cursor: 'default'}
                                 );
                             }
                         );

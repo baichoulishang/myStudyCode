@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'parts-gantt/PathfinderAlgorithms.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2016 Highsoft AS
@@ -35,7 +37,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var min = Math.min,
@@ -206,7 +207,7 @@
             straight: function (start, end) {
                 return {
                     path: ['M', start.x, start.y, 'L', end.x, end.y],
-                    obstacles: [{ start: start, end: end }]
+                    obstacles: [{start: start, end: end}]
                 };
             },
 
@@ -268,7 +269,7 @@
                 // Return waypoint outside obstacle
                 function getMeOut(obstacle, point, direction) {
                     var useMax = abs(point[direction] - obstacle[direction + 'Min']) >
-                                abs(point[direction] - obstacle[direction + 'Max']);
+                        abs(point[direction] - obstacle[direction + 'Max']);
 
                     return copyFromPoint(
                         point,
@@ -408,8 +409,8 @@
                           shortest route, rather pick the one closer to the end point
                 */
                 var dirIsX = pick(
-                        options.startDirectionX,
-                        abs(end.x - start.x) > abs(end.y - start.y)
+                    options.startDirectionX,
+                    abs(end.x - start.x) > abs(end.y - start.y)
                     ),
                     dir = dirIsX ? 'x' : 'y',
                     segments,
@@ -544,18 +545,18 @@
                     var softBounds = bounds.soft,
                         hardBounds = bounds.hard,
                         dir = dirIsX ? 'x' : 'y',
-                        toPointMax = { x: fromPoint.x, y: fromPoint.y },
-                        toPointMin = { x: fromPoint.x, y: fromPoint.y },
+                        toPointMax = {x: fromPoint.x, y: fromPoint.y},
+                        toPointMin = {x: fromPoint.x, y: fromPoint.y},
                         minPivot,
                         maxPivot,
                         maxOutOfSoftBounds = obstacle[dir + 'Max'] >=
-                                            softBounds[dir + 'Max'],
+                            softBounds[dir + 'Max'],
                         minOutOfSoftBounds = obstacle[dir + 'Min'] <=
-                                            softBounds[dir + 'Min'],
+                            softBounds[dir + 'Min'],
                         maxOutOfHardBounds = obstacle[dir + 'Max'] >=
-                                            hardBounds[dir + 'Max'],
+                            hardBounds[dir + 'Max'],
                         minOutOfHardBounds = obstacle[dir + 'Min'] <=
-                                            hardBounds[dir + 'Min'],
+                            hardBounds[dir + 'Min'],
                         // Find out if we should prefer one direction over the other if
                         // we can choose freely
                         minDistance = abs(obstacle[dir + 'Min'] - fromPoint[dir]),
@@ -571,9 +572,9 @@
                     toPointMin[dir] = obstacle[dir + 'Min'];
                     toPointMax[dir] = obstacle[dir + 'Max'];
                     minPivot = pivotPoint(fromPoint, toPointMin, dirIsX)[dir] !==
-                                toPointMin[dir];
+                        toPointMin[dir];
                     maxPivot = pivotPoint(fromPoint, toPointMax, dirIsX)[dir] !==
-                                toPointMax[dir];
+                        toPointMax[dir];
                     useMax = minPivot ?
                         (maxPivot ? useMax : true) :
                         (maxPivot ? false : useMax);
@@ -653,7 +654,7 @@
                         if (secondEnvelopingObstacle > -1) {
                             secondEnvelopingObstacle = chartObstacles[
                                 secondEnvelopingObstacle
-                            ];
+                                ];
 
                             // Cut obstacle to hard bounds
                             limitObstacleToBounds(
@@ -668,7 +669,7 @@
                                     secondEnvelopingObstacle[dir + 'Min'] +
                                     envelopingObstacle[dir + 'Max']
                                 ) / 2
-                            ) :
+                                ) :
                                 min((
                                     envelopingObstacle[dir + 'Min'] + obstacleMargin - 1
                                 ), (
@@ -737,10 +738,10 @@
                                 x: dirIsX ?
                                     pivot.x :
                                     pivot.obstacle[waypointUseMax ? 'xMax' : 'xMin'] +
-                                        (waypointUseMax ? 1 : -1),
+                                    (waypointUseMax ? 1 : -1),
                                 y: dirIsX ?
                                     pivot.obstacle[waypointUseMax ? 'yMax' : 'yMin'] +
-                                        (waypointUseMax ? 1 : -1) :
+                                    (waypointUseMax ? 1 : -1) :
                                     pivot.y
                             };
 
@@ -769,7 +770,7 @@
                 // closest. Returns new point outside obstacle.
                 function extractFromObstacle(obstacle, point, goalPoint) {
                     var dirIsX = min(obstacle.xMax - point.x, point.x - obstacle.xMin) <
-                                min(obstacle.yMax - point.y, point.y - obstacle.yMin),
+                        min(obstacle.yMax - point.y, point.y - obstacle.yMin),
                         bounds = {
                             soft: options.hardBounds,
                             hard: options.hardBounds
@@ -810,7 +811,7 @@
                 // force-moving towards the start point.
                 while (
                     (endObstacleIx = findObstacleFromPoint(chartObstacles, end)) > -1
-                ) {
+                    ) {
                     useMax = end[dir] - start[dir] < 0;
                     extractedEndPoint = {
                         x: end.x,
@@ -818,7 +819,7 @@
                     };
                     extractedEndPoint[dir] = chartObstacles[endObstacleIx][
                         useMax ? dir + 'Max' : dir + 'Min'
-                    ] + (useMax ? 1 : -1);
+                        ] + (useMax ? 1 : -1);
                     endSegments.push({
                         end: end,
                         start: extractedEndPoint
@@ -851,7 +852,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         /**
@@ -984,7 +984,7 @@
          *         Path array
          */
         H.SVGRenderer.prototype.symbols['arrow-filled'] =
-                H.SVGRenderer.prototype.symbols['triangle-left'];
+            H.SVGRenderer.prototype.symbols['triangle-left'];
 
         /**
          * Creates a half-width, left-oriented triangle.
@@ -1040,7 +1040,7 @@
          *         Path array
          */
         H.SVGRenderer.prototype.symbols['arrow-filled-half'] =
-                H.SVGRenderer.prototype.symbols['triangle-left-half'];
+            H.SVGRenderer.prototype.symbols['triangle-left-half'];
 
     });
     _registerModule(_modules, 'parts-gantt/Pathfinder.js', [_modules['parts/Globals.js'], _modules['parts-gantt/PathfinderAlgorithms.js']], function (H, pathfinderAlgorithms) {
@@ -1417,9 +1417,9 @@
                     // Count the distance even if we are slightly off
                     var margin = pick(bbMargin, 10),
                         yOverlap = a.yMax + margin > b.yMin - margin &&
-                                    a.yMin - margin < b.yMax + margin,
+                            a.yMin - margin < b.yMax + margin,
                         xOverlap = a.xMax + margin > b.xMin - margin &&
-                                    a.xMin - margin < b.xMax + margin,
+                            a.xMin - margin < b.xMax + margin,
                         xDistance = yOverlap ? (
                             a.xMin > b.xMax ? a.xMin - b.xMax : b.xMin - a.xMax
                         ) : Infinity,
@@ -1463,7 +1463,7 @@
                         // Discard first 10% of the relevant distances, and then grab
                         // the smallest one.
                         Math.floor(distances.length / 10)
-                    ] / 2 - 1 // Divide the distance by 2 and subtract 1.
+                        ] / 2 - 1 // Divide the distance by 2 and subtract 1.
                 ),
                 1 // 1 is the minimum margin
             );
@@ -1490,6 +1490,7 @@
         function Connection(from, to, options) {
             this.init(from, to, options);
         }
+
         Connection.prototype = {
 
             /**
@@ -1546,7 +1547,7 @@
                 if (!pathfinder.group) {
                     pathfinder.group = chart.renderer.g()
                         .addClass('highcharts-pathfinder-group')
-                        .attr({ zIndex: -1 })
+                        .attr({zIndex: -1})
                         .add(chart.seriesGroup);
                 }
 
@@ -1568,7 +1569,7 @@
 
                 // Set path attribs and animate to the new path
                 pathGraphic.attr(attribs);
-                anim = { d: path };
+                anim = {d: path};
                 if (!styledMode) {
                     anim.opacity = 1;
                 }
@@ -1727,7 +1728,7 @@
                 if (algorithm.requiresObstacles && !chartObstacles) {
                     chartObstacles =
                         pathfinder.chartObstacles =
-                        pathfinder.getChartObstacles(options);
+                            pathfinder.getChartObstacles(options);
 
                     // If the algorithmMargin was computed, store the result in default
                     // options.
@@ -1859,6 +1860,7 @@
         function Pathfinder(chart) {
             this.init(chart);
         }
+
         Pathfinder.prototype = {
 
             /**
@@ -1951,9 +1953,9 @@
                     for (k = 0; k < lenNew; ++k) {
                         if (
                             oldConnections[j].fromPoint ===
-                                pathfinder.connections[k].fromPoint &&
+                            pathfinder.connections[k].fromPoint &&
                             oldConnections[j].toPoint ===
-                                pathfinder.connections[k].toPoint
+                            pathfinder.connections[k].toPoint
                         ) {
                             pathfinder.connections[k].graphics =
                                 oldConnections[j].graphics;
@@ -2077,7 +2079,7 @@
                 if (!defined(options.algorithmMargin)) {
                     calculatedMargin =
                         options.algorithmMargin =
-                        calculateObstacleMargin(obstacles);
+                            calculateObstacleMargin(obstacles);
                     obstacles.forEach(function (obstacle) {
                         obstacle.xMin -= calculatedMargin;
                         obstacle.xMax += calculatedMargin;
@@ -2141,9 +2143,9 @@
              */
             getAlgorithmStartDirection: function (markerOptions) {
                 var xCenter = markerOptions.align !== 'left' &&
-                                markerOptions.align !== 'right',
+                    markerOptions.align !== 'right',
                     yCenter = markerOptions.verticalAlign !== 'top' &&
-                                markerOptions.verticalAlign !== 'bottom',
+                        markerOptions.verticalAlign !== 'bottom',
                     undef;
 
                 return xCenter ?
@@ -2179,19 +2181,19 @@
                     y;
 
                 switch (markerOptions.align) { // eslint-disable-line default-case
-                case 'right':
-                    x = 'xMax';
-                    break;
-                case 'left':
-                    x = 'xMin';
+                    case 'right':
+                        x = 'xMax';
+                        break;
+                    case 'left':
+                        x = 'xMin';
                 }
 
                 switch (markerOptions.verticalAlign) { // eslint-disable-line default-case
-                case 'top':
-                    y = 'yMin';
-                    break;
-                case 'bottom':
-                    y = 'yMax';
+                    case 'top':
+                        y = 'yMin';
+                        break;
+                    case 'bottom':
+                        y = 'yMax';
                 }
 
                 return {
@@ -2331,7 +2333,7 @@
                             true,
                             (
                                 series.options.connectors = series.options.connectors ||
-                                {}
+                                    {}
                             ), series.options.pathfinder
                         );
                     }

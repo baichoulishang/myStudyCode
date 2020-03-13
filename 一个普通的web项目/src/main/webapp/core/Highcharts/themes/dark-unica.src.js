@@ -21,11 +21,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'themes/dark-unica.js', [_modules['parts/Globals.js']], function (Highcharts) {
         /* *
          *
@@ -53,7 +55,7 @@
                 '#eeaaee', '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
             chart: {
                 backgroundColor: {
-                    linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
+                    linearGradient: {x1: 0, y1: 0, x2: 1, y2: 1},
                     stops: [
                         [0, '#2a2a2b'],
                         [1, '#3e3e40']

@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'parts/DataGrouping.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          *
@@ -285,7 +287,7 @@
                 // 1. it consists of nulls exclusive
                 if (!len && arr.hasNulls) {
                     ret = null;
-                // 2. it has a length and real values
+                    // 2. it has a length and real values
                 } else if (len) {
                     ret = 0;
                     while (len--) {
@@ -404,10 +406,11 @@
                     return approximations[approx];
                 }
                 return approximations[
-                    (series.getDGApproximation && series.getDGApproximation()) ||
-                    'average'
-                ];
+                (series.getDGApproximation && series.getDGApproximation()) ||
+                'average'
+                    ];
             }
+
             approximationFn = getApproximation(approximation);
 
             // Calculate values array size from pointArrayMap length
@@ -437,7 +440,7 @@
                         xData[i] >= groupPositions[pos + 1]
                     ) ||
                     i === dataLength
-                ) { // get the last group
+                    ) { // get the last group
 
                     // get group x and y
                     pointX = groupPositions[pos];
@@ -457,9 +460,9 @@
                         series.dataGroupInfo.options = merge(
                             series.pointClass.prototype
                                 .optionsToObject.call(
-                                    { series: series },
-                                    series.options.data[series.cropStart + start]
-                                )
+                                {series: series},
+                                series.options.data[series.cropStart + start]
+                            )
                         );
 
                         // Make sure the raw data (x, y, open, high etc) is not copied
@@ -929,8 +932,8 @@
                 labelFormats,
                 formattedKey,
                 formatString = tooltipOptions[
-                    (e.isFooter ? 'footer' : 'header') + 'Format'
-                ];
+                (e.isFooter ? 'footer' : 'header') + 'Format'
+                    ];
 
             // apply only to grouped series
             if (
@@ -956,9 +959,9 @@
                         xDateFormat = labelFormats[1];
                         xDateFormatEnd = labelFormats[2];
                     }
-                // if not grouped, and we don't have set the xDateFormat option, get the
-                // best fit, so if the least distance between points is one minute, show
-                // it, but if the least distance is one day, skip hours and minutes etc.
+                    // if not grouped, and we don't have set the xDateFormat option, get the
+                    // best fit, so if the least distance between points is one minute, show
+                    // it, but if the least distance is one day, skip hours and minutes etc.
                 } else if (!xDateFormat && dateTimeLabelFormats) {
                     xDateFormat = tooltip.getXDateFormat(
                         labelConfig,
@@ -984,7 +987,7 @@
                 // return the replaced format
                 e.text = format(
                     formatString, {
-                        point: extend(labelConfig.point, { key: formattedKey }),
+                        point: extend(labelConfig.point, {key: formattedKey}),
                         series: series
                     },
                     time
@@ -1122,7 +1125,7 @@
                     }, false);
                 }
 
-            // Axis not yet instanciated, alter series options
+                // Axis not yet instanciated, alter series options
             } else {
                 this.chart.options.series.forEach(function (seriesOptions) {
                     seriesOptions.dataGrouping = dataGrouping;

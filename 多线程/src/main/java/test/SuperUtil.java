@@ -2,99 +2,56 @@ package test;
 
 import dataStructure.algs4.RedBlackBST;
 
-import java.io.*;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.*;
-import java.util.function.*;
+import java.util.concurrent.ForkJoinPool;
+import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import static java.util.stream.Collectors.*;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 
 public class SuperUtil {
 
+    public static final ForkJoinPool FORK_JOIN_POOL = new ForkJoinPool();
+
+
+    public static <T, R> long measurePerf(Function<T, R> f, T input) {
+        long fastest = Long.MAX_VALUE;
+        for (int i = 0; i < 10; i++) {
+            long start = System.nanoTime();
+            R result = f.apply(input);
+            long duration = (System.nanoTime() - start) / 1_000_000;
+            System.out.println("Result: " + result);
+            if (duration < fastest) fastest = duration;
+        }
+        return fastest;
+    }
+
 
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, IOException {
+        System.out.println("Parallel forkJoinSum done in: " + measurePerf(ParallelStreams::parallelSum, 10_000_000L) + " msecs");
+        System.out.println("Parallel forkJoinSum done in: " + measurePerf(ParallelStreams::truth, 1) + " msecs");
+
         List<TreeVO> list = new ArrayList<TreeVO>();
         list.add(new TreeVO("1", "20200112141101", "0", 1));
         list.add(new TreeVO("2", "20200112141104", "1", 2));
         list.add(new TreeVO("3", "20200112141105", "1", 3));
         list.add(new TreeVO("4", "20200112141107", "2", 4));
-        List<TreeVO> treeVOS = getTreeVOS(list);
-        treeVOS.stream().forEach(System.out::println);
-
-
-
-        String s = "123456,1,1,1";
-        System.out.println("嗯?" + s.replace(",", ""));
-        System.out.println("ok" + s.replaceAll(",", ""));
-
-        List<Integer> nums = new ArrayList<>();
-        nums.add(1);
-        nums.add(2);
-        nums.add(3);
-        nums.add(4);
-        nums.add(6);
-
-        nums.stream().collect(maxBy(Integer::compareTo));
-        Integer collect = nums.stream().collect(summingInt(e -> e));
-        IntSummaryStatistics summaryStatistics = nums.stream().collect(summarizingInt(e -> e));
-        Optional<Integer> reduce1 = nums.stream().reduce(Integer::sum);
-
-        IntStream toInt = nums.stream().mapToInt(e -> e);
-
-        Optional<Integer> reduce = nums.stream().reduce(Integer::compare);
-        IntStream intStream = nums.stream().mapToInt(e -> e);
-        System.out.println(reduce.get());
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("")));
-        String s1 = bufferedReader.readLine();
-        Stream.iterate(0, new UnaryOperator<Integer>() {
-            @Override
-            public Integer apply(Integer integer) {
-                return null;
-            }
-        });
-
-        Stream.iterate(new int[]{0, 1}, n -> new int[]{n[1], n[0] + n[1]});
-        Stream.generate(new Supplier<String>() {
-            @Override
-            public String get() {
-                return null;
-            }
-        });
-        list.stream().collect(Collectors.groupingBy(e -> e.getCode()));
-        list.stream().collect(new Collector<TreeVO, Object, Object>() {
-            @Override
-            public Supplier<Object> supplier() {
-                return null;
-            }
-
-            @Override
-            public BiConsumer<Object, TreeVO> accumulator() {
-                return null;
-            }
-
-            @Override
-            public BinaryOperator<Object> combiner() {
-                return null;
-            }
-
-            @Override
-            public Function<Object, Object> finisher() {
-                return null;
-            }
-
-            @Override
-            public Set<Characteristics> characteristics() {
-                return null;
-            }
-        });
-
+        list.add(new TreeVO("5", "20200210192829", "2", 5));
+        list.add(new TreeVO("6", "20200210192830", "2", 6));
+        list.add(new TreeVO("7", "20200210192832", "2", 7));
+        list.add(new TreeVO("8", "20200210192833", "2", 8));
+        list.add(new TreeVO("9", "20200210192835", "2", 9));
+        list.add(new TreeVO("10", "20200210192837", "2", 10));
+        list.add(new TreeVO("11", "20200210192838", "2", 11));
+        System.out.println(list.stream().filter(e -> e.getCode() > 1).parallel().findAny().get());
+        System.out.println(list.stream().filter(e -> e.getCode() > 4).parallel().findFirst().get());
+        String ok = "abcd";
+        list.stream().sorted(Comparator.comparing(TreeVO::getCode));
     }
+
 
     private static List<TreeVO> getTreeVOS(List<TreeVO> list) {
         // 构造红黑树

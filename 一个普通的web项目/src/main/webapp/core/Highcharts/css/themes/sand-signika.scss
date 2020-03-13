@@ -27,10 +27,10 @@ $tooltip-background: $neutral-color-100;
 // Buttons
 $highcharts-button-background: $neutral-color-100;
 $highcharts-button-border: #C0C0C8;
-$highcharts-button-text:  #000;
+$highcharts-button-text: #000;
 
 $highcharts-button-pressed-background: #D0D0D8;
-$highcharts-button-pressed-text:  #000;
+$highcharts-button-pressed-text: #000;
 
 $context-button-background: $neutral-color-100;
 
@@ -48,7 +48,7 @@ $scrollbar-track-border: #C0C0C8;
 
 // Boxplot
 .highcharts-boxplot-box {
-   fill: #505053;
+  fill: #505053;
 }
 
 // Navigator
@@ -63,12 +63,12 @@ $scrollbar-track-border: #C0C0C8;
 
 // Title
 .highcharts-title {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 // Buttons
 .highcharts-button-box {
-	stroke-width: 1px;
+  stroke-width: 1px;
 }
 
 @import '../highcharts';

@@ -30,6 +30,7 @@ public class FinalData {
     private final int[] a = {1, 2, 3, 4, 5, 6};
     private String id;
     private Value v1 = new Value(11);
+
     public FinalData(String id) {
         this.id = id;
     }

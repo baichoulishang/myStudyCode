@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'mixins/download-url.js', [_modules['parts/Globals.js']], function (Highcharts) {
         /* *
          * Mixin for downloading content in the browser
@@ -36,7 +38,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var win = Highcharts.win,
@@ -68,7 +69,7 @@
                     binary[i] = binStr.charCodeAt(i);
                 }
 
-                blob = new win.Blob([binary], { 'type': parts[1] });
+                blob = new win.Blob([binary], {'type': parts[1]});
                 return domurl.createObjectURL(blob);
             }
         };
@@ -307,8 +308,8 @@
                                 );
                             }
                         }
-                    // IE bug where image is not always ready despite calling load
-                    // event.
+                        // IE bug where image is not always ready despite calling load
+                        // event.
                     }, loadEventDeferDelay);
                 },
                 // Image load failed (e.g. invalid URL)
@@ -403,7 +404,7 @@
                     }
                 );
 
-                win.svg2pdf(svgElement, pdf, { removeInvalid: true });
+                win.svg2pdf(svgElement, pdf, {removeInvalid: true});
                 return pdf.output('datauristring');
             }
 
@@ -666,7 +667,7 @@
                         Highcharts.imageToDataUrl(
                             href,
                             'image/png',
-                            { imageElement: el },
+                            {imageElement: el},
                             options.scale,
                             embeddedSuccess,
                             // Tainted canvas
@@ -677,7 +678,7 @@
                             failCallback
                         );
 
-                    // Hidden, boosted series have blank href (#10243)
+                        // Hidden, boosted series have blank href (#10243)
                     } else {
                         ++imagesEmbedded;
                         el.parentNode.removeChild(el);
@@ -738,7 +739,7 @@
                         Highcharts.downloadSVGLocal(
                             svg,
                             Highcharts.extend(
-                                { filename: chart.getFilename() },
+                                {filename: chart.getFilename()},
                                 options
                             ),
                             fallbackToExportServer

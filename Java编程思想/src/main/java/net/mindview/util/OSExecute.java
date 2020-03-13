@@ -28,13 +28,15 @@ public class OSExecute {
         } catch (Exception e) {
             // Compensate for Windows 2000, which throws an
             // exception for the default command line:
-            if (!command.startsWith("CMD /C"))
+            if (!command.startsWith("CMD /C")) {
                 command("CMD /C " + command);
-            else
+            } else {
                 throw new RuntimeException(e);
+            }
         }
-        if (err)
+        if (err) {
             throw new OSExecuteException("Errors executing " +
                     command);
+        }
     }
 } ///:~

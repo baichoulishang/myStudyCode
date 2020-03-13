@@ -22,11 +22,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'mixins/tree-series.js', [_modules['parts/Globals.js']], function (H) {
 
         var extend = H.extend,
@@ -138,8 +140,8 @@
 
                 if (getColorByPoint) {
                     colorIndexByPoint = point.index % (colors ?
-                        colors.length :
-                        chartOptionsChart.colorCount
+                            colors.length :
+                            chartOptionsChart.colorCount
                     );
                     colorByPoint = colors && colors[colorIndexByPoint];
                 }
@@ -373,7 +375,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var seriesType = H.seriesType,
@@ -1159,8 +1160,8 @@
                         algorithm = pick(
                             (
                                 series[level &&
-                            level.layoutAlgorithm] &&
-                            level.layoutAlgorithm
+                                level.layoutAlgorithm] &&
+                                level.layoutAlgorithm
                             ),
                             options.layoutAlgorithm
                         ),
@@ -1248,7 +1249,7 @@
                             point.plotY =
                                 point.shapeArgs.y + (point.shapeArgs.height / 2);
                         } else {
-                        // Reset visibility
+                            // Reset visibility
                             delete point.plotX;
                             delete point.plotY;
                         }
@@ -1326,7 +1327,7 @@
                         this.lP.total = this.elArr[this.elArr.length - 1];
                         this.total = this.total + el;
                         if (this.direction === 0) {
-                        // Calculate last point old aspect ratio
+                            // Calculate last point old aspect ratio
                             this.lW = this.nW;
                             this.lP.lH = this.lP.total / this.lW;
                             this.lP.lR = this.lP.aspectRatio(this.lW, this.lP.lH);
@@ -1335,7 +1336,7 @@
                             this.lP.nH = this.lP.total / this.nW;
                             this.lP.nR = this.lP.aspectRatio(this.nW, this.lP.nH);
                         } else {
-                        // Calculate last point old aspect ratio
+                            // Calculate last point old aspect ratio
                             this.lH = this.nH;
                             this.lP.lW = this.lP.total / this.lH;
                             this.lP.lR = this.lP.aspectRatio(this.lP.lW, this.lH);
@@ -1546,7 +1547,7 @@
                     });
                     if (
                         rootId !== '' &&
-                    (!rootNode || !rootNode.children.length)
+                        (!rootNode || !rootNode.children.length)
                     ) {
                         series.setRootNode('', false);
                         rootId = series.rootNode;
@@ -1583,7 +1584,7 @@
                     // Calculate plotting values.
                     series.axisRatio = (series.xAxis.len / series.yAxis.len);
                     series.nodeMap[''].pointValues = pointValues =
-                    { x: 0, y: 0, width: 100, height: 100 };
+                        {x: 0, y: 0, width: 100, height: 100};
                     series.nodeMap[''].values = seriesArea = merge(pointValues, {
                         width: (pointValues.width * series.axisRatio),
                         direction: (
@@ -1639,7 +1640,7 @@
                     points.forEach(function (point) {
                         level = mapOptionsToLevel[point.node.level];
                         // Set options to new object to avoid problems with scope
-                        options = { style: {} };
+                        options = {style: {}};
 
                         // If not a leaf, then label should be disabled as default
                         if (!point.node.isLeaf) {
@@ -1690,8 +1691,8 @@
 
                     seriesTypes.column.prototype.alignDataLabel.apply(this, arguments);
                     if (point.dataLabel) {
-                    // point.node.zIndex could be undefined (#6956)
-                        point.dataLabel.attr({ zIndex: (point.node.zIndex || 0) + 1 });
+                        // point.node.zIndex could be undefined (#6956)
+                        point.dataLabel.attr({zIndex: (point.node.zIndex || 0) + 1});
                     }
                 },
 
@@ -1714,10 +1715,10 @@
                     // Stroke width uses pick because it can be 0.
                     attr = {
                         'stroke':
-                        (point && point.borderColor) ||
-                        level.borderColor ||
-                        stateOptions.borderColor ||
-                        options.borderColor,
+                            (point && point.borderColor) ||
+                            level.borderColor ||
+                            stateOptions.borderColor ||
+                            options.borderColor,
                         'stroke-width': pick(
                             point && point.borderWidth,
                             level.borderWidth,
@@ -1725,10 +1726,10 @@
                             options.borderWidth
                         ),
                         'dashstyle':
-                        (point && point.borderDashStyle) ||
-                        level.borderDashStyle ||
-                        stateOptions.borderDashStyle ||
-                        options.borderDashStyle,
+                            (point && point.borderDashStyle) ||
+                            level.borderDashStyle ||
+                            stateOptions.borderDashStyle ||
+                            options.borderDashStyle,
                         'fill': (point && point.color) || this.color
                     };
 
@@ -1749,7 +1750,7 @@
                         attr.fill = 'none';
 
                     } else if (state) {
-                    // Brighten and hoist the hover nodes
+                        // Brighten and hoist the hover nodes
                         attr.fill = color(attr.fill)
                             .brighten(stateOptions.brightness)
                             .get();
@@ -1850,7 +1851,7 @@
                     // If a drill id is returned, add click event and cursor.
                     if (isString(drillId)) {
                         point.setState(''); // Remove hover
-                        series.setRootNode(drillId, true, { trigger: 'click' });
+                        series.setRootNode(drillId, true, {trigger: 'click'});
                     }
                 },
                 /**
@@ -1917,7 +1918,7 @@
                         series.setRootNode(
                             node.parent,
                             true,
-                            { trigger: 'traverseUpButton' }
+                            {trigger: 'traverseUpButton'}
                         );
                     }
                 },
@@ -2040,7 +2041,7 @@
                 buildKDTree: noop,
                 drawLegendSymbol: H.LegendSymbolMixin.drawRectangle,
                 getExtremes: function () {
-                // Get the extremes from the value data
+                    // Get the extremes from the value data
                     Series.prototype.getExtremes.call(this, this.colorValueData);
                     this.valueMin = this.dataMin;
                     this.valueMax = this.dataMax;
@@ -2100,7 +2101,7 @@
 
                     } else if (
                         !this.node.isLeaf &&
-                    !pick(options.interactByLeaf, !options.allowTraversingTree)
+                        !pick(options.interactByLeaf, !options.allowTraversingTree)
                     ) {
                         className += ' highcharts-internal-node-interactive';
 

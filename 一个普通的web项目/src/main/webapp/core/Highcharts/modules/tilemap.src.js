@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/tilemap.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Tilemaps module
@@ -99,10 +101,10 @@
 
                     series.points.forEach(function (point) {
                         var x1 = between(
-                                Math.floor(
-                                    xAxis.len -
-                                    xAxis.translate(point.x - xPad * 2, 0, 1, 0, 1)
-                                ), -xAxis.len, 2 * xAxis.len
+                            Math.floor(
+                                xAxis.len -
+                                xAxis.translate(point.x - xPad * 2, 0, 1, 0, 1)
+                            ), -xAxis.len, 2 * xAxis.len
                             ),
                             x2 = between(
                                 Math.floor(
@@ -230,10 +232,10 @@
 
                     series.points.forEach(function (point) {
                         var x1 = between(
-                                Math.round(
-                                    xAxis.len -
-                                    xAxis.translate(point.x - xPad, 0, 1, 0, 0)
-                                ), -xAxis.len, 2 * xAxis.len
+                            Math.round(
+                                xAxis.len -
+                                xAxis.translate(point.x - xPad, 0, 1, 0, 0)
+                            ), -xAxis.len, 2 * xAxis.len
                             ),
                             x2 = between(
                                 Math.round(
@@ -345,10 +347,10 @@
 
                     series.points.forEach(function (point) {
                         var x = between(
-                                Math.round(
-                                    xAxis.len -
-                                    xAxis.translate(point.x, 0, 1, 0, 0)
-                                ), -xAxis.len, 2 * xAxis.len
+                            Math.round(
+                                xAxis.len -
+                                xAxis.translate(point.x, 0, 1, 0, 0)
+                            ), -xAxis.len, 2 * xAxis.len
                             ),
                             y = between(
                                 Math.round(yAxis.translate(point.y, 0, 1, 0, 0)),
@@ -469,13 +471,13 @@
             var axis = this,
                 // Find which series' padding to use
                 seriesPadding = axis.series
-                    .map(function (series) {
-                        return series.getSeriesPixelPadding &&
-                            series.getSeriesPixelPadding(axis);
-                    })
-                    .reduce(function (a, b) {
-                        return (a && a.padding) > (b && b.padding) ? a : b;
-                    }, undefined) ||
+                        .map(function (series) {
+                            return series.getSeriesPixelPadding &&
+                                series.getSeriesPixelPadding(axis);
+                        })
+                        .reduce(function (a, b) {
+                            return (a && a.padding) > (b && b.padding) ? a : b;
+                        }, undefined) ||
                     {
                         padding: 0,
                         axisLengthFactor: 1
@@ -605,7 +607,7 @@
 
                 // Set tile shape object on series
                 setOptions: function () {
-                // Call original function
+                    // Call original function
                     var ret = H.seriesTypes.heatmap.prototype.setOptions.apply(
                         this,
                         Array.prototype.slice.call(arguments)

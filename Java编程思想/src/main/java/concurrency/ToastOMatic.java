@@ -13,6 +13,7 @@ import static net.mindview.util.Print.print;
 class Toast {
     private final int id;
     private Status status = Status.DRY;
+
     public Toast(int idn) {
         id = idn;
     }

@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'mixins/nodes.js', [_modules['parts/Globals.js']], function (H) {
 
         var pick = H.pick,
@@ -337,8 +339,8 @@
 
                 if (getColorByPoint) {
                     colorIndexByPoint = point.index % (colors ?
-                        colors.length :
-                        chartOptionsChart.colorCount
+                            colors.length :
+                            chartOptionsChart.colorCount
                     );
                     colorByPoint = colors && colors[colorIndexByPoint];
                 }
@@ -579,7 +581,8 @@
          *
          * @name Highcharts.SeriesSankeyDataLabelsOptionsObject#nodeFormat
          * @type {string|undefined}
-         *//**
+         */
+        /**
          * Callback to format data labels for _nodes_ in the sankey diagram. The
          * `nodeFormat` option takes precedence over the `nodeFormatter`.
          *
@@ -590,7 +593,7 @@
          */
 
 
-        // Note: replace this with destructuring assignment in the future
+            // Note: replace this with destructuring assignment in the future
         var getLevelOptions = mixinTreeSeries.getLevelOptions;
 
 
@@ -691,8 +694,9 @@
                     /** @ignore-option */
                     format: undefined,
                     /**
-                    /** @ignore-option */
-                    formatter: function () {},
+                     /** @ignore-option */
+                    formatter: function () {
+                    },
                     /** @ignore-option */
                     inside: true
                 },
@@ -846,7 +850,7 @@
                     followPointer: true,
 
                     headerFormat:
-                    '<span style="font-size: 10px">{series.name}</span><br/>',
+                        '<span style="font-size: 10px">{series.name}</span><br/>',
                     pointFormat: '{point.fromNode.name} \u2192 {point.toNode.name}: <b>{point.weight}</b><br/>',
                     /**
                      * The
@@ -935,8 +939,8 @@
                             if (node.linksTo.length === 0) {
                                 node.column = 0;
 
-                            // There are incoming links, place it to the right of the
-                            // highest order column that links to this one.
+                                // There are incoming links, place it to the right of the
+                                // highest order column that links to this one.
                             } else {
                                 for (i = 0; i < node.linksTo.length; i++) {
                                     point = node.linksTo[0];
@@ -1181,13 +1185,13 @@
                             ]
                         };
 
-                    // Experimental: Circular links pointing backwards. In
-                    // v6.1.0 this breaks the rendering completely, so even
-                    // this experimental rendering is an improvement. #8218.
-                    // @todo
-                    // - Make room for the link in the layout
-                    // - Automatically determine if the link should go up or
-                    //   down.
+                        // Experimental: Circular links pointing backwards. In
+                        // v6.1.0 this breaks the rendering completely, so even
+                        // this experimental rendering is an improvement. #8218.
+                        // @todo
+                        // - Make room for the link in the layout
+                        // - Automatically determine if the link should go up or
+                        //   down.
                     } else {
                         var bend = 20,
                             vDist = chart.plotHeight - fromY - linkHeight,
@@ -1277,7 +1281,7 @@
                     this.translationFactor = nodeColumns.reduce(
                         function (translationFactor, column) {
                             var height = chart.plotSizeY - options.borderWidth -
-                            (column.length - 1) * nodePadding;
+                                (column.length - 1) * nodePadding;
 
                             return Math.min(translationFactor, height / column.sum());
                         },
@@ -1285,7 +1289,7 @@
                     );
                     this.colDistance =
                         (chart.plotSizeX - nodeWidth - options.borderWidth) /
-                            (nodeColumns.length - 1);
+                        (nodeColumns.length - 1);
 
                     // Calculate level options used in sankey and organization
                     series.mapOptionsToLevel = getLevelOptions({
@@ -1351,7 +1355,7 @@
                 setState: H.NodesMixin.setNodeState,
                 getClassName: function () {
                     return (this.isNode ? 'highcharts-node ' : 'highcharts-link ') +
-                    Point.prototype.getClassName.call(this);
+                        Point.prototype.getClassName.call(this);
                 },
                 isValid: function () {
                     return this.isNode || typeof this.weight === 'number';

@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/funnel3d.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Highcharts funnel3d series module
@@ -222,7 +224,7 @@
                         return (y > neckY || height === neckHeight) ?
                             neckWidth :
                             neckWidth + (width - neckWidth) *
-                                (1 - (y - top) / (height - neckHeight));
+                            (1 - (y - top) / (height - neckHeight));
                     };
 
                     // Expose
@@ -583,7 +585,7 @@
                     funnel3d.gradientForSides
                 ) {
                     fillColor = {
-                        linearGradient: { x1: 0, x2: 1, y1: 1, y2: 1 },
+                        linearGradient: {x1: 0, x2: 1, y1: 1, y2: 1},
                         stops: [
                             [0, color(fill).brighten(-0.2).get()],
                             [0.5, fill],

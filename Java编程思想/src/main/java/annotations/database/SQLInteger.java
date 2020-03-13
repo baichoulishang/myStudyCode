@@ -11,5 +11,6 @@ import java.lang.annotation.Target;
 public @interface SQLInteger {
     String name() default "";
 
-    Constraints constraints() default @Constraints;
+    Constraints constraints() default @Constraints(primaryKey = false);
+
 } ///:~

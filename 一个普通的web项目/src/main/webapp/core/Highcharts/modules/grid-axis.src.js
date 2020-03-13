@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'parts-gantt/GridAxis.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2016 Highsoft AS
@@ -35,7 +37,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var addEvent = H.addEvent,
@@ -88,7 +89,7 @@
             // axis option if set
             if (axis.horiz) {
                 options.tickLength = gridOptions.cellHeight ||
-                        fontMetrics.h * fontSizeToCellHeightRatio;
+                    fontMetrics.h * fontSizeToCellHeightRatio;
             }
 
             // Prevents rotation of labels when squished, as rotating them would not
@@ -151,18 +152,18 @@
          */
 
 
-        // Enum for which side the axis is on.
-        // Maps to axis.side
+            // Enum for which side the axis is on.
+            // Maps to axis.side
         var axisSide = {
-            top: 0,
-            right: 1,
-            bottom: 2,
-            left: 3,
-            0: 'top',
-            1: 'right',
-            2: 'bottom',
-            3: 'left'
-        };
+                top: 0,
+                right: 1,
+                bottom: 2,
+                left: 3,
+                0: 'top',
+                1: 'right',
+                2: 'bottom',
+                3: 'left'
+            };
 
         /**
          * Checks if an axis is a navigator axis.
@@ -819,7 +820,7 @@
                 var axis = this,
                     options = axis.options,
                     gridOptions = ((
-                        options && isObject(options.grid)) ? options.grid : {}
+                            options && isObject(options.grid)) ? options.grid : {}
                     ),
                     labelPadding,
                     distance,
@@ -900,10 +901,10 @@
                             if (!axis.axisLineExtra) {
                                 axis.axisLineExtra = renderer.path(linePath)
                                     .attr({
-                                
+
                                         stroke: options.lineColor,
                                         'stroke-width': lineWidth,
-                                
+
                                         zIndex: 7
                                     })
                                     .addClass('highcharts-axis-line')
@@ -976,8 +977,8 @@
                     var columnOptions = merge(
                         userOptions,
                         gridOptions.columns[
-                            gridOptions.columns.length - columnIndex - 1
-                        ],
+                        gridOptions.columns.length - columnIndex - 1
+                            ],
                         {
                             linkedTo: 0,
                             // Force to behave like category axis

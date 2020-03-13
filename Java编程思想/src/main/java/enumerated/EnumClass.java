@@ -14,7 +14,8 @@ public class EnumClass {
             printnb(s.compareTo(Shrubbery.CRAWLING) + " ");
             printnb(s.equals(Shrubbery.CRAWLING) + " ");
             print(s == Shrubbery.CRAWLING);
-            print(s.getDeclaringClass());
+            Class<Shrubbery> aClass = s.getDeclaringClass();
+            print(aClass);
             print(s.name());
             print("----------------------");
         }

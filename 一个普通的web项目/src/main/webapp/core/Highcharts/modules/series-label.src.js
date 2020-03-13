@@ -21,11 +21,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/series-label.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2009-2019 Torstein Honsi
@@ -64,7 +66,6 @@
          * https://jsfiddle.net/highcharts/264Nm/
          * https://jsfiddle.net/highcharts/y5A37/
          */
-
 
 
         var labelDistance = 3,
@@ -317,15 +318,15 @@
                 if (anchorY > y + h) {
                     path.push('L', x + lateral, y + h);
 
-                // Anchor above label
+                    // Anchor above label
                 } else if (anchorY < y) {
                     path.push('L', x + lateral, y);
 
-                // Anchor left of label
+                    // Anchor left of label
                 } else if (anchorX < x) {
                     path.push('L', x, y + h / 2);
 
-                // Anchor right of label
+                    // Anchor right of label
                 } else if (anchorX > x + w) {
                     path.push('L', x + w, y + h / 2);
                 }
@@ -378,7 +379,7 @@
             function pushDiscrete(point) {
                 var cellSize = 8,
                     key = Math.round(point.plotX / cellSize) + ',' +
-                    Math.round(point.plotY / cellSize);
+                        Math.round(point.plotY / cellSize);
 
                 if (!grid[key]) {
                     grid[key] = 1;
@@ -400,7 +401,7 @@
                 // reset
                 if (graph.toD) {
                     d = graph.attr('d');
-                    graph.attr({ d: graph.toD });
+                    graph.attr({d: graph.toD});
                 }
                 len = node.getTotalLength();
                 for (i = 0; i < len; i += distance) {
@@ -413,7 +414,7 @@
                     });
                 }
                 if (d) {
-                    graph.attr({ d: d });
+                    graph.attr({d: d});
                 }
                 // Last point
                 point = points[points.length - 1];
@@ -421,7 +422,7 @@
                 point.chartY = paneTop + point.plotY;
                 pushDiscrete(point);
 
-            // Interpolate
+                // Interpolate
             } else {
                 len = points.length;
                 for (i = 0; i < len; i += 1) {
@@ -1057,7 +1058,7 @@
                                 y: closest[0].plotY + closest[2]
                             });
                         } else {
-                            label.attr({ opacity: 0 });
+                            label.attr({opacity: 0});
                         }
                     }
                 }

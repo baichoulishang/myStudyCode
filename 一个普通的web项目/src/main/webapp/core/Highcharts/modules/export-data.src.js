@@ -23,18 +23,19 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'mixins/ajax.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2010-2017 Christer Vasseng, Torstein Honsi
          *
          * License: www.highcharts.com/license
          */
-
 
 
         /**
@@ -146,7 +147,8 @@
 
             try {
                 options.data = JSON.stringify(options.data);
-            } catch (e) {}
+            } catch (e) {
+            }
 
             r.send(options.data || true);
         };
@@ -160,7 +162,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var win = Highcharts.win,
@@ -192,7 +193,7 @@
                     binary[i] = binStr.charCodeAt(i);
                 }
 
-                blob = new win.Blob([binary], { 'type': parts[1] });
+                blob = new win.Blob([binary], {'type': parts[1]});
                 return domurl.createObjectURL(blob);
             }
         };
@@ -268,7 +269,6 @@
         // @todo
         // - Set up systematic tests for all series types, paired with tests of the data
         //   module importing the same data.
-
 
 
         var defined = Highcharts.defined,
@@ -667,7 +667,7 @@
                             name,
                             point;
 
-                        point = { series: mockSeries };
+                        point = {series: mockSeries};
                         series.pointClass.prototype.applyOptions.apply(
                             point,
                             [options]
@@ -780,7 +780,7 @@
             }
             dataRows = dataRows.concat(rowArr);
 
-            fireEvent(this, 'exportData', { dataRows: dataRows });
+            fireEvent(this, 'exportData', {dataRows: dataRows});
 
             return dataRows;
         };
@@ -903,8 +903,8 @@
                         className = 'empty';
                     }
                     return '<' + tag + (attrs ? ' ' + attrs : '') +
-                            ' class="' + className + '">' +
-                            val + '</' + tag + '>';
+                        ' class="' + className + '">' +
+                        val + '</' + tag + '>';
                 },
                 // Get table header markup from row data
                 getTableHeaderHTML = function (topheaders, subheaders, rowLength) {
@@ -1032,7 +1032,7 @@
             });
             html += '</tbody></table>';
 
-            var e = { html: html };
+            var e = {html: html};
 
             fireEvent(this, 'afterGetTable', e);
 
@@ -1053,7 +1053,7 @@
             if (win.Blob && win.navigator.msSaveOrOpenBlob) {
                 return new win.Blob(
                     ['\uFEFF' + content], // #7084
-                    { type: type }
+                    {type: type}
                 );
             }
         }
@@ -1070,7 +1070,7 @@
 
             downloadURL(
                 getBlobFromContent(csv, 'text/csv') ||
-                    'data:text/csv,\uFEFF' + encodeURIComponent(csv),
+                'data:text/csv,\uFEFF' + encodeURIComponent(csv),
                 this.getFilename() + '.csv'
             );
         };
@@ -1106,7 +1106,7 @@
 
             downloadURL(
                 getBlobFromContent(template, 'application/vnd.ms-excel') ||
-                    uri + base64(template),
+                uri + base64(template),
                 this.getFilename() + '.xls'
             );
         };

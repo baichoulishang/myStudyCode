@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/xrange.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * X-range series module
@@ -36,7 +38,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var addEvent = H.addEvent,
@@ -351,8 +352,8 @@
                     // Apply pointPlacement to the Y axis
                     if (
                         options.pointPlacement &&
-                    isNumber(point.plotY) &&
-                    yAxis.categories
+                        isNumber(point.plotY) &&
+                        yAxis.categories
                     ) {
                         point.plotY = yAxis
                             .translate(point.y, 0, 1, 0, 1, options.pointPlacement);
@@ -411,7 +412,7 @@
                     // Add a partShapeArgs to the point, based on the shapeArgs property
                     partialFill = point.partialFill;
                     if (partialFill) {
-                    // Get the partial fill amount
+                        // Get the partial fill amount
                         if (isObject(partialFill)) {
                             partialFill = partialFill.amount;
                         }
@@ -433,7 +434,7 @@
                             width: Math.max(
                                 Math.round(
                                     length * partialFill +
-                                (point.plotX - plotX)
+                                    (point.plotX - plotX)
                                 ),
                                 0
                             ),
@@ -536,9 +537,9 @@
                         if (!series.chart.styledMode) {
                             point
                                 .graphicOriginal[verb](
-                                    pointAttr,
-                                    animation
-                                )
+                                pointAttr,
+                                animation
+                            )
                                 .shadow(seriesOpts.shadow, null, cutOff);
 
                             if (partShapeArgs) {
@@ -562,9 +563,9 @@
                                 pointAttr.fill = fill;
                                 point
                                     .graphicOverlay[pointStateVerb](
-                                        pointAttr,
-                                        animation
-                                    )
+                                    pointAttr,
+                                    animation
+                                )
                                     .shadow(seriesOpts.shadow, null, cutOff);
                             }
                         }
@@ -701,7 +702,7 @@
                  */
                 isValid: function () {
                     return typeof this.x === 'number' &&
-                    typeof this.x2 === 'number';
+                        typeof this.x2 === 'number';
                 }
             });
 

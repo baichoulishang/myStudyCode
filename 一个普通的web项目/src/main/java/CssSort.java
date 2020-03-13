@@ -90,13 +90,13 @@ public class CssSort {
             }
             return o1.compareTo(o2);
         });
-        for (String str : list) {
+        for (String str : collect) {
             System.out.println(str);
         }
         // 关闭流
         in.close();
         PrintWriter out = new PrintWriter(READFILE);
-        for (String str : list) {
+        for (String str : collect) {
             out.println(str);
         }
         out.close();

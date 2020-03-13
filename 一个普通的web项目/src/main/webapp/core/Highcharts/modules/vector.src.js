@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/vector.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Vector plot series module
@@ -36,7 +38,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var seriesType = H.seriesType;
@@ -143,8 +144,8 @@
                     if (state) {
                         stroke = options.states[state].color || stroke;
                         strokeWidth =
-                        (options.states[state].lineWidth || strokeWidth) +
-                        (options.states[state].lineWidthPlus || 0);
+                            (options.states[state].lineWidth || strokeWidth) +
+                            (options.states[state].lineWidthPlus || 0);
                     }
 
                     return {

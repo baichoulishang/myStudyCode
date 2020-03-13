@@ -53,20 +53,16 @@ public class TableCreationProcessorFactory
         }
 
         public void process() {
-            for (TypeDeclaration typeDecl :
-                    env.getSpecifiedTypeDeclarations()) {
-                typeDecl.accept(getDeclarationScanner(
-                        new TableCreationVisitor(), NO_OP));
+            for (TypeDeclaration typeDecl : env.getSpecifiedTypeDeclarations()) {
+                typeDecl.accept(getDeclarationScanner(new TableCreationVisitor(), NO_OP));
                 sql = sql.substring(0, sql.length() - 1) + ");";
                 System.out.println("creation SQL is :\n" + sql);
                 sql = "";
             }
         }
 
-        private class TableCreationVisitor
-                extends SimpleDeclarationVisitor {
-            public void visitClassDeclaration(
-                    ClassDeclaration d) {
+        private class TableCreationVisitor extends SimpleDeclarationVisitor {
+            public void visitClassDeclaration(ClassDeclaration d) {
                 DBTable dbTable = d.getAnnotation(DBTable.class);
                 if (dbTable != null) {
                     sql += "CREATE TABLE ";
@@ -77,30 +73,27 @@ public class TableCreationProcessorFactory
                 }
             }
 
-            public void visitFieldDeclaration(
-                    FieldDeclaration d) {
+            public void visitFieldDeclaration(FieldDeclaration d) {
                 String columnName = "";
                 if (d.getAnnotation(SQLInteger.class) != null) {
-                    SQLInteger sInt = d.getAnnotation(
-                            SQLInteger.class);
+                    SQLInteger sInt = d.getAnnotation(SQLInteger.class);
                     // Use field name if name not specified
-                    if (sInt.name().length() < 1)
+                    if (sInt.name().length() < 1) {
                         columnName = d.getSimpleName().toUpperCase();
-                    else
+                    } else {
                         columnName = sInt.name();
-                    sql += "\n    " + columnName + " INT" +
-                            getConstraints(sInt.constraints()) + ",";
+                    }
+                    sql += "\n    " + columnName + " INT" + getConstraints(sInt.constraints()) + ",";
                 }
                 if (d.getAnnotation(SQLString.class) != null) {
-                    SQLString sString = d.getAnnotation(
-                            SQLString.class);
+                    SQLString sString = d.getAnnotation(SQLString.class);
                     // Use field name if name not specified.
-                    if (sString.name().length() < 1)
+                    if (sString.name().length() < 1) {
                         columnName = d.getSimpleName().toUpperCase();
-                    else
+                    } else {
                         columnName = sString.name();
-                    sql += "\n    " + columnName + " VARCHAR(" +
-                            sString.value() + ")" +
+                    }
+                    sql += "\n    " + columnName + " VARCHAR(" + sString.value() + ")" +
                             getConstraints(sString.constraints()) + ",";
                 }
             }

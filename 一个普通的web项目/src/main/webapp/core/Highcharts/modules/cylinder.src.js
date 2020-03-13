@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'modules/cylinder.src.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * Highcharts cylinder - a 3D series
@@ -37,7 +39,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         var charts = H.charts,
@@ -53,17 +54,17 @@
             cylinderMethods;
 
         /**
-          * The cylinder series type.
-          *
-          * @requires module:highcharts-3d
-          * @requires module:modules/cylinder
-          *
-          * @private
-          * @class
-          * @name Highcharts.seriesTypes.cylinder
-          *
-          * @augments Highcharts.Series
-          */
+         * The cylinder series type.
+         *
+         * @requires module:highcharts-3d
+         * @requires module:modules/cylinder
+         *
+         * @private
+         * @class
+         * @name Highcharts.seriesTypes.cylinder
+         *
+         * @augments Highcharts.Series
+         */
         seriesType(
             'cylinder',
             'column',

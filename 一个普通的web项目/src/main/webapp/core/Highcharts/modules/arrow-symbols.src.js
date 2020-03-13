@@ -23,11 +23,13 @@
     }
 }(function (Highcharts) {
     var _modules = Highcharts ? Highcharts._modules : {};
+
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
         }
     }
+
     _registerModule(_modules, 'parts-gantt/ArrowSymbols.js', [_modules['parts/Globals.js']], function (H) {
         /* *
          * (c) 2017 Highsoft AS
@@ -35,7 +37,6 @@
          *
          * License: www.highcharts.com/license
          */
-
 
 
         /**
@@ -168,7 +169,7 @@
          *         Path array
          */
         H.SVGRenderer.prototype.symbols['arrow-filled'] =
-                H.SVGRenderer.prototype.symbols['triangle-left'];
+            H.SVGRenderer.prototype.symbols['triangle-left'];
 
         /**
          * Creates a half-width, left-oriented triangle.
@@ -224,7 +225,7 @@
          *         Path array
          */
         H.SVGRenderer.prototype.symbols['arrow-filled-half'] =
-                H.SVGRenderer.prototype.symbols['triangle-left-half'];
+            H.SVGRenderer.prototype.symbols['triangle-left-half'];
 
     });
     _registerModule(_modules, 'masters/modules/arrow-symbols.src.js', [], function () {
