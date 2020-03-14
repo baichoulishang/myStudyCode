@@ -4,7 +4,10 @@ import lambdasinaction.chap4.Dish;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import static lambdasinaction.chap4.Dish.menu;
 
@@ -25,6 +28,8 @@ public class Reducing {
         Optional<Integer> min = numbers.stream().reduce(Integer::min);
         min.ifPresent(System.out::println);
 
+        Map<String, List<Dish>> map = menu.stream().collect(Collectors.groupingBy(Dish::getName));
+        Map<String, Dish> dishMap = menu.stream().collect(Collectors.toMap(Dish::getName, Function.identity()));
         int calories = menu.stream()
                 .map(Dish::getCalories)
                 .reduce(0, Integer::sum);

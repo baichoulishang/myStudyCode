@@ -2,7 +2,9 @@ package lambdasinaction.chap5;
 
 import lambdasinaction.chap4.Dish;
 
+import java.util.IntSummaryStatistics;
 import java.util.Optional;
+import static java.util.stream.Collectors.*;
 
 import static lambdasinaction.chap4.Dish.menu;
 
@@ -18,6 +20,7 @@ public class Finding {
 
         Optional<Dish> dish = findVegetarianDish();
         dish.ifPresent(d -> System.out.println(d.getName()));
+        IntSummaryStatistics collect = menu.stream().collect(summarizingInt(Dish::getCalories));
     }
 
     private static boolean isVegetarianFriendlyMenu() {

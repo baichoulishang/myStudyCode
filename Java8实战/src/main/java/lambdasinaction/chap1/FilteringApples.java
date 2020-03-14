@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class FilteringApples {
 
@@ -15,9 +16,15 @@ public class FilteringApples {
         // [Apple{color='green', weight=80}, Apple{color='green', weight=155}]
 
         List<Apple> greenApples = filterApples(inventory, FilteringApples::isGreenApple);
-
-
+        List<String> str = Arrays.asList("a", "b", "A", "B");
+        str.sort((a, b) -> a.compareToIgnoreCase(b));
+        str.sort(String::compareToIgnoreCase);
         System.out.println(greenApples);
+
+        inventory.stream()
+                .map(Apple::getWeight)
+                .map(Integer::intValue)
+                .collect(Collectors.toList());
 
         // [Apple{color='green', weight=155}]
         List<Apple> heavyApples = filterApples(inventory, FilteringApples::isHeavyApple);

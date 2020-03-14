@@ -17,11 +17,13 @@ public class Partitioning {
     }
 
     private static Map<Boolean, List<Dish>> partitionByVegeterian() {
-        return menu.stream().collect(partitioningBy(Dish::isVegetarian));
+        Map<Boolean, List<Dish>> collect = menu.stream().collect(partitioningBy(Dish::isVegetarian));
+        return collect;
     }
 
     private static Map<Boolean, Map<Dish.Type, List<Dish>>> vegetarianDishesByType() {
-        return menu.stream().collect(partitioningBy(Dish::isVegetarian, groupingBy(Dish::getType)));
+        Map<Boolean, Map<Dish.Type, List<Dish>>> collect = menu.stream().collect(partitioningBy(Dish::isVegetarian, groupingBy(Dish::getType)));
+        return collect;
     }
 
     private static Object mostCaloricPartitionedByVegetarian() {

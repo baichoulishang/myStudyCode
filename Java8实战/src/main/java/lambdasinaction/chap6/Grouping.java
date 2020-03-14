@@ -1,12 +1,9 @@
 package lambdasinaction.chap6;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collector;
 
 import static java.util.stream.Collectors.*;
-import static lambdasinaction.chap6.Dish.dishTags;
 import static lambdasinaction.chap6.Dish.menu;
 
 public class Grouping {
@@ -34,12 +31,14 @@ public class Grouping {
     }
 
     private static Map<Dish.Type, Set<String>> groupDishTagsByType() {
-        return menu.stream().collect(groupingBy(Dish::getType, flatMapping(dish -> dishTags.get(dish.getName()).stream(), toSet())));
+        // return menu.stream().collect(groupingBy(Dish::getType, flatMap(dish -> dishTags.get(dish.getName()).stream(), toSet())));
+        return null;
     }
 
     private static Map<Dish.Type, List<Dish>> groupCaloricDishesByType() {
 //        return menu.stream().filter(dish -> dish.getCalories() > 500).collect(groupingBy(Dish::getType));
-        return menu.stream().collect(groupingBy(Dish::getType, filtering(dish -> dish.getCalories() > 500, toList())));
+//         return menu.stream().collect(groupingBy(Dish::getType, filtering(dish -> dish.getCalories() > 500, toList())));
+        return null;
     }
 
     private static Map<CaloricLevel, List<Dish>> groupDishesByCaloricLevel() {
@@ -52,7 +51,11 @@ public class Grouping {
     }
 
     private static Map<Dish.Type, Map<CaloricLevel, List<Dish>>> groupDishedByTypeAndCaloricLevel() {
-        return menu.stream().collect(
+        Collector<Dish, ?, Map<Dish.Type, Map<Dish.Type, List<Dish>>>> grouping =
+                groupingBy(Dish::getType, groupingBy(Dish::getType));
+
+
+        Map<Dish.Type, Map<CaloricLevel, List<Dish>>> map = menu.stream().collect(
                 groupingBy(Dish::getType,
                         groupingBy((Dish dish) -> {
                             if (dish.getCalories() <= 400) return CaloricLevel.DIET;
@@ -61,10 +64,12 @@ public class Grouping {
                         })
                 )
         );
+        return map;
     }
 
     private static Map<Dish.Type, Long> countDishesInGroups() {
-        return menu.stream().collect(groupingBy(Dish::getType, counting()));
+        Map<Dish.Type, Long> collect = menu.stream().collect(groupingBy(Dish::getType, counting()));
+        return collect;
     }
 
     private static Map<Dish.Type, Optional<Dish>> mostCaloricDishesByType() {
@@ -72,13 +77,21 @@ public class Grouping {
                 groupingBy(Dish::getType,
                         reducing((Dish d1, Dish d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2)));
     }
+    private static Map<Dish.Type, Optional<Dish>> mostCaloricDishesByType2() {
+        Map<Dish.Type, Optional<Dish>> collect = menu.stream().collect(
+                groupingBy(Dish::getType,
+                        maxBy(Comparator.comparing(Dish::getCalories))));
+
+        return collect;
+    }
 
     private static Map<Dish.Type, Dish> mostCaloricDishesByTypeWithoutOprionals() {
-        return menu.stream().collect(
+        Map<Dish.Type, Dish> collect = menu.stream().collect(
                 groupingBy(Dish::getType,
                         collectingAndThen(
                                 reducing((d1, d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2),
                                 Optional::get)));
+        return collect;
     }
 
     private static Map<Dish.Type, Integer> sumCaloriesByType() {
@@ -87,7 +100,7 @@ public class Grouping {
     }
 
     private static Map<Dish.Type, Set<CaloricLevel>> caloricLevelsByType() {
-        return menu.stream().collect(
+        Map<Dish.Type, Set<CaloricLevel>> collect = menu.stream().collect(
                 groupingBy(Dish::getType, mapping(
                         dish -> {
                             if (dish.getCalories() <= 400) return CaloricLevel.DIET;
@@ -95,6 +108,7 @@ public class Grouping {
                             else return CaloricLevel.FAT;
                         },
                         toSet())));
+        return collect;
     }
 
     enum CaloricLevel {DIET, NORMAL, FAT}

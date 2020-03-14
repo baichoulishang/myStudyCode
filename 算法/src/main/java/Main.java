@@ -3,22 +3,15 @@ import pojo.Role;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) {
-        List<String> words = new ArrayList<>();
-        words.add("fsdfsdf");
-        words.add("fsdfsdfsd");
-        words.add("fsdfsdfsdfssd");
-        words.add("fsdfsdfsdfsdsd");
-        words.add("fsdfsdfsdfsdfsd");
-        List<String> results = new ArrayList();
-        Optional<String> optionalS = words.stream().filter(s -> s.startsWith("f")).findFirst();
-        optionalS.ifPresent(results::add);
-        Optional<Boolean> add = optionalS.map(results::add);
-        optionalS.get();
+        List<Role> list = new ArrayList<>();
+        Map<String, Role> collect = list.stream().collect(Collectors.toMap(Role::getId, Function.identity()));
     }
 
 

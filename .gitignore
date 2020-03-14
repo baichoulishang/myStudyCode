@@ -1,3 +1,6 @@
 # Project exclude paths
 /Java编程思想/target/
 /多线程/target/
+/Java8实战/target/
+/一个普通的web项目/target/
+/算法/target/

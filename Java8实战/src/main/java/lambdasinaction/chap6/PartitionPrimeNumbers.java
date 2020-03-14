@@ -18,7 +18,19 @@ public class PartitionPrimeNumbers {
         System.out.println("Numbers partitioned in prime and non-prime: " + partitionPrimes(100));
         System.out.println("Numbers partitioned in prime and non-prime: " + partitionPrimesWithCustomCollector(100));
 
+        Stream<Integer> stream = Arrays.asList(1, 2, 3, 4, 5, 6).stream();
+        List<Integer> numbers = stream.reduce(
+                new ArrayList<Integer>(),
+                (List<Integer> l, Integer e) -> {
+                    l.add(e);
+                    return l;
+                },
+                (List<Integer> l1, List<Integer> l2) -> {
+                    l1.addAll(l2);
+                    return l1;
+                });
     }
+
 
     public static Map<Boolean, List<Integer>> partitionPrimes(int n) {
         return IntStream.rangeClosed(2, n).boxed()
@@ -31,14 +43,26 @@ public class PartitionPrimeNumbers {
                 .noneMatch(i -> candidate % i == 0);
     }
 
+    /**
+     * 检测一个数是否是质数
+     *
+     * @param candidate 被检测的数
+     * @return true:是质数;false:不是
+     */
+    public static boolean isPrimeSimple(int candidate) {
+        return IntStream.rangeClosed(2, candidate - 1)
+                .noneMatch(i -> candidate % i == 0);
+    }
+
     public static Map<Boolean, List<Integer>> partitionPrimesWithCustomCollector(int n) {
         return IntStream.rangeClosed(2, n).boxed().collect(new PrimeNumbersCollector());
     }
 
     public static boolean isPrime(List<Integer> primes, Integer candidate) {
         double candidateRoot = Math.sqrt((double) candidate);
-        //return takeWhile(primes, i -> i <= candidateRoot).stream().noneMatch(i -> candidate % i == 0);
-        return primes.stream().takeWhile(i -> i <= candidateRoot).noneMatch(i -> candidate % i == 0);
+        // return takeWhile(primes, i -> i <= candidateRoot).stream().noneMatch(i -> candidate % i == 0);
+        // return primes.stream().takeWhile(i -> i <= candidateRoot).noneMatch(i -> candidate % i == 0);
+        return true;
     }
 
     public Map<Boolean, List<Integer>> partitionPrimesWithInlineCollector(int n) {
@@ -58,7 +82,7 @@ public class PartitionPrimeNumbers {
                         });
     }
 
-    /*
+    /*    *//*
         public static <A> List<A> takeWhile(List<A> list, Predicate<A> p) {
             int i = 0;
             for (A item : list) {

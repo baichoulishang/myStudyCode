@@ -68,7 +68,7 @@ public class BuildingStreams {
             }
         };
         IntStream.generate(fib).limit(10).forEach(System.out::println);
-
+        Stream<String> stream1 = Arrays.stream("abcd".split(" "));
         long uniqueWords = Files.lines(Paths.get("lambdasinaction/chap5/data.txt"), Charset.defaultCharset())
                 .flatMap(line -> Arrays.stream(line.split(" ")))
                 .distinct()

@@ -43,22 +43,30 @@ public class NumericStreams {
 
         System.out.println(evenNumbers.count());
 
+
+        int firstLetter = 3;
+        Stream<int[]> ggs = IntStream.rangeClosed(1, 100)
+                .filter(b -> Math.sqrt(firstLetter * firstLetter + b * b) % 1 == 0)
+                .boxed()
+                .map(b -> new int[]{firstLetter, b, (int) Math.sqrt(firstLetter * firstLetter + b * b)});
+
+
         int original = 3;
         Stream<int[]> stream = IntStream.rangeClosed(original, 100)
                 .filter(b -> Math.sqrt(original * original + b * b) % 1 == 0).boxed()
                 .map(b -> new int[]{original, b, (int) Math.sqrt(original * original + b * b)});
 
-        Stream<Stream<int[]>> streamStream = IntStream.rangeClosed(1, 100).boxed()
+        Stream<Stream<int[]>> streamStream = IntStream.rangeClosed(1, 100)
+                .boxed()
                 .map(a -> IntStream.rangeClosed(a, 100)
                         .filter(b -> Math.sqrt(a * a + b * b) % 1 == 0).boxed()
                         .map(b -> new int[]{a, b, (int) Math.sqrt(a * a + b * b)}));
 
-
-        Stream<int[]> pythagoreanTriples =
-                IntStream.rangeClosed(1, 100).boxed()
-                        .flatMap(a -> IntStream.rangeClosed(a, 100)
-                                .filter(b -> Math.sqrt(a * a + b * b) % 1 == 0).boxed()
-                                .map(b -> new int[]{a, b, (int) Math.sqrt(a * a + b * b)}));
+        Stream<int[]> pythagoreanTriples = IntStream.rangeClosed(1, 100)
+                .boxed()
+                .flatMap(a -> IntStream.rangeClosed(a, 100)
+                        .filter(b -> Math.sqrt(a * a + b * b) % 1 == 0).boxed()
+                        .map(b -> new int[]{a, b, (int) Math.sqrt(a * a + b * b)}));
 
         pythagoreanTriples.forEach(t -> System.out.println(t[0] + ", " + t[1] + ", " + t[2]));
 
