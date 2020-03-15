@@ -18,33 +18,32 @@ import java.util.Iterator;
 import java.util.Set;
 
 public final class Candidate implements Iterable<Endpoint> {
-    // 下游部件节点的总权重
-    public final int totalWeight;
-    // 下游部件节点列表
-    // 引用了其他状态可变的对象（如集合、数组，对象等），则这些字段必须是 private 修饰的，并且这些字段值不能对外暴露
-    private final Set<Endpoint> endpoints;
+  // 下游部件节点列表
+  private final Set<Endpoint> endpoints;
+  // 下游部件节点的总权重
+  public final int totalWeight;
 
-    public Candidate(Set<Endpoint> endpoints) {
-        int sum = 0;
-        for (Endpoint endpoint : endpoints) {
-            sum += endpoint.weight;
-        }
-        this.totalWeight = sum;
-        this.endpoints = endpoints;
+  public Candidate(Set<Endpoint> endpoints) {
+    int sum = 0;
+    for (Endpoint endpoint : endpoints) {
+      sum += endpoint.weight;
     }
+    this.totalWeight = sum;
+    this.endpoints = endpoints;
+  }
 
-    public int getEndpointCount() {
-        return endpoints.size();
-    }
+  public int getEndpointCount() {
+    return endpoints.size();
+  }
 
-    @Override
-    public final Iterator<Endpoint> iterator() {
-        return ReadOnlyIterator.with(endpoints.iterator());
-    }
+  @Override
+  public final Iterator<Endpoint> iterator() {
+    return ReadOnlyIterator.with(endpoints.iterator());
+  }
 
-    @Override
-    public String toString() {
-        return "Candidate [endpoints=" + endpoints + ", totalWeight=" + totalWeight
-                + "]";
-    }
+  @Override
+  public String toString() {
+    return "Candidate [endpoints=" + endpoints + ", totalWeight=" + totalWeight
+        + "]";
+  }
 }

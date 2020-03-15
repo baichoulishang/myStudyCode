@@ -13,7 +13,7 @@ http://www.broadview.com.cn/31065
 package io.github.viscent.mtia.ch5;
 
 public interface TaskRunnerSpec {
-    void init();
+  public void init();
 
-    void submit(Runnable task) throws InterruptedException;
+  public void submit(Runnable task) throws InterruptedException;
 }

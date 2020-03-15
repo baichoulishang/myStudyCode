@@ -16,52 +16,46 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class PauseControl extends ReentrantLock {
-    private static final long serialVersionUID = 176912639934052187L;
-    // 设置条件变量,用来暂停和唤醒线程
-    private final Condition condSuspended = newCondition();
-    // 线程暂挂标志
-    private volatile boolean suspended = false;
+  private static final long serialVersionUID = 176912639934052187L;
+  // 线程暂挂标志
+  private volatile boolean suspended = false;
+  private final Condition condSuspended = newCondition();
 
-    /**
-     * 暂停线程
-     */
-    public void requestPause() {
-        suspended = true;
-    }
+  /**
+   * 暂停线程
+   */
+  public void requestPause() {
+    suspended = true;
+  }
 
-    /**
-     * 恢复线程
-     */
-    public void proceed() {
-        // 以当前对象为锁实例,申请锁
-        // 原子操作
-        lock();
-        try {
-            suspended = false;
-            // 唤醒所有的等待线程
-            condSuspended.signalAll();
-        } finally {
-            // 以当前对象为锁实例,解锁
-            unlock();
-        }
+  /**
+   * 恢复线程
+   */
+  public void proceed() {
+    lock();
+    try {
+      suspended = false;
+      condSuspended.signalAll();
+    } finally {
+      unlock();
     }
+  }
 
-    /**
-     * 当前线程仅在线程暂挂标记不为true的情况下才执行指定的目标动作。
-     *
-     * @throws InterruptedException
-     * @targetAction 目标动作
-     */
-    public void pauseIfNeccessary(Runnable targetAction) throws InterruptedException {
-        // 三个条件,1,循环;2,await语句;3,释放锁的语句放在finally中
-        lock();
-        try {
-            while (suspended) {
-                condSuspended.await();
-            }
-            targetAction.run();
-        } finally {
-            unlock();
-        }
+  /**
+   * 当前线程仅在线程暂挂标记不为true的情况下才执行指定的目标动作。
+   *
+   * @targetAction 目标动作
+   * @throws InterruptedException
+   */
+  public void pauseIfNeccessary(Runnable targetAction) throws InterruptedException {
+    lock();
+    try {
+      while (suspended) {
+        condSuspended.await();
+      }
+      targetAction.run();
+    } finally {
+      unlock();
     }
+  }
 }

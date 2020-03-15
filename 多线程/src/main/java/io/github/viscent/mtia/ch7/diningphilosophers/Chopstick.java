@@ -18,33 +18,33 @@ package io.github.viscent.mtia.ch7.diningphilosophers;
  * @author Viscent Huang
  */
 public class Chopstick {
-    public final int id;
-    private Status status = Status.PUT_DOWN;
+  public final int id;
+  private Status status = Status.PUT_DOWN;
 
-    public Chopstick(int id) {
-        super();
-        this.id = id;
-    }
+  public static enum Status {
+    PICKED_UP,
+    PUT_DOWN
+  }
 
-    public void pickUp() {
-        status = Status.PICKED_UP;
-    }
+  public Chopstick(int id) {
+    super();
+    this.id = id;
+  }
 
-    public void putDown() {
-        status = Status.PUT_DOWN;
-    }
+  public void pickUp() {
+    status = Status.PICKED_UP;
+  }
 
-    public Status getStatus() {
-        return status;
-    }
+  public void putDown() {
+    status = Status.PUT_DOWN;
+  }
 
-    @Override
-    public String toString() {
-        return "chopstick-" + id;
-    }
+  public Status getStatus() {
+    return status;
+  }
 
-    public enum Status {
-        PICKED_UP,
-        PUT_DOWN
-    }
+  @Override
+  public String toString() {
+    return "chopstick-" + id;
+  }
 }

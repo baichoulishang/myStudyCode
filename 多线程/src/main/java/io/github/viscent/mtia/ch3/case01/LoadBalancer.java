@@ -13,7 +13,6 @@ http://www.broadview.com.cn/31065
 package io.github.viscent.mtia.ch3.case01;
 
 public interface LoadBalancer {
-    void updateCandidate(final Candidate candidate);
-
-    Endpoint nextEndpoint();
+	void updateCandidate(final Candidate candidate);
+	Endpoint nextEndpoint();
 }

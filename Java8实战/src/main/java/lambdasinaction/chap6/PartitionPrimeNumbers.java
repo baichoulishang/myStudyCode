@@ -33,14 +33,16 @@ public class PartitionPrimeNumbers {
 
 
     public static Map<Boolean, List<Integer>> partitionPrimes(int n) {
-        return IntStream.rangeClosed(2, n).boxed()
+        Map<Boolean, List<Integer>> collect = IntStream.rangeClosed(2, n).boxed()
                 .collect(partitioningBy(candidate -> isPrime(candidate)));
+        return collect;
     }
 
     public static boolean isPrime(int candidate) {
-        return IntStream.rangeClosed(2, candidate - 1)
+        boolean match = IntStream.rangeClosed(2, candidate - 1)
                 .limit((long) Math.floor(Math.sqrt(candidate)) - 1)
                 .noneMatch(i -> candidate % i == 0);
+        return match;
     }
 
     /**
@@ -60,9 +62,12 @@ public class PartitionPrimeNumbers {
 
     public static boolean isPrime(List<Integer> primes, Integer candidate) {
         double candidateRoot = Math.sqrt((double) candidate);
+        boolean match = IntStream.rangeClosed(2, candidate)
+                .noneMatch(i -> candidate % i == 0);
+
         // return takeWhile(primes, i -> i <= candidateRoot).stream().noneMatch(i -> candidate % i == 0);
         // return primes.stream().takeWhile(i -> i <= candidateRoot).noneMatch(i -> candidate % i == 0);
-        return true;
+        return match;
     }
 
     public Map<Boolean, List<Integer>> partitionPrimesWithInlineCollector(int n) {

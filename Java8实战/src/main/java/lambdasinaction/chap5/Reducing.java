@@ -1,11 +1,9 @@
 package lambdasinaction.chap5;
 
 import lambdasinaction.chap4.Dish;
+import lambdasinaction.chap6.ToListCollector;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -34,5 +32,10 @@ public class Reducing {
                 .map(Dish::getCalories)
                 .reduce(0, Integer::sum);
         System.out.println("Number of calories:" + calories);
+        List<Dish> collect = menu.stream().collect(new ToListCollector<Dish>());
+        menu.stream().collect(
+                ArrayList::new,
+                List::add,
+                List::addAll);
     }
 }
