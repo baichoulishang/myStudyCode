@@ -48,9 +48,12 @@ public class AcyclicLP {
 
     private void relax(DirectedEdge e) {
         int v = e.from(), w = e.to();
+        // 如果当前记录的从顶点到w的距离,要小于先从顶点到v,再从v到w的距离,那么更新数据
         if (distTo[w] < distTo[v] + e.weight()) {
-            distTo[w] = distTo[v] + e.weight();
-            edgeTo[w] = e;
+            distTo[w] = distTo[v] + e.weight();// 设置到w的距离为:先从顶点到v,再从v到w的距离
+            edgeTo[w] = e;// 设置最短路径中,到w的边时e
+        } else {
+            System.out.println("边e失效");
         }
     }
 

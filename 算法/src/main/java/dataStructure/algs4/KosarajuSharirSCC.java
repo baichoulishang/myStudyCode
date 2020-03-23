@@ -6,16 +6,19 @@ public class KosarajuSharirSCC {
     private int count;
 
     public KosarajuSharirSCC(Digraph G) {
-
         marked = new boolean[G.V()];
         id = new int[G.V()];
-
-
+        // G.reverse()，就是G的逆序
+        // dfs.reversePost() G的逆序的逆后序
+        // 设我们生成的逆后序是a b c d v w x y z
+        // 逆后序的意义：假如我们使用dfs()这个递归方法来生成逆后序，那么在生成的逆后序中，若v排在前面，w排在后面，dfs(w)必然在dfs(v)【结束之前】结束。
+        // 换言之，dfs(a)是最后一个结束的。
+        // 但是这个意义不能证明dfs(w)是在dfs(v)调用之前还是调用之后，这个还是要注意一下的。详细情况可以参考p.374页的图4.2.10
         DepthFirstOrder dfs = new DepthFirstOrder(G.reverse());
         for (int v : dfs.reversePost()) {
             if (!marked[v]) {
                 dfs(G, v);
-                count++;
+                count++;// 同一个连通分量的顶点一定会被标识同一个count
             }
         }
 
@@ -51,10 +54,8 @@ public class KosarajuSharirSCC {
     }
 
     private void dfs(Digraph G, int v) {
-
-        marked[v] = true;
-
-        id[v] = count;
+        marked[v] = true; //已经访问过的点都打个标记
+        id[v] = count; //标记v属于哪个连通分量
         for (int w : G.adj(v)) {
             if (!marked[w]) dfs(G, w);
         }

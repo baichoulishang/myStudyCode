@@ -33,27 +33,29 @@ public class DirectedCycle {
     }
 
     private void dfs(Digraph G, int v) {
-        onStack[v] = true;
-        marked[v] = true;
+        onStack[v] = true;// 将v存入到栈中
+        marked[v] = true;// 标记v已经遍历过了
         for (int w : G.adj(v)) {
-
-
-            if (cycle != null) return;
-
-
-            else if (!marked[w]) {
-                edgeTo[w] = v;
-                dfs(G, w);
-            } else if (onStack[w]) {
-                cycle = new Stack<Integer>();
+            if (cycle != null) return;// 如果cycle不为空,说明已经检测到了有向环,退出
+            else if (!marked[w]) {// 没有遍历过
+                edgeTo[w] = v;// 标记从v到w的边
+                dfs(G, w);// 以w为起点继续深度搜索
+            } else if (onStack[w]) {// w已经存在栈中.进入这个分支,说明已经检测到了有向环!
+                // 将这个环的信息保存下来
+                cycle = new Stack<>();
+                // 比如,3 → 4,4 → 5,5 → 3,那这个for循环会将3,4放进cycle中
                 for (int x = v; x != w; x = edgeTo[x]) {
                     cycle.push(x);
                 }
-                cycle.push(w);
-                cycle.push(v);
+                cycle.push(w);// 存入5
+                cycle.push(v); // 存入3
                 assert check();
             }
         }
+        // 从栈中删除v,因为已经执行完了for (int w : G.adj(v)) ，已经遍历了v所有的顶点
+        // 如果不移除的话,后续可能会有边指向v,并对v顶点进行判断
+        // 1、判断【!marked[w]】，返回false
+        // 2、判断【onStack[w]】，返回true，从而判定存在有向环。这个结论是错的。
         onStack[v] = false;
     }
 

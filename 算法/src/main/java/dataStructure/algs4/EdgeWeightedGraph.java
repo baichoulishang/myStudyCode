@@ -13,9 +13,9 @@ public class EdgeWeightedGraph {
         if (V < 0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
         this.V = V;
         this.E = 0;
-        adj = (Bag<Edge>[]) new Bag[V];
+        adj = new Bag[V];// 用来保存Edge,每个Edge都会在两个地方有保存
         for (int v = 0; v < V; v++) {
-            adj[v] = new Bag<Edge>();
+            adj[v] = new Bag<>();
         }
     }
 
@@ -84,11 +84,11 @@ public class EdgeWeightedGraph {
     }
 
     public void addEdge(Edge e) {
-        int v = e.either();
-        int w = e.other(v);
+        int v = e.either();// 得到其中一个顶点
+        int w = e.other(v);// 得到另外一个顶点
         validateVertex(v);
         validateVertex(w);
-        adj[v].add(e);
+        adj[v].add(e);// 添加两次同一条边
         adj[w].add(e);
         E++;
     }

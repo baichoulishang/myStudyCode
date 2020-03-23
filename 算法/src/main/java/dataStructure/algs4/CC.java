@@ -7,13 +7,14 @@ public class CC {
     private int count;
 
     public CC(Graph G) {
-        marked = new boolean[G.V()];
-        id = new int[G.V()];
+        marked = new boolean[G.V()];// 用来标记一个顶点是否已经遍历过
+        id = new int[G.V()];// 建立一个和顶点数量一致的数组
         size = new int[G.V()];
         for (int v = 0; v < G.V(); v++) {
-
-            if (!marked[v]) {
+            if (!marked[v]) {// 从0开始遍历.如果没有标记过,那么使用dfs
                 dfs(G, v);
+                // 连通分量的个数
+                // 因为同一个连通分量中的点,在一个dfs(G, v);中会被全部标记完
                 count++;
             }
         }
@@ -62,8 +63,8 @@ public class CC {
         marked[v] = true;
         id[v] = count;
         size[count]++;
-        for (int w : G.adj(v)) {
-            if (!marked[w]) {
+        for (int w : G.adj(v)) {// 遍历以v为其中一个顶点的所有顶点
+            if (!marked[w]) {// 如果没有被标记,那么继续以该顶点为起点dfs
                 dfs(G, w);
             }
         }

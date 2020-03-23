@@ -13,11 +13,52 @@ public class LazyPrimMST {
         mst = new Queue<Edge>();
         pq = new MinPQ<Edge>();
         marked = new boolean[G.V()];
-        for (int v = 0; v < G.V(); v++)
-            if (!marked[v]) prim(G, v);
+        for (int v = 0; v < G.V(); v++) {
+            if (!marked[v]) {
+                prim(G, v);
+            }
+        }
 
 
         assert check(G);
+    }
+
+
+    public void LazyPrimMST2(EdgeWeightedGraph G) {
+        mst = new Queue<Edge>();
+        pq = new MinPQ<Edge>();
+        marked = new boolean[G.V()];
+        visit(G, 0);
+
+        while (!pq.isEmpty()) { // 对优先队列进行循环
+            Edge edge = pq.delMin(); // 删除并返回优先队列的最小值,即权重最小的边
+            int v = edge.either();
+            int w = edge.other(v);
+            // 如果两个顶点都被标记过,这条边无效,进入下一次循环
+            if (marked[v] && marked[w]) {
+                continue;
+            }
+            mst.enqueue(edge);// 否则,将这条边到最小生成树中
+            // 从两个顶点中找到没标记过的那个,然后根据该顶点继续更新横切边的集合
+            if (!marked[v]) {
+                visit(G, v);
+            }
+            if (!marked[w]) {
+                visit(G, w);
+            }
+        }
+        assert check(G);
+    }
+
+    // 更新横切边的集合
+    private void visit(EdgeWeightedGraph G, int v) {
+        marked[v] = true;// 标记这个顶点已经被访问过了
+        for (Edge e : G.adj(v)) {// 遍历与v相连的所有边
+            // 判断另一个顶点是否已经被标记过了
+            if (!marked[e.other(v)]) {
+                pq.insert(e);// 如果没有的话,添加到优先队列中
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -36,11 +77,17 @@ public class LazyPrimMST {
             Edge e = pq.delMin();
             int v = e.either(), w = e.other(v);
             assert marked[v] || marked[w];
-            if (marked[v] && marked[w]) continue;
+            if (marked[v] && marked[w]) {
+                continue;
+            }
             mst.enqueue(e);
             weight += e.weight();
-            if (!marked[v]) scan(G, v);
-            if (!marked[w]) scan(G, w);
+            if (!marked[v]) {
+                scan(G, v);
+            }
+            if (!marked[w]) {
+                scan(G, w);
+            }
         }
     }
 

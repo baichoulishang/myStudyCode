@@ -7,21 +7,19 @@ public class AcyclicSP {
     public AcyclicSP(EdgeWeightedDigraph G, int s) {
         distTo = new double[G.V()];
         edgeTo = new DirectedEdge[G.V()];
-
         validateVertex(s);
-
-        for (int v = 0; v < G.V(); v++)
+        for (int v = 0; v < G.V(); v++) {
             distTo[v] = Double.POSITIVE_INFINITY;
+        }
         distTo[s] = 0.0;
-
-
-        Topological topological = new Topological(G);
+        Topological topological = new Topological(G);// 将原图转换成拓扑图
         if (!topological.hasOrder())
             throw new IllegalArgumentException("Digraph is not acyclic.");
 
-        for (int v : topological.order()) {
-            for (DirectedEdge e : G.adj(v))
+        for (int v : topological.order()) {// 按照拓扑排序逐渐放松所有的顶点
+            for (DirectedEdge e : G.adj(v)) {
                 relax(e);
+            }
         }
     }
 

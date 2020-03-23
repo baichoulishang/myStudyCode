@@ -9,26 +9,25 @@ public class DijkstraSP {
 
     public DijkstraSP(EdgeWeightedDigraph G, int s) {
         for (DirectedEdge e : G.edges()) {
-            if (e.weight() < 0)
+            if (e.weight() < 0) {
                 throw new IllegalArgumentException("edge " + e + " has negative weight");
+            }
         }
-
         distTo = new double[G.V()];
         edgeTo = new DirectedEdge[G.V()];
-
         validateVertex(s);
-
-        for (int v = 0; v < G.V(); v++)
+        for (int v = 0; v < G.V(); v++) {
             distTo[v] = Double.POSITIVE_INFINITY;
+        }
         distTo[s] = 0.0;
-
-
-        pq = new IndexMinPQ<Double>(G.V());
-        pq.insert(s, distTo[s]);
+        pq = new IndexMinPQ<>(G.V());
+        pq.insert(s, distTo[s]);// 将起点加入优先队列.从起点开始放松
         while (!pq.isEmpty()) {
-            int v = pq.delMin();
-            for (DirectedEdge e : G.adj(v))
-                relax(e);
+            int v = pq.delMin();// 从优先队列中删除优先级最小的顶点
+            for (DirectedEdge e : G.adj(v)) {
+                relax(e);// 放松从e指出的所有边.从起点s开始!!!
+            }
+
         }
 
 
@@ -59,11 +58,14 @@ public class DijkstraSP {
 
     private void relax(DirectedEdge e) {
         int v = e.from(), w = e.to();
-        if (distTo[w] > distTo[v] + e.weight()) {
+        if (distTo[w] > distTo[v] + e.weight()) {// 边e仍然有效,则对其放松,使其无效
             distTo[w] = distTo[v] + e.weight();
             edgeTo[w] = e;
-            if (pq.contains(w)) pq.decreaseKey(w, distTo[w]);
-            else pq.insert(w, distTo[w]);
+            if (pq.contains(w)) {
+                pq.decreaseKey(w, distTo[w]);// 如果优先队列中已经有那个点,则更新
+            } else {
+                pq.insert(w, distTo[w]);// 否则,插入那个顶点的数据
+            }
         }
     }
 
