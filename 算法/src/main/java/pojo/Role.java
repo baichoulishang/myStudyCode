@@ -1,6 +1,21 @@
 package pojo;
 
+import org.apache.poi.ss.formula.functions.T;
+
+import javax.management.relation.RoleList;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Role implements Comparable {
+    public void main(String[] args) {
+
+        check(new ArrayList<Role>());
+    }
+
+    public void check(List<? extends Role> t) {
+
+    }
+
     private String id;
     private String rolename;
     private String note;
