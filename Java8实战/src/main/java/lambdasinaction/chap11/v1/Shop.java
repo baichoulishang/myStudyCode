@@ -26,12 +26,14 @@ public class Shop {
     }
 
     public Future<Double> getPriceAsync(String product) {
+        // 创建CompletableFuture对象,他会包含计算结果
         CompletableFuture<Double> futurePrice = new CompletableFuture<>();
+        // 在另一个线程中以异步方式执行计算
         new Thread(() -> {
             double price = calculatePrice(product);
-            futurePrice.complete(price);
+            futurePrice.complete(price);// 需长时间计算的任务结束并得出结果时，设置Future的返回值
         }).start();
-        return futurePrice;
+        return futurePrice;// 直接返回Future对象.我们可以从Future中获取处理结果
     }
 
     public String getName() {

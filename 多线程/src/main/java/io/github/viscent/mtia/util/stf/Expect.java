@@ -12,18 +12,14 @@ http://www.broadview.com.cn/31065
 */
 package io.github.viscent.mtia.util.stf;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Inherited;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 @Documented
 @Target(ElementType.METHOD)
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Expect {
-	int expected();
-	String desc();
+    int expected();
+
+    String desc();
 }

@@ -18,7 +18,7 @@ public class Summarizing {
         System.out.println("Menu statistics: " + calculateMenuStatistics());
         System.out.println("Short menu: " + getShortMenu());
         System.out.println("Short menu comma separated: " + getShortMenuCommaSeparated());
-        Integer collect = menu.stream().collect(reducing(0, Dish::getCalories,Integer::sum));
+        Integer collect = menu.stream().collect(reducing(0, Dish::getCalories, Integer::sum));
         menu.stream().reduce(null, (a, b) -> a == b ? a : b);
     }
 

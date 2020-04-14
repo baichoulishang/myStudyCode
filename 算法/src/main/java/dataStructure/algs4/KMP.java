@@ -1,9 +1,6 @@
 package dataStructure.algs4;
 
 
-import org.apache.poi.ss.formula.functions.T;
-import pojo.Role;
-
 public class KMP {
     private final int R;
     private int[][] dfa;
@@ -32,18 +29,20 @@ public class KMP {
     public KMP(char[] pattern, int R) {
         this.R = R;
         this.pattern = new char[pattern.length];
-        for (int j = 0; j < pattern.length; j++)
+        for (int j = 0; j < pattern.length; j++) {
             this.pattern[j] = pattern[j];
-
-
+        }
         int m = pattern.length;
         dfa = new int[R][m];
+        // 定义一个最基础的dfa
         dfa[pattern[0]][0] = 1;
-        for (int x = 0, j = 1; j < m; j++) {
-            for (int c = 0; c < R; c++)
-                dfa[c][j] = dfa[c][x];
-            dfa[pattern[j]][j] = j + 1;
-            x = dfa[pattern[j]][x];
+        int X = 0;// 初始化重启状态
+        for (int j = 1; j < m; j++) {
+            for (int c = 0; c < R; c++) {
+                dfa[c][j] = dfa[c][X];// 把重启状态的dfa的值赋给j
+            }
+            dfa[pattern[j]][j] = j + 1;// 匹配成功,+1
+            X = dfa[pattern[j]][X];// 更新重启状态
         }
     }
 

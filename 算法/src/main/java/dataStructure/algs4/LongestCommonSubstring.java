@@ -7,12 +7,22 @@ public class LongestCommonSubstring {
     private LongestCommonSubstring() {
     }
 
+    private static int lcpBL(String s, String t) {
+        int N = Math.min(s.length(), t.length());
+        for (int i = 0; i < N; i++) {
+            if (s.charAt(i) != t.charAt(i)) {
+                return i;
+            }
+        }
+        return N;
+    }
 
     private static String lcp(String s, int p, String t, int q) {
         int n = Math.min(s.length() - p, t.length() - q);
         for (int i = 0; i < n; i++) {
-            if (s.charAt(p + i) != t.charAt(q + i))
+            if (s.charAt(p + i) != t.charAt(q + i)) {
                 return s.substring(p, p + i);
+            }
         }
         return s.substring(p, p + n);
     }

@@ -8,12 +8,14 @@ public class BestPriceFinderMain {
     private static BestPriceFinder bestPriceFinder = new BestPriceFinder();
 
     public static void main(String[] args) {
-        execute("sequential", () -> bestPriceFinder.findPricesSequential("myPhone27S"));
+        System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "3");
+        // execute("sequential", () -> bestPriceFinder.findPricesSequential("myPhone27S"));
         execute("parallel", () -> bestPriceFinder.findPricesParallel("myPhone27S"));
         execute("composed CompletableFuture", () -> bestPriceFinder.findPricesFuture("myPhone27S"));
-        execute("combined USD CompletableFuture", () -> bestPriceFinder.findPricesInUSD("myPhone27S"));
-        execute("combined USD CompletableFuture v2", () -> bestPriceFinder.findPricesInUSD2("myPhone27S"));
-        execute("combined USD CompletableFuture v3", () -> bestPriceFinder.findPricesInUSD3("myPhone27S"));
+        execute("composed CompletableFuture", () -> bestPriceFinder.findPricesFutureOwnExecutor("myPhone27S"));
+        // execute("combined USD CompletableFuture", () -> bestPriceFinder.findPricesInUSD("myPhone27S"));
+        // execute("combined USD CompletableFuture v2", () -> bestPriceFinder.findPricesInUSD2("myPhone27S"));
+        // execute("combined USD CompletableFuture v3", () -> bestPriceFinder.findPricesInUSD3("myPhone27S"));
     }
 
     private static void execute(String msg, Supplier<List<String>> s) {

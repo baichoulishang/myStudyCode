@@ -4,8 +4,8 @@ import lambdasinaction.chap4.Dish;
 
 import java.util.IntSummaryStatistics;
 import java.util.Optional;
-import static java.util.stream.Collectors.*;
 
+import static java.util.stream.Collectors.summarizingInt;
 import static lambdasinaction.chap4.Dish.menu;
 
 public class Finding {

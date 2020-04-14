@@ -69,6 +69,10 @@ public class DateTimeExamples {
         LocalDateTime dt4 = date.atTime(time);
         LocalDateTime dt5 = time.atDate(date);
         System.out.println(dt1);
+        dt1.get(ChronoField.YEAR);
+        dt1.getYear();
+        LocalDateTime now1 = LocalDateTime.now();
+
 
         LocalDate date1 = dt1.toLocalDate();
         System.out.println(date1);

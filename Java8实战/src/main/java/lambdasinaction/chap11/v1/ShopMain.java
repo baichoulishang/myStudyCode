@@ -10,8 +10,7 @@ public class ShopMain {
         long start = System.nanoTime();
         Future<Double> futurePrice = shop.getPriceAsync("my favorite product");
         long invocationTime = ((System.nanoTime() - start) / 1_000_000);
-        System.out.println("Invocation returned after " + invocationTime
-                + " msecs");
+        System.out.println("Invocation returned after " + invocationTime + " msecs");
         // Do some more tasks, like querying other shops
         doSomethingElse();
         // while the price of the product is being calculated

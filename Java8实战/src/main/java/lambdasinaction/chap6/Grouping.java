@@ -77,6 +77,7 @@ public class Grouping {
                 groupingBy(Dish::getType,
                         reducing((Dish d1, Dish d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2)));
     }
+
     private static Map<Dish.Type, Optional<Dish>> mostCaloricDishesByType2() {
         Map<Dish.Type, Optional<Dish>> collect = menu.stream().collect(
                 groupingBy(Dish::getType,

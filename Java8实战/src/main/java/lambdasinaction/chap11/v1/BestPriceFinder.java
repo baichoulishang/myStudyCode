@@ -1,7 +1,9 @@
 package lambdasinaction.chap11.v1;
 
+import lambdasinaction.chap11.Discount;
 import lambdasinaction.chap11.ExchangeService;
 import lambdasinaction.chap11.ExchangeService.Money;
+import lambdasinaction.chap11.Quote;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,28 +30,59 @@ public class BestPriceFinder {
     });
 
     public List<String> findPricesSequential(String product) {
-        return shops.stream()
+        List<String> collect = shops.stream()
                 .map(shop -> shop.getName() + " price is " + shop.getPrice(product))
                 .collect(Collectors.toList());
+        return collect;
     }
 
     public List<String> findPricesParallel(String product) {
-        return shops.parallelStream()
+        List<String> collect = shops.parallelStream()
                 .map(shop -> shop.getName() + " price is " + shop.getPrice(product))
                 .collect(Collectors.toList());
+        return collect;
     }
 
     public List<String> findPricesFuture(String product) {
         List<CompletableFuture<String>> priceFutures =
                 shops.stream()
-                        .map(shop -> CompletableFuture.supplyAsync(() -> shop.getName() + " price is "
-                                + shop.getPrice(product), executor))
+                        .map(shop -> CompletableFuture.supplyAsync(
+                                () -> shop.getName() + " price is " + shop.getPrice(product)))
                         .collect(Collectors.toList());
 
-        List<String> prices = priceFutures.stream()
+        return priceFutures.stream()
                 .map(CompletableFuture::join)
                 .collect(Collectors.toList());
-        return prices;
+    }
+
+    public List<String> findPricesFutureOwnExecutor(String product) {
+        List<CompletableFuture<String>> priceFutures =
+                shops.stream()
+                        .map(shop -> CompletableFuture.supplyAsync(
+                                () -> shop.getName() + " price is " + shop.getPrice(product), executor))
+                        .collect(Collectors.toList());
+
+        return priceFutures.stream()
+                .map(CompletableFuture::join)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> findPrices(String product) {
+        List<CompletableFuture<String>> collect = shops.stream()
+                // 使用CompletableFuture异步获取处理结果
+                .map(shop -> CompletableFuture.supplyAsync(
+                        () -> shop.getName() + " price is " + shop.getPrice(product), executor))
+                // 使用CompletableFuture自带的apply方法直接进行处理
+                .map(future -> future.thenApply(Quote::parse))
+                // thenCompose方法允许你对两个异步操作进行流水线，第一个操作完成时，将其结果作为参数传递给第二个操作。
+                .map(future -> future.thenCompose(
+                        quote -> CompletableFuture.supplyAsync(
+                                () -> Discount.applyDiscount(quote), executor
+                        )))
+                .collect(Collectors.toList());
+        return collect.stream()
+                .map(CompletableFuture::join)
+                .collect(Collectors.toList());
     }
 
     public List<String> findPricesInUSD(String product) {
@@ -64,8 +97,7 @@ public class BestPriceFinder {
                             .thenCombine(
                                     CompletableFuture.supplyAsync(
                                             () -> ExchangeService.getRate(Money.EUR, Money.USD)),
-                                    (price, rate) -> price * rate
-                            );
+                                    (price, rate) -> price * rate);
             priceFutures.add(futurePriceInUSD);
         }
         // Drawback: The shop is not accessible anymore outside the loop,
@@ -80,6 +112,7 @@ public class BestPriceFinder {
 
     public List<String> findPricesInUSDJava7(String product) {
         ExecutorService executor = Executors.newCachedThreadPool();
+        Future<?> submit = executor.submit(() -> System.out.println("2020年03月28日 20:16:29"));
         List<Future<Double>> priceFutures = new ArrayList<>();
         for (Shop shop : shops) {
             final Future<Double> futureRate = executor.submit(new Callable<Double>() {

@@ -1,7 +1,7 @@
 package dataStructure.algs4;
 
 
-public class Cat {
+public class Cat implements Comparable<Cat> {
 
 
     private Cat() {
@@ -19,6 +19,10 @@ public class Cat {
         out.close();
     }
 
+    @Override
+    public int compareTo(Cat o) {
+        return 0;
+    }
 }
 
 

@@ -13,7 +13,9 @@ http://www.broadview.com.cn/31065
 package io.github.viscent.mtia.ch12;
 
 public interface CountingTask {
-  public void setValue(long value);
-  public long getValue();
-  public long getIterations();
+    public void setValue(long value);
+
+    public long getValue();
+
+    public long getIterations();
 }
