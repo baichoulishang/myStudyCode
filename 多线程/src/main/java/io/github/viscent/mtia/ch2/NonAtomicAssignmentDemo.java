@@ -53,19 +53,19 @@ public class NonAtomicAssignmentDemo implements Runnable {
         System.exit(0);
     }
 
-    static class DummyOutputStream extends OutputStream {
-        @Override
-        public void write(int b) throws IOException {
-            // 不实际进行输出
-        }
-    }
-
     @SuppressFBWarnings(value = "ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD",
             justification = "特意为之")
     @Override
     public void run() {
         for (; ; ) {
             value = valueToSet;
+        }
+    }
+
+    static class DummyOutputStream extends OutputStream {
+        @Override
+        public void write(int b) throws IOException {
+            // 不实际进行输出
         }
     }
 }
