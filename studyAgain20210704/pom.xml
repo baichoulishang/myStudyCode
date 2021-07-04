@@ -9,8 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>baichoulishang</groupId>
-    <artifactId>Java编程思想</artifactId>
+    <artifactId>studyAgain20210704</artifactId>
 
+    <properties>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+    </properties>
 
 </project>
