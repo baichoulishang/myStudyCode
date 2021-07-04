@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="多线程" />
         <module name="算法" />
+        <module name="再次复习2021年07月04日" />
+        <module name="多线程" />
         <module name="Java8实战" />
         <module name="Java编程思想" />
+        <module name="ANewProject" />
         <module name="一个普通的web项目" />
       </profile>
     </annotationProcessing>

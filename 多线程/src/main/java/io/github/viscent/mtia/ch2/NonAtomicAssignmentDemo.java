@@ -13,6 +13,9 @@ http://www.broadview.com.cn/31065
 package io.github.viscent.mtia.ch2;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.dao.DataAccessException;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -33,6 +36,7 @@ public class NonAtomicAssignmentDemo implements Runnable {
     }
 
     public static void main(String[] args) {
+
         // 线程updateThread1将data更新为0
         Thread updateThread1 = new Thread(new NonAtomicAssignmentDemo(0L));
         // 线程updateThread2将data更新为-1
@@ -52,6 +56,8 @@ public class NonAtomicAssignmentDemo implements Runnable {
         }
         System.exit(0);
     }
+
+
 
     @SuppressFBWarnings(value = "ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD",
             justification = "特意为之")
