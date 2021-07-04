@@ -11,6 +11,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/studyAgain20210704/pom.xml" />
+        <option value="$PROJECT_DIR$/ThinkInJava/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
