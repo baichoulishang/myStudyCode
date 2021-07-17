@@ -3,15 +3,17 @@ import pojo.Role;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) {
-        List<Role> list = new ArrayList<>();
-        Map<String, Role> collect = list.stream().collect(Collectors.toMap(Role::getId, Function.identity()));
+        List<String> menu = new ArrayList<>();
+        String.join(", ", menu);
+        // menu.stream()
+        //         .collect(Collectors.groupingBy(Function.identity(),
+        //                 Collectors.maxBy(Function.identity())));
     }
 
 

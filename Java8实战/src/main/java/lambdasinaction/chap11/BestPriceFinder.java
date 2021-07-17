@@ -52,18 +52,26 @@ public class BestPriceFinder {
     }
 
     public Stream<CompletableFuture<String>> findPricesStream(String product) {
-        CompletableFuture<Quote> completableFuture = new CompletableFuture<>();
         return shops.stream()
-                .map(shop -> CompletableFuture.supplyAsync(() -> {
-                    String price = shop.getPrice(product);
-                    System.out.println("第一步线程名称:" + Thread.currentThread().getName() + ";" + price);
-                    return price;
-                }, executor))
-                .map(future -> future.thenApply(Quote::parse))
-                .map(future -> future.thenComposeAsync(quote -> {
-                    System.out.println("第二步线程名称:" + Thread.currentThread().getName() + ";" + quote);
-                    return CompletableFuture.supplyAsync(() -> Discount.applyDiscount(quote), executor);
-                }));
+                .map(shop -> {
+                    CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> {
+                        String price = shop.getPrice(product);
+                        System.out.println("第一步线程名称:" + Thread.currentThread().getName() + ";" + price);
+                        return price;
+                    }, executor);
+                    return completableFuture;
+                })
+                .map(future -> {
+                    CompletableFuture<Quote> thenApply = future.thenApply(Quote::parse);
+                    return thenApply;
+                })
+                .map(future -> {
+                    CompletableFuture<String> thenComposeAsync = future.thenCompose(quote -> {
+                        System.out.println("第二步线程名称:" + Thread.currentThread().getName() + ";" + quote);
+                        return CompletableFuture.supplyAsync(() -> Discount.applyDiscount(quote), executor);
+                    });
+                    return thenComposeAsync;
+                });
     }
 
     public void printPricesStream(String product) {

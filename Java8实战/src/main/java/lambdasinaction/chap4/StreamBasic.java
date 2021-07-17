@@ -1,11 +1,9 @@
 package lambdasinaction.chap4;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
 
 public class StreamBasic {
@@ -28,6 +26,35 @@ public class StreamBasic {
                 lowCaloricDishes.add(d);
             }
         }
+        /*测试一下无限分组的功能*/
+        Map<String, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Integer, Map<Dish.Type, Map<Integer, List<Dish>>>>>>>>>>>>>>>>>>>>>>>>>>>> collect = lowCaloricDishes.stream()
+                .collect(groupingBy(Dish::getName,
+                        groupingBy(Dish::getCalories,
+                                groupingBy(Dish::getCalories,
+                                        groupingBy(Dish::getCalories,
+                                                groupingBy(Dish::getCalories,
+                                                        groupingBy(Dish::getCalories,
+                                                                groupingBy(Dish::getCalories,
+                                                                        groupingBy(Dish::getCalories,
+                                                                                groupingBy(Dish::getCalories,
+                                                                                        groupingBy(Dish::getCalories,
+                                                                                                groupingBy(Dish::getCalories,
+                                                                                                        groupingBy(Dish::getCalories,
+                                                                                                                groupingBy(Dish::getCalories,
+                                                                                                                        groupingBy(Dish::getCalories,
+                                                                                                                                groupingBy(Dish::getCalories,
+                                                                                                                                        groupingBy(Dish::getCalories,
+                                                                                                                                                groupingBy(Dish::getCalories,
+                                                                                                                                                        groupingBy(Dish::getCalories,
+                                                                                                                                                                groupingBy(Dish::getCalories,
+                                                                                                                                                                        groupingBy(Dish::getCalories,
+                                                                                                                                                                                groupingBy(Dish::getCalories,
+                                                                                                                                                                                        groupingBy(Dish::getCalories,
+                                                                                                                                                                                                groupingBy(Dish::getCalories,
+                                                                                                                                                                                                        groupingBy(Dish::getCalories,
+                                                                                                                                                                                                                groupingBy(Dish::getCalories,
+                                                                                                                                                                                                                        groupingBy(Dish::getType,
+                                                                                                                                                                                                                                groupingBy(Dish::getCalories))))))))))))))))))))))))))));
         List<String> lowCaloricDishesName = new ArrayList<>();
         Collections.sort(lowCaloricDishes, new Comparator<Dish>() {
             public int compare(Dish d1, Dish d2) {

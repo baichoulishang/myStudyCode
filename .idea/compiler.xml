@@ -15,5 +15,6 @@
         <module name="一个普通的web项目" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>
