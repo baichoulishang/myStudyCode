@@ -11,7 +11,6 @@
         <module name="Multi" />
         <module name="anNormalWebProject" />
         <module name="ANewProject" />
-        <module name="studyAgain20210704" />
         <module name="algorithm" />
       </profile>
     </annotationProcessing>

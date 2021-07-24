@@ -21,7 +21,7 @@ public class Car {
     public static void main(String[] args) {
         check(Collections.singletonList(new Car()));
         check(Collections.singletonList(new BigCar()));
-        check(Collections.singletonList(new BigRedCar()));
+        // check(Collections.singletonList(new BigRedCar()));
     }
 
     /**
