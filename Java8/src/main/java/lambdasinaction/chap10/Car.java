@@ -24,6 +24,8 @@ public class Car {
         // check(Collections.singletonList(new BigRedCar()));
     }
 
+
+
     /**
      * 测试往集合里面塞进去元素
      *
