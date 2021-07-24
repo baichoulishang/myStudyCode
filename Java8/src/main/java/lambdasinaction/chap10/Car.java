@@ -12,6 +12,7 @@ public class Car {
         // 报错了
         // list.add(new Car());
 
+        /*测试一下*/
         List<? extends BigCar> list2 = new ArrayList<>();
         // list2.add(new BigRedCar());
 
