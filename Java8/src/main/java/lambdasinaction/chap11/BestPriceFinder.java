@@ -1,5 +1,6 @@
 package lambdasinaction.chap11;
 
+import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -51,6 +52,7 @@ public class BestPriceFinder {
                 .collect(Collectors.toList());
     }
 
+
     public Stream<CompletableFuture<String>> findPricesStream(String product) {
         return shops.stream()
                 .map(shop -> {
@@ -84,3 +86,5 @@ public class BestPriceFinder {
     }
 
 }
+
+

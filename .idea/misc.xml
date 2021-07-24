@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/一个普通的web项目" />
+    <file type="web" url="file://$PROJECT_DIR$/anNormalWebProject" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
